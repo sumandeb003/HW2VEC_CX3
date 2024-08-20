@@ -102,7 +102,7 @@ class GRAPH2VEC(nn.Module):
         fc_in_channel, fc_out_channel = model_configuration['fc']
         self.set_output_layer(nn.Linear(fc_in_channel, fc_out_channel))
 
-        self.load_state_dict(torch.load(model_weight_path))
+        self.load_state_dict(torch.load(model_weight_path,map_location=torch.device('cpu')),strict=False)
         
     def set_graph_conv(self, convs):
         self.layers = []
