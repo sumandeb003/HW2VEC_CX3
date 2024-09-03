@@ -38,8 +38,8 @@ if __name__ == '__main__':
     	os.remove('TrustHub2graph.log')
     except:
     	pass
-    log = open('TrustHub2graph.log', 'a')
-    sys.stdout = log
+    #log = open('TrustHub2graph.log', 'a')
+    #sys.stdout = log
     #delete all previous .pt files in all sub-directories of directory_path
     directory_path = '../assets/datasets/MyTrustHub4GraphGPS/TjFree' #like, path to TjFree or TjIn
     print('starting: delete_all_dotptfiles_in_all_subdirectories(directory_path)')
@@ -62,4 +62,4 @@ if __name__ == '__main__':
     #			print("ERROR:	", type(error).__name__, "–", error)
     #	print('===================================================================')
 
-    log.close()
+    #log.close()
