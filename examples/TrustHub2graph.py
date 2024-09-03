@@ -46,7 +46,7 @@ if __name__ == '__main__':
     delete_all_dotptfiles_in_all_subdirectories(directory_path)
     print ('done: delete_all_dotptfiles_in_all_subdirectories(directory_path)')
     #create new .pt files
-    #cfg = Config(sys.argv[1:]) #because of the following 4 lines, the statement 'cfg = Config(sys.argv[1:]) has no use
+    cfg = Config(sys.argv[1:]) #because of the following 4 lines, the statement 'cfg = Config(sys.argv[1:]) has no use
     #iterate through all folders in TjFree
     #for subdir in os.listdir(directory_path):
     #	subdir_path = Path(os.path.join(directory_path,subdir))
