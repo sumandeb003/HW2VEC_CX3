@@ -48,18 +48,18 @@ if __name__ == '__main__':
     #create new .pt files
     cfg = Config(sys.argv[1:]) #because of the following 4 lines, the statement 'cfg = Config(sys.argv[1:]) has no use
     #iterate through all folders in TjFree
-    #for subdir in os.listdir(directory_path):
-    #	subdir_path = Path(os.path.join(directory_path,subdir))
-    #	print('===================================================================')
-    #	print (f'TrustHub_to_graph: circuit - {subdir_path}')
-    #	#do both AST and DFG
-    #	for graphtype in ['AST', 'DFG']:
-    #		cfg.graph_type = graphtype
-    #		print (f'TrustHub_to_graph: graphtype - {cfg.graph_type}')
+    for subdir in os.listdir(directory_path):
+    	subdir_path = Path(os.path.join(directory_path,subdir))
+    	print('===================================================================')
+    	print (f'TrustHub_to_graph: circuit - {subdir_path}')
+    	#do both AST and DFG
+    	for graphtype in ['AST', 'DFG']:
+    		cfg.graph_type = graphtype
+    		print (f'TrustHub_to_graph: graphtype - {cfg.graph_type}')
     #		try:
     #			TrustHub_to_graph(cfg, subdir_path)
     #		except Exception as error:
     #			print("ERROR:	", type(error).__name__, "–", error)
-    #	print('===================================================================')
+    	print('===================================================================')
 
     #log.close()
