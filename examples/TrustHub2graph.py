@@ -36,7 +36,6 @@ if __name__ == '__main__':
     print('starting...')
     try:
     	os.remove('TrustHub2graph.log')
-        print('inside try')
     except:
     	pass
     log = open('TrustHub2graph.log', 'a')
