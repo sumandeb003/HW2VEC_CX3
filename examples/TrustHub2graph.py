@@ -24,11 +24,12 @@ def TrustHub_to_graph(cfg, hw_design_dir_path):
     NON_TROJAN = 0
     data = data_proc.get_graphs()
     print (f'TrustHub_to_graph: data - {data}')
+    print(str(hw_design_path).split("/")[-3])
     if "TjFree" == str(hw_design_path).split("/")[-3]:
-    	data[0].label = NON_TROJAN
+    	data[0].label = TJFREE
     else:
-    	data[0].label = TROJAN
-    save_path = os.path.join(hw_design_dir_path, f'{cfg.graph_type}.pt')
+    	data[0].label = TJIN
+    save_path = os.path.join(hw_design_dir_path, f'{cfg.graph_type}_topModule_cktname_{data[0].label}.pt')
     torch.save(data[0], save_path)
 
 if __name__ == '__main__':
