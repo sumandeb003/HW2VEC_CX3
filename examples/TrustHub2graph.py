@@ -20,11 +20,11 @@ def TrustHub_to_graph(cfg, hw_design_dir_path):
     hardware_nxgraph = hw2graph.process(hw_design_path) #generate AST/DFG (JSON format) of the topModule.v
     data_proc = DataProcessor(cfg)
     data_proc.process(hardware_nxgraph)#normalize the graph and create node-feature vectors X and adjacency matrix A
-    TROJAN = 1
-    NON_TROJAN = 0
+    TJIN = 1
+    TJFREE = 0
     data = data_proc.get_graphs()
     print (f'TrustHub_to_graph: data - {data}')
-    print(str(hw_design_path).split("/")[-3])
+    print(str(hw_design_path).split("/"))
     if "TjFree" == str(hw_design_path).split("/")[-3]:
     	data[0].label = TJFREE
     else:
