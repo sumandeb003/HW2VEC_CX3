@@ -33,6 +33,7 @@ def TrustHub_to_graph(cfg, hw_design_dir_path):
 
 if __name__ == '__main__':
     #redirect output messages - print statements - to a log file
+    print('starting...')
     try:
     	os.remove('TrustHub2graph.log')
     except:
