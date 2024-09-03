@@ -36,14 +36,16 @@ if __name__ == '__main__':
     print('starting...')
     try:
     	os.remove('TrustHub2graph.log')
+        print('inside try')
     except:
     	pass
     log = open('TrustHub2graph.log', 'a')
     sys.stdout = log
     #delete all previous .pt files in all sub-directories of directory_path
     directory_path = '../assets/datasets/MyTrustHub4GraphGPS/TjFree' #like, path to TjFree or TjIn
+    print('starting: delete_all_dotptfiles_in_all_subdirectories(directory_path)')
     delete_all_dotptfiles_in_all_subdirectories(directory_path)
-    print ('done: delete_all_dotptfiles_in_all_subdirectories(directory_path')
+    print ('done: delete_all_dotptfiles_in_all_subdirectories(directory_path)')
     #create new .pt files
     #cfg = Config(sys.argv[1:]) #because of the following 4 lines, the statement 'cfg = Config(sys.argv[1:]) has no use
     #iterate through all folders in TjFree
