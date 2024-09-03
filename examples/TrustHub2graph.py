@@ -56,10 +56,10 @@ if __name__ == '__main__':
     	for graphtype in ['AST', 'DFG']:
     		cfg.graph_type = graphtype
     		print (f'TrustHub_to_graph: graphtype - {cfg.graph_type}')
-    #		try:
-    #			TrustHub_to_graph(cfg, subdir_path)
-    #		except Exception as error:
-    #			print("ERROR:	", type(error).__name__, "–", error)
+    		try:
+    			TrustHub_to_graph(cfg, subdir_path)
+    		except Exception as error:
+    			print("ERROR:	", type(error).__name__, "–", error)
     	print('===================================================================')
 
     #log.close()
