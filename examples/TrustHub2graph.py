@@ -26,9 +26,9 @@ def TrustHub_to_graph(cfg, hw_design_dir_path):
     print (f'TrustHub_to_graph: data - {data}')
     hw_design = str(hw_design_path).split("/")[-2].replace('_','-')
     if "TjFree" == str(hw_design_path).split("/")[-3]:
-    	data[0].label = `TJFREE`
+    	data[0].label = 'TJFREE'
     else:
-    	data[0].label = `TJIN`
+    	data[0].label = 'TJIN'
     save_path = os.path.join(hw_design_dir_path, f'{hw_design}_topModule_{data[0].label}_{cfg.graph_type}.pt')
     torch.save(data[0], save_path)
 
