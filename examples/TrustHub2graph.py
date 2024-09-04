@@ -20,16 +20,16 @@ def TrustHub_to_graph(cfg, hw_design_dir_path):
     hardware_nxgraph = hw2graph.process(hw_design_path) #generate AST/DFG (JSON format) of the topModule.v
     data_proc = DataProcessor(cfg)
     data_proc.process(hardware_nxgraph)#normalize the graph and create node-feature vectors X and adjacency matrix A
-    TJIN = 1
-    TJFREE = 0
+    #TJIN = 1
+    #TJFREE = 0
     data = data_proc.get_graphs()
     print (f'TrustHub_to_graph: data - {data}')
-    print(str(hw_design_path).split("/"))
+    hw_design = str(hw_design_path).split("/")[-2].replace('_','-')
     if "TjFree" == str(hw_design_path).split("/")[-3]:
-    	data[0].label = TJFREE
+    	data[0].label = `TJFREE`
     else:
-    	data[0].label = TJIN
-    save_path = os.path.join(hw_design_dir_path, f'{cfg.graph_type}_topModule_cktname_{data[0].label}.pt')
+    	data[0].label = `TJIN`
+    save_path = os.path.join(hw_design_dir_path, f'{hw_design}_topModule_{data[0].label}_{cfg.graph_type}.pt')
     torch.save(data[0], save_path)
 
 if __name__ == '__main__':
