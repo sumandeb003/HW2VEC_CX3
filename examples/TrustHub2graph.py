@@ -4,6 +4,8 @@ from hw2vec.hw2graph import *
 from hw2vec.config import Config
 from pathlib import Path
 import glob, shutil
+import torch
+from torch_geometric.data import (download_google_url,extract_zip,)
 
 def delete_all_dotptfiles_in_all_subdirectories(directory_path):
 	for subdir in os.listdir(directory_path):
@@ -80,6 +82,11 @@ if __name__ == '__main__':
     zippedfile = os.path.join(directory_path, 'TrustHubGraphDataset.zip')
     cmd = 'zip ' + zippedfile + ' -r ' + dst_folder
     os.system(cmd)
-    
+    #id ='1mgBILYWXRyY9jAXeslmpKgwilP1etvSs'
+    #download_google_url(id,os.getcwd(),'try.zip')
+    #extract_zip('try.zip','try')
+    #??
+    #os.rename(osp.join(self.root, 'asqol_graph_raw'), self.raw_dir)
+    #os.unlink(path)
 
     #log.close()
