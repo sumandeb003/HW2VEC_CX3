@@ -1,0 +1,8691 @@
+
+
+module top ( GND, VDD, RST, CLK, G0, G1, G10, G11, G12, G13, G2, G3, G4, G45, 
+        G5, G530, G532, G535, G537, G539, G542, G546, G547, G548, G549, G550, 
+        G551, G552, G6, G7, G8, G9 );
+  input GND, VDD, RST, CLK, G0, G1, G10, G11, G12, G13, G2, G3, G4, G5, G6, G7,
+         G8, G9;
+  output G45, G530, G532, G535, G537, G539, G542, G546, G547, G548, G549, G550,
+         G551, G552;
+  wire   n515, n511, n998, n514, n996, n512, n513, G39, G32, G29, G44, G43,
+         n255, n256, n257, n258, n259, n260, n261, n262, n263, n264, n265,
+         n266, n267, n268, n269, n270, n271, n272, n273, n274, n275, n276,
+         n277, n278, n279, n280, n281, n282, n283, n284, n285, n286, n287,
+         n288, n289, n290, n291, n292, n293, n294, n295, n296, n297, n298,
+         n299, n300, n301, n302, n303, n304, n305, n306, n307, n308, n309,
+         n310, n311, n312, n313, n314, n315, n316, n317, n318, n319, n320,
+         n321, n322, n323, n324, n325, n326, n327, n328, n329, n330, n331,
+         n332, n333, n334, n335, n336, n337, n338, n339, n340, n341, n342,
+         n343, n344, n345, n346, n347, n348, n349, n350, n351, n352, n353,
+         n354, n355, n356, n357, n358, n359, n360, n361, n362, n363, n364,
+         n365, n366, n367, n368, n369, n370, n371, n372, n373, n374, n375,
+         n376, n377, n378, n379, n380, n381, n382, n383, n384, n385, n386,
+         n387, n388, n389, n390, n391, n392, n393, n394, n395, n396, n397,
+         n398, n399, n400, n401, n402, n403, n404, n405, n406, n407, n408,
+         n409, n410, n411, n412, n413, n414, n415, n416, n417, n418, n419,
+         n420, n421, n422, n423, n424, n425, n426, n427, n428, n429, n430,
+         n431, n432, n433, n434, n435, n436, n437, n438, n439, n440, n441,
+         n442, n443, n444, n445, n446, n447, n448, n449, n450, n451, n452,
+         n453, n454, n455, n456, n457, n458, n459, n460, n461, n462, n463,
+         n464, n465, n466, n467, n468, n469, n470, n471, n472, n473, n474,
+         n475, n476, n477, n478, n479, n480, n481, n482, n483, n484, n485,
+         n486, n487, n488, n489, n490, n491, n492, n493, n494, n495, n496,
+         n497, n498, n499, n500, n501, n502, n503, n504, n505, n506, n507,
+         n508, n509, n510, n516, n517, n518, n519, n520, n521, n522, n523,
+         n524, n525, n526, n527, n528, n529, n530, n531, n532, n533, n534,
+         n535, n536, n537, n538;
+
+  dfxbp1 DFF13Qreg ( .D(n271), .CLK(CLK), .Q(n537) );
+  dfxtp1 DFF9Qreg ( .D(n269), .CLK(CLK), .Q(n515) );
+  dfxtp1 DFF8Qreg ( .D(n268), .CLK(CLK), .Q(n511) );
+  dfxbp1 DFF7Qreg ( .D(n267), .CLK(CLK), .Q(n538) );
+  dfxbp1 DFF6Qreg ( .D(n266), .CLK(CLK), .QN(n998) );
+  dfxbp1 DFF17Qreg ( .D(n272), .CLK(CLK), .Q(n535) );
+  dfxbp1 DFF11Qreg ( .D(n270), .CLK(CLK), .Q(n536) );
+  dfxtp1 DFF10Qreg ( .D(n261), .CLK(CLK), .Q(G39) );
+  dfxtp1 DFF3Qreg ( .D(n260), .CLK(CLK), .Q(G32) );
+  dfxbp1 DFF4Qreg ( .D(n264), .CLK(CLK), .QN(n996) );
+  dfxtp1 DFF0Qreg ( .D(n259), .CLK(CLK), .Q(G29) );
+  dfxtp1 DFF15Qreg ( .D(n258), .CLK(CLK), .Q(G44) );
+  dfxtp1 DFF14Qreg ( .D(n257), .CLK(CLK), .Q(G43) );
+  dfxbp1 DFF12Qreg ( .D(n256), .CLK(CLK), .QN(G546) );
+  dfxtp1 DFF16Qreg ( .D(n255), .CLK(CLK), .Q(G45) );
+  dfxtp1 DFF5Qreg ( .D(n265), .CLK(CLK), .Q(n514) );
+  dfxtp1 DFF2Qreg ( .D(n263), .CLK(CLK), .Q(n512) );
+  dfxtp1 DFF1Qreg ( .D(n262), .CLK(CLK), .Q(n513) );
+  nor41 U288 ( .A(RST), .B(n273), .C(n274), .D(n275), .Y(n272) );
+  a211oi1 U289 ( .A1(n513), .A2(G7), .B1(G6), .C1(n276), .Y(n275) );
+  nor31 U290 ( .A(n277), .B(n278), .C(n279), .Y(n274) );
+  a21oi1 U291 ( .A1(G2), .A2(n280), .B1(n281), .Y(n278) );
+  o21ai0 U292 ( .A1(G1), .A2(n282), .B1(n283), .Y(n277) );
+  a21oi1 U293 ( .A1(n284), .A2(G0), .B1(G1), .Y(n273) );
+  mux2i1 U294 ( .A0(n285), .A1(n286), .S(n287), .Y(n284) );
+  nor21 U295 ( .A(G3), .B(G2), .Y(n286) );
+  nor41 U296 ( .A(RST), .B(n288), .C(n289), .D(n290), .Y(n271) );
+  mux2i1 U297 ( .A0(n291), .A1(n292), .S(n293), .Y(n290) );
+  nand31 U298 ( .A(G7), .B(n294), .C(G11), .Y(n292) );
+  nand21 U299 ( .A(n295), .B(n296), .Y(n291) );
+  nor31 U300 ( .A(n297), .B(n276), .C(n293), .Y(n289) );
+  nor31 U301 ( .A(n298), .B(RST), .C(n299), .Y(n270) );
+  nor31 U302 ( .A(n300), .B(G10), .C(n293), .Y(n299) );
+  a21oi1 U303 ( .A1(n301), .A2(n302), .B1(n303), .Y(n298) );
+  o21ai0 U304 ( .A1(n304), .A2(n512), .B1(G6), .Y(n302) );
+  nor31 U305 ( .A(n305), .B(G11), .C(n306), .Y(n304) );
+  and31 U306 ( .A(n307), .B(n308), .C(n279), .X(n269) );
+  nor21 U307 ( .A(RST), .B(n309), .Y(n268) );
+  xnor21 U308 ( .A(G9), .B(G6), .Y(n309) );
+  a21oi1 U309 ( .A1(n310), .A2(n311), .B1(RST), .Y(n267) );
+  mux2i1 U310 ( .A0(n312), .A1(n313), .S(n293), .Y(n266) );
+  nand31 U311 ( .A(n303), .B(n305), .C(n307), .Y(n313) );
+  nor31 U312 ( .A(G10), .B(RST), .C(n306), .Y(n307) );
+  nand21 U313 ( .A(n314), .B(n315), .Y(n312) );
+  inv1 U314 ( .A(RST), .Y(n315) );
+  a21oi1 U315 ( .A1(n316), .A2(n317), .B1(RST), .Y(n265) );
+  nor21 U316 ( .A(RST), .B(n318), .Y(n264) );
+  mux2i1 U317 ( .A0(n319), .A1(n320), .S(n321), .Y(n318) );
+  nand21 U318 ( .A(n322), .B(n323), .Y(n320) );
+  nand41 U319 ( .A(n324), .B(G1), .C(G0), .D(n308), .Y(n319) );
+  nor21 U320 ( .A(RST), .B(n325), .Y(n263) );
+  a22oi1 U321 ( .A1(G10), .A2(n297), .B1(G11), .B2(n306), .Y(n325) );
+  a21oi1 U322 ( .A1(n326), .A2(n327), .B1(RST), .Y(n262) );
+  nor21 U323 ( .A(RST), .B(n328), .Y(n261) );
+  xnor21 U324 ( .A(n329), .B(G2), .Y(n328) );
+  a21oi1 U325 ( .A1(n330), .A2(n331), .B1(RST), .Y(n260) );
+  a22oi1 U326 ( .A1(n332), .A2(n285), .B1(n333), .B2(n334), .Y(n330) );
+  a211oi1 U327 ( .A1(n335), .A2(n336), .B1(RST), .C1(n337), .Y(n259) );
+  o22ai1 U328 ( .A1(G4), .A2(n338), .B1(n339), .B2(n340), .Y(n336) );
+  nor31 U329 ( .A(n341), .B(RST), .C(n342), .Y(n258) );
+  o32ai1 U330 ( .A1(n310), .A2(G9), .A3(G6), .B1(n343), .B2(n311), .Y(n341)
+         );
+  nand31 U331 ( .A(n344), .B(n282), .C(n276), .Y(n311) );
+  nor31 U332 ( .A(n345), .B(RST), .C(n346), .Y(n257) );
+  o32ai1 U333 ( .A1(n280), .A2(n287), .A3(n293), .B1(n347), .B2(n339), .Y(
+        n345) );
+  nor41 U334 ( .A(n348), .B(n349), .C(RST), .D(n350), .Y(n256) );
+  o221ai1 U335 ( .A1(G9), .A2(n351), .B1(n352), .B2(n353), .C1(n354), .Y(n348) );
+  a22oi1 U336 ( .A1(n355), .A2(n276), .B1(n514), .B2(n295), .Y(n351) );
+  nor21 U337 ( .A(RST), .B(n356), .Y(n255) );
+  a21oi1 U338 ( .A1(n357), .A2(n358), .B1(n359), .Y(n356) );
+  o221ai1 U339 ( .A1(n360), .A2(n317), .B1(n536), .B2(n361), .C1(n362), .Y(
+        G552) );
+  o21ai0 U340 ( .A1(n363), .A2(n364), .B1(n365), .Y(n362) );
+  o22ai1 U341 ( .A1(G1), .A2(n293), .B1(n333), .B2(n366), .Y(n364) );
+  o21ai0 U342 ( .A1(n367), .A2(n368), .B1(n369), .Y(n363) );
+  inv1 U343 ( .A(n370), .Y(n369) );
+  a211oi1 U344 ( .A1(n333), .A2(n332), .B1(n371), .C1(n372), .Y(n360) );
+  inv1 U345 ( .A(n373), .Y(n372) );
+  o21ai0 U346 ( .A1(n337), .A2(n322), .B1(G6), .Y(n373) );
+  nor21 U347 ( .A(n374), .B(n375), .Y(n337) );
+  nor31 U348 ( .A(n366), .B(G3), .C(n376), .Y(n371) );
+  nand41 U349 ( .A(n377), .B(n378), .C(n379), .D(n380), .Y(G551) );
+  or31 U350 ( .A(n368), .B(n381), .C(n382), .X(n380) );
+  nand31 U351 ( .A(G5), .B(n383), .C(n355), .Y(n379) );
+  o22ai1 U352 ( .A1(G0), .A2(n384), .B1(G3), .B2(n385), .Y(n383) );
+  a21oi1 U353 ( .A1(n281), .A2(G0), .B1(n386), .Y(n385) );
+  a21oi1 U354 ( .A1(G2), .A2(G0), .B1(n335), .Y(n386) );
+  nand31 U355 ( .A(n387), .B(G4), .C(G39), .Y(n378) );
+  nand21 U356 ( .A(n365), .B(n388), .Y(n377) );
+  nand31 U357 ( .A(n366), .B(n287), .C(n389), .Y(n388) );
+  a21oi1 U358 ( .A1(n281), .A2(n335), .B1(n390), .Y(n389) );
+  a21oi1 U359 ( .A1(G5), .A2(n384), .B1(n374), .Y(n390) );
+  o221ai1 U360 ( .A1(G29), .A2(n382), .B1(n339), .B2(n391), .C1(n392), .Y(
+        G550) );
+  a211oi1 U361 ( .A1(n393), .A2(n365), .B1(n394), .C1(n395), .Y(n392) );
+  nor31 U362 ( .A(n317), .B(n281), .C(n368), .Y(n395) );
+  inv1 U363 ( .A(n316), .Y(n365) );
+  mux2i1 U364 ( .A0(n396), .A1(n338), .S(n384), .Y(n393) );
+  nand21 U365 ( .A(G2), .B(n282), .Y(n396) );
+  inv1 U366 ( .A(n397), .Y(n391) );
+  or41 U367 ( .A(n397), .B(n394), .C(n398), .D(n399), .X(G549) );
+  o32ai1 U368 ( .A1(n316), .A2(n400), .A3(n335), .B1(n361), .B2(n401), .Y(
+        n399) );
+  nand21 U369 ( .A(n381), .B(n339), .Y(n401) );
+  nor41 U370 ( .A(n370), .B(n402), .C(n403), .D(n404), .Y(n400) );
+  inv1 U371 ( .A(n331), .Y(n404) );
+  a21oi1 U372 ( .A1(n285), .A2(G5), .B1(n322), .Y(n331) );
+  nor21 U373 ( .A(n376), .B(n287), .Y(n322) );
+  nor21 U374 ( .A(n366), .B(n405), .Y(n403) );
+  a211oi1 U375 ( .A1(G3), .A2(G4), .B1(n317), .C1(n338), .Y(n398) );
+  inv1 U376 ( .A(n387), .Y(n317) );
+  nor31 U377 ( .A(G12), .B(G13), .C(n406), .Y(n387) );
+  and31 U378 ( .A(n407), .B(n996), .C(G3), .X(n394) );
+  nor31 U379 ( .A(n384), .B(G0), .C(n361), .Y(n397) );
+  o22ai1 U380 ( .A1(n537), .A2(n361), .B1(n408), .B2(n409), .Y(G548) );
+  a21oi1 U381 ( .A1(n276), .A2(n296), .B1(n410), .Y(n408) );
+  o32ai1 U382 ( .A1(n297), .A2(n295), .A3(n306), .B1(n411), .B2(n412), .Y(
+        n410) );
+  nand21 U383 ( .A(G11), .B(n294), .Y(n412) );
+  o22ai1 U384 ( .A1(n413), .A2(n305), .B1(n414), .B2(n353), .Y(G547) );
+  a21oi1 U385 ( .A1(n415), .A2(n303), .B1(n416), .Y(n414) );
+  mux2i1 U386 ( .A0(n417), .A1(n294), .S(n411), .Y(n416) );
+  mux2i1 U387 ( .A0(G9), .A1(G11), .S(n326), .Y(n417) );
+  nor31 U388 ( .A(n418), .B(n349), .C(n419), .Y(n413) );
+  inv1 U389 ( .A(n354), .Y(n419) );
+  nand31 U390 ( .A(n276), .B(n293), .C(n355), .Y(n354) );
+  nor31 U391 ( .A(n420), .B(G7), .C(n409), .Y(n349) );
+  nor31 U392 ( .A(n409), .B(n295), .C(n306), .Y(n418) );
+  o221ai1 U393 ( .A1(n409), .A2(n421), .B1(n422), .B2(n353), .C1(n423), .Y(
+        G542) );
+  inv1 U394 ( .A(n350), .Y(n423) );
+  nor31 U395 ( .A(n352), .B(n303), .C(n409), .Y(n350) );
+  inv1 U396 ( .A(n424), .Y(n352) );
+  nand21 U397 ( .A(n355), .B(G6), .Y(n353) );
+  nor31 U398 ( .A(n425), .B(n424), .C(n426), .Y(n422) );
+  nor31 U399 ( .A(n297), .B(G8), .C(n326), .Y(n426) );
+  o22ai1 U400 ( .A1(G7), .A2(n420), .B1(G9), .B2(n427), .Y(n425) );
+  o21ai0 U401 ( .A1(n303), .A2(n305), .B1(n276), .Y(n421) );
+  inv1 U402 ( .A(n514), .Y(n409) );
+  o22ai1 U403 ( .A1(n358), .A2(n428), .B1(G12), .B2(n429), .Y(G539) );
+  mux2i1 U404 ( .A0(n430), .A1(n431), .S(n407), .Y(n429) );
+  nor21 U405 ( .A(n323), .B(n432), .Y(n431) );
+  nor21 U406 ( .A(n433), .B(n434), .Y(n430) );
+  inv1 U407 ( .A(n357), .Y(n428) );
+  o221ai1 U408 ( .A1(n435), .A2(n436), .B1(n437), .B2(n438), .C1(n439), .Y(
+        G537) );
+  o21ai0 U409 ( .A1(n440), .A2(G0), .B1(n441), .Y(n439) );
+  inv1 U410 ( .A(n442), .Y(n441) );
+  nor31 U411 ( .A(n443), .B(G9), .C(n293), .Y(n440) );
+  a222oi1 U412 ( .A1(n329), .A2(G8), .B1(n444), .B2(n332), .C1(n445), .C2(
+        n314), .Y(n438) );
+  a221oi1 U413 ( .A1(n446), .A2(n447), .B1(n448), .B2(n276), .C1(n342), .Y(
+        n435) );
+  nor31 U414 ( .A(n366), .B(n282), .C(n449), .Y(n342) );
+  nor21 U415 ( .A(n287), .B(n300), .Y(n448) );
+  inv1 U416 ( .A(n310), .Y(n446) );
+  nand41 U417 ( .A(n450), .B(n326), .C(n451), .D(n282), .Y(n310) );
+  or41 U418 ( .A(n452), .B(n453), .C(n454), .D(n455), .X(G535) );
+  nor31 U419 ( .A(n442), .B(n456), .C(n443), .Y(n455) );
+  inv1 U420 ( .A(n515), .Y(n443) );
+  nand31 U421 ( .A(n358), .B(n329), .C(n357), .Y(n442) );
+  nor31 U422 ( .A(n324), .B(G13), .C(n321), .Y(n357) );
+  inv1 U423 ( .A(n457), .Y(n324) );
+  and20 U424 ( .A(n458), .B(G1), .X(n358) );
+  mux2i1 U425 ( .A0(n459), .A1(n460), .S(n279), .Y(n458) );
+  o211ai1 U426 ( .A1(n461), .A2(n462), .B1(G2), .C1(G11), .Y(n460) );
+  nor31 U427 ( .A(n463), .B(n464), .C(n367), .Y(n462) );
+  nand31 U428 ( .A(n282), .B(n305), .C(n339), .Y(n463) );
+  nor41 U429 ( .A(n465), .B(n466), .C(n368), .D(n456), .Y(n461) );
+  inv1 U430 ( .A(n511), .Y(n456) );
+  nand21 U431 ( .A(G7), .B(n308), .Y(n466) );
+  nor21 U432 ( .A(G44), .B(n436), .Y(n453) );
+  inv1 U433 ( .A(n467), .Y(n436) );
+  a21oi1 U434 ( .A1(n468), .A2(n411), .B1(n469), .Y(n452) );
+  a21oi1 U435 ( .A1(n470), .A2(n445), .B1(n471), .Y(n469) );
+  o221ai1 U436 ( .A1(n472), .A2(n382), .B1(G43), .B2(n316), .C1(n473), .Y(
+        G532) );
+  a221oi1 U437 ( .A1(n474), .A2(n359), .B1(n467), .B2(n475), .C1(n454), .Y(
+        n473) );
+  and31 U438 ( .A(n314), .B(n359), .C(n332), .X(n454) );
+  o21ai0 U439 ( .A1(n366), .A2(n468), .B1(n343), .Y(n475) );
+  nor21 U440 ( .A(n476), .B(G3), .Y(n467) );
+  inv1 U441 ( .A(n437), .Y(n359) );
+  nor21 U442 ( .A(n470), .B(n471), .Y(n437) );
+  and31 U443 ( .A(n434), .B(n321), .C(G13), .X(n471) );
+  o32ai1 U444 ( .A1(n376), .A2(G5), .A3(n477), .B1(n478), .B2(n335), .Y(n434)
+         );
+  nor21 U445 ( .A(n479), .B(n480), .Y(n478) );
+  a21oi1 U446 ( .A1(n481), .A2(n482), .B1(n483), .Y(n477) );
+  a211oi1 U447 ( .A1(n484), .A2(n485), .B1(G10), .C1(G1), .Y(n483) );
+  nand31 U448 ( .A(n447), .B(G3), .C(n288), .Y(n485) );
+  nor31 U449 ( .A(n306), .B(G8), .C(n327), .Y(n288) );
+  nand31 U450 ( .A(n486), .B(n415), .C(n445), .Y(n484) );
+  o22ai1 U451 ( .A1(G1), .A2(n334), .B1(n367), .B2(n280), .Y(n482) );
+  o21ai0 U452 ( .A1(n451), .A2(n468), .B1(n449), .Y(n481) );
+  inv1 U453 ( .A(n476), .Y(n470) );
+  o21ai0 U454 ( .A1(n449), .A2(n334), .B1(n487), .Y(n474) );
+  inv1 U455 ( .A(n479), .Y(n487) );
+  nor41 U456 ( .A(n488), .B(n366), .C(n368), .D(n376), .Y(n479) );
+  or20 U457 ( .A(n464), .B(n297), .X(n449) );
+  nand31 U458 ( .A(n433), .B(n321), .C(G13), .Y(n316) );
+  a21oi1 U459 ( .A1(n347), .A2(n489), .B1(n490), .Y(n433) );
+  a21oi1 U460 ( .A1(n491), .A2(G1), .B1(n346), .Y(n489) );
+  and20 U461 ( .A(G1), .B(n492), .X(n346) );
+  o22ai1 U462 ( .A1(n493), .A2(n368), .B1(n374), .B2(n293), .Y(n492) );
+  inv1 U463 ( .A(n285), .Y(n374) );
+  nor21 U464 ( .A(n339), .B(G2), .Y(n285) );
+  inv1 U465 ( .A(n494), .Y(n491) );
+  a221oi1 U466 ( .A1(n493), .A2(n368), .B1(n495), .B2(n339), .C1(n402), .Y(
+        n494) );
+  nor21 U467 ( .A(n343), .B(n282), .Y(n402) );
+  inv1 U468 ( .A(n447), .Y(n343) );
+  nor21 U469 ( .A(G4), .B(G6), .Y(n447) );
+  o21ai0 U470 ( .A1(n376), .A2(n293), .B1(n287), .Y(n495) );
+  inv1 U471 ( .A(n496), .Y(n347) );
+  o32ai1 U472 ( .A1(n384), .A2(G6), .A3(n376), .B1(G1), .B2(n497), .Y(n496)
+         );
+  nor21 U473 ( .A(n370), .B(n333), .Y(n497) );
+  nor21 U474 ( .A(n367), .B(n376), .Y(n370) );
+  inv1 U475 ( .A(n332), .Y(n367) );
+  nor21 U476 ( .A(n293), .B(G4), .Y(n332) );
+  nand21 U477 ( .A(n355), .B(G0), .Y(n382) );
+  a221oi1 U478 ( .A1(n498), .A2(n376), .B1(n375), .B2(n339), .C1(n499), .Y(
+        n472) );
+  mux2i1 U479 ( .A0(G4), .A1(n340), .S(n280), .Y(n499) );
+  inv1 U480 ( .A(n281), .Y(n340) );
+  nor21 U481 ( .A(n376), .B(n308), .Y(n281) );
+  o22ai1 U482 ( .A1(n308), .A2(n368), .B1(n335), .B2(n405), .Y(n498) );
+  inv1 U483 ( .A(n500), .Y(n405) );
+  o32ai1 U484 ( .A1(n361), .A2(n501), .A3(n502), .B1(n503), .B2(n476), .Y(
+        G530) );
+  nand41 U485 ( .A(n432), .B(n406), .C(n321), .D(n407), .Y(n476) );
+  inv1 U486 ( .A(G13), .Y(n407) );
+  inv1 U487 ( .A(n323), .Y(n406) );
+  nor21 U488 ( .A(n504), .B(n490), .Y(n323) );
+  a221oi1 U489 ( .A1(n513), .A2(n486), .B1(n300), .B2(n276), .C1(n424), .Y(
+        n490) );
+  nor21 U490 ( .A(n294), .B(n306), .Y(n424) );
+  inv1 U491 ( .A(n505), .Y(n294) );
+  inv1 U492 ( .A(n344), .Y(n300) );
+  inv1 U493 ( .A(G32), .Y(n504) );
+  or31 U494 ( .A(n480), .B(n506), .C(n507), .X(n432) );
+  o32ai1 U495 ( .A1(n488), .A2(n338), .A3(n334), .B1(G2), .B2(n503), .Y(n507)
+         );
+  inv1 U496 ( .A(n333), .Y(n338) );
+  nand31 U497 ( .A(n450), .B(n451), .C(n505), .Y(n488) );
+  nor31 U498 ( .A(n508), .B(G5), .C(n451), .Y(n506) );
+  mux2i1 U499 ( .A0(n509), .A1(n510), .S(n376), .Y(n508) );
+  nor21 U500 ( .A(n516), .B(n334), .Y(n510) );
+  inv1 U501 ( .A(n445), .Y(n334) );
+  nor21 U502 ( .A(n366), .B(n339), .Y(n445) );
+  a21oi1 U503 ( .A1(n486), .A2(n505), .B1(n314), .Y(n516) );
+  nor21 U504 ( .A(n305), .B(G10), .Y(n505) );
+  nor31 U505 ( .A(n998), .B(G4), .C(n339), .Y(n509) );
+  inv1 U506 ( .A(n459), .Y(n480) );
+  nand41 U507 ( .A(n344), .B(G2), .C(n276), .D(n517), .Y(n459) );
+  nor21 U508 ( .A(n368), .B(n366), .Y(n517) );
+  inv1 U509 ( .A(n493), .Y(n366) );
+  nor21 U510 ( .A(n306), .B(n326), .Y(n276) );
+  nor21 U511 ( .A(n297), .B(n303), .Y(n344) );
+  inv1 U512 ( .A(n415), .Y(n297) );
+  nor21 U513 ( .A(n305), .B(n451), .Y(n415) );
+  and20 U514 ( .A(n518), .B(n519), .X(n503) );
+  nand41 U515 ( .A(n500), .B(n493), .C(G11), .D(n314), .Y(n519) );
+  o21ai0 U516 ( .A1(n305), .A2(n464), .B1(n468), .Y(n314) );
+  inv1 U517 ( .A(n444), .Y(n468) );
+  nor31 U518 ( .A(n306), .B(G9), .C(n465), .Y(n444) );
+  inv1 U519 ( .A(n427), .Y(n465) );
+  nor21 U520 ( .A(n303), .B(G10), .Y(n427) );
+  inv1 U521 ( .A(G7), .Y(n306) );
+  nor21 U522 ( .A(n293), .B(n308), .Y(n493) );
+  nor21 U523 ( .A(n282), .B(G3), .Y(n500) );
+  nand31 U524 ( .A(n339), .B(n293), .C(n538), .Y(n518) );
+  a21oi1 U525 ( .A1(n333), .A2(G1), .B1(n520), .Y(n502) );
+  a21oi1 U526 ( .A1(n384), .A2(n279), .B1(n376), .Y(n520) );
+  inv1 U527 ( .A(n381), .Y(n384) );
+  nor21 U528 ( .A(n335), .B(n308), .Y(n381) );
+  inv1 U529 ( .A(G1), .Y(n335) );
+  nor21 U530 ( .A(n376), .B(n282), .Y(n333) );
+  inv1 U531 ( .A(G2), .Y(n376) );
+  nor31 U532 ( .A(n521), .B(n279), .C(n522), .Y(n501) );
+  mux2i1 U533 ( .A0(G1), .A1(n280), .S(n282), .Y(n522) );
+  nand21 U534 ( .A(G1), .B(G3), .Y(n280) );
+  o21ai0 U535 ( .A1(G4), .A2(n368), .B1(n283), .Y(n521) );
+  nand21 U536 ( .A(G4), .B(n368), .Y(n283) );
+  inv1 U537 ( .A(n329), .Y(n368) );
+  nor21 U538 ( .A(n282), .B(n339), .Y(n329) );
+  inv1 U539 ( .A(G5), .Y(n282) );
+  inv1 U540 ( .A(n355), .Y(n361) );
+  nor31 U541 ( .A(n457), .B(G13), .C(n321), .Y(n355) );
+  inv1 U542 ( .A(G12), .Y(n321) );
+  nand31 U543 ( .A(n523), .B(n535), .C(n524), .Y(n457) );
+  a222oi1 U544 ( .A1(n450), .A2(n296), .B1(n525), .B2(n287), .C1(n526), .C2(
+        n301), .Y(n524) );
+  nand31 U545 ( .A(G7), .B(n293), .C(n513), .Y(n301) );
+  inv1 U546 ( .A(G6), .Y(n293) );
+  o22ai1 U547 ( .A1(n512), .A2(n527), .B1(G8), .B2(n528), .Y(n526) );
+  inv1 U548 ( .A(n529), .Y(n528) );
+  a21oi1 U549 ( .A1(G8), .A2(n530), .B1(n529), .Y(n527) );
+  nor31 U550 ( .A(G11), .B(G9), .C(G10), .Y(n529) );
+  o21ai0 U551 ( .A1(n451), .A2(n420), .B1(n327), .Y(n530) );
+  inv1 U552 ( .A(n296), .Y(n327) );
+  inv1 U553 ( .A(n295), .Y(n420) );
+  nor21 U554 ( .A(n303), .B(n326), .Y(n295) );
+  inv1 U555 ( .A(G10), .Y(n326) );
+  inv1 U556 ( .A(n375), .Y(n287) );
+  nor21 U557 ( .A(n308), .B(G5), .Y(n375) );
+  mux2i1 U558 ( .A0(n531), .A1(G5), .S(n339), .Y(n525) );
+  inv1 U559 ( .A(G3), .Y(n339) );
+  nand21 U560 ( .A(n279), .B(n308), .Y(n531) );
+  inv1 U561 ( .A(G4), .Y(n308) );
+  inv1 U562 ( .A(G0), .Y(n279) );
+  nor21 U563 ( .A(n451), .B(G9), .Y(n296) );
+  mux2i1 U564 ( .A0(n532), .A1(n533), .S(n451), .Y(n523) );
+  inv1 U565 ( .A(G11), .Y(n451) );
+  a21oi1 U566 ( .A1(n464), .A2(n534), .B1(n305), .Y(n533) );
+  inv1 U567 ( .A(G9), .Y(n305) );
+  or20 U568 ( .A(n411), .B(n512), .X(n534) );
+  inv1 U569 ( .A(n486), .Y(n411) );
+  nor21 U570 ( .A(n303), .B(G7), .Y(n486) );
+  inv1 U571 ( .A(G8), .Y(n303) );
+  nand21 U572 ( .A(n450), .B(G10), .Y(n464) );
+  nor21 U573 ( .A(G8), .B(G7), .Y(n450) );
+  nor21 U574 ( .A(n513), .B(G6), .Y(n532) );
+endmodule
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+module sky130fdschdudpmux2to1 (
+    X ,
+    A0,
+    A1,
+    S
+);
+
+    output X ;
+    input  A0;
+    input  A1;
+    input  S ;
+    assign X = (!S && A0) || (S && A1); 
+    /*table
+     
+         0   0   ?  :  0   ;
+         1   1   ?  :  1   ;
+         0   ?   0  :  0   ;
+         1   ?   0  :  1   ;
+         ?   0   1  :  0   ;
+         ?   1   1  :  1   ;
+    endtable*/
+endmodule
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+module sky130fdschdudpmux2to1N (
+    Y ,
+    A0,
+    A1,
+    S
+);
+
+    output Y ;
+    input  A0;
+    input  A1;
+    input  S ;
+    assign Y = !((!S && A0) || (S && A1)); 
+    /*table
+     
+         0   ?   0  :  1   ;
+         1   ?   0  :  0   ;
+         ?   0   1  :  1   ;
+         ?   1   1  :  0   ;
+         0   0   ?  :  1   ;
+         1   1   ?  :  0   ;
+    endtable*/
+endmodule
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+module sky130fdschdudpmux4to2 (
+    X ,
+    A0,
+    A1,
+    A2,
+    A3,
+    S0,
+    S1
+);
+
+    output X ;
+    input  A0;
+    input  A1;
+    input  A2;
+    input  A3;
+    input  S0;
+    input  S1;
+    assign X = (!S0 && !S1 && A0) || (S0 && !S1 && A1) || (!S0 && S1 && A2) || (S0 && S1 && A3);
+    /*table
+     
+         0   ?   ?   ?   0   0  :  0   ;
+         1   ?   ?   ?   0   0  :  1   ;
+         ?   0   ?   ?   1   0  :  0   ;
+         ?   1   ?   ?   1   0  :  1   ;
+         ?   ?   0   ?   0   1  :  0   ;
+         ?   ?   1   ?   0   1  :  1   ;
+         ?   ?   ?   0   1   1  :  0   ;
+         ?   ?   ?   1   1   1  :  1   ;
+         0   0   0   0   ?   ?  :  0   ;
+         1   1   1   1   ?   ?  :  1   ;
+         0   0   ?   ?   ?   0  :  0   ;
+         1   1   ?   ?   ?   0  :  1   ;
+         ?   ?   0   0   ?   1  :  0   ;
+         ?   ?   1   1   ?   1  :  1   ;
+         0   ?   0   ?   0   ?  :  0   ;
+         1   ?   1   ?   0   ?  :  1   ;
+         ?   0   ?   0   1   ?  :  0   ;
+         ?   1   ?   1   1   ?  :  1   ;
+    endtable*/
+endmodule
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+module sky130fdschdudpdff$NSR (
+    Q    ,
+    SET  ,
+    RESET,
+    CLKN,
+    D
+);
+
+    output Q    ;
+    input  SET  ;
+    input  RESET;
+    input  CLKN;
+    input  D    ;
+
+    reg Q;
+    always @(negedge CLKN)
+    begin
+        if(SET == 1)
+        begin
+            Q<=1;
+        end
+        else if(RESET == 1 )
+        begin
+            Q<=0;
+        end
+        else
+        begin
+            Q<=D;
+        end
+    end
+    /*table
+     
+         0    1     ?    ?  :  ?  :  0    ; 
+         0    *     ?    ?  :  0  :  0    ; 
+         1    ?     ?    ?  :  ?  :  1    ; 
+         *    0     ?    ?  :  1  :  1    ; 
+         0    ?    (01)  0  :  ?  :  0    ; 
+         ?    0    (01)  1  :  ?  :  1    ; 
+         0    ?     p    0  :  0  :  0    ; 
+         ?    0     p    1  :  1  :  1    ; 
+         0    0     n    ?  :  ?  :  -    ; 
+         0    0     ?    *  :  ?  :  -    ; 
+    endtable*/
+endmodule
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+module sky130fdschdudpdff$P (
+    Q  ,
+    D  ,
+    CLK
+);
+
+    output Q  ;
+    input  D  ;
+    input  CLK;
+
+    reg Q;
+    always @(posedge CLK)
+    begin
+       
+      Q<=D;
+ 
+    end
+   /* table
+     
+         1  (01) :  ?  :  1    ; 
+         0  (01) :  ?  :  0    ;
+         1  (x1) :  1  :  1    ; 
+         0  (x1) :  0  :  0    ;
+         1  (0x) :  1  :  1    ;
+         0  (0x) :  0  :  0    ;
+         ?  (1x) :  ?  :  -    ; 
+         ?  (?0) :  ?  :  -    ;
+         *   ?   :  ?  :  -    ; 
+    endtable*/
+endmodule
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+module sky130fdschdudpdff$PS (
+    Q  ,
+    D  ,
+    CLK,
+    SET
+);
+
+    output Q  ;
+    input  D  ;
+    input  CLK;
+    input  SET;
+
+    reg Q;
+    always @(posedge CLK, posedge SET)
+    begin
+        if(SET == 1)
+        begin
+            Q<=1;
+        end
+        else
+        begin
+            Q<=D;
+        end
+    end
+    /*table
+     
+         *   b    0   :  ?  :  -    ; 
+         ?  (?0)  0   :  ?  :  -    ; 
+         ?   b   (?0) :  ?  :  -    ; 
+         ?   ?    1   :  ?  :  1    ; 
+         0   r    0   :  ?  :  0    ; 
+         1   r    ?   :  ?  :  1    ; 
+         0  (x1)  0   :  0  :  0    ; 
+         1  (x1)  ?   :  1  :  1    ; 
+         0   x    0   :  0  :  0    ; 
+         1   x    ?   :  1  :  1    ; 
+         ?   b   (?x) :  1  :  1    ; 
+    endtable*/
+endmodule
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+module sky130fdschdudpdff$PR (
+    Q    ,
+    D    ,
+    CLK  ,
+    RESET
+);
+
+    output Q    ;
+    input  D    ;
+    input  CLK  ;
+    input  RESET;
+
+    reg Q;
+    always @(posedge CLK, posedge RESET)
+    begin
+        if(RESET == 1 )
+        begin
+            Q<=0;
+        end
+        else
+        begin
+            Q<=D;
+        end
+    end
+    /*table
+     
+         *   b     0   :  ?  :  -    ; 
+         ?  (?0)   0   :  ?  :  -    ; 
+         ?   b    (?0) :  ?  :  -    ; 
+         ?   ?     1   :  ?  :  0    ; 
+         0   r     ?   :  ?  :  0    ; 
+         1   r     0   :  ?  :  1    ; 
+         0  (x1)   ?   :  0  :  0    ; 
+         1  (x1)   0   :  1  :  1    ; 
+         0   x     ?   :  0  :  0    ; 
+         1   x     0   :  1  :  1    ; 
+         ?   b    (?x) :  0  :  0    ; 
+    endtable*/
+endmodule
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * dfrtp: Delay flop, inverted reset, single output.
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+
+
+`celldefine
+module dfrtp1 (
+    Q      ,
+    CLK    ,
+    D      ,
+    RESETB
+);
+
+    
+    output Q      ;
+    input  CLK    ;
+    input  D      ;
+    input  RESETB;
+
+    
+    wire bufQ;
+    wire RESET;
+
+    
+    not                                     not0 (RESET , RESETB        );
+    sky130fdschdudpdff$PR 			 dff0 (bufQ , D, CLK, RESET  );
+    buf                                     buf0 (Q     , bufQ          );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * dfrtp: Delay flop, inverted reset, single output.
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+
+
+`celldefine
+module dfrtp2 (
+    Q      ,
+    CLK    ,
+    D      ,
+    RESETB
+);
+
+    
+    output Q      ;
+    input  CLK    ;
+    input  D      ;
+    input  RESETB;
+
+    
+    wire bufQ;
+    wire RESET;
+
+    
+    not                                     not0 (RESET , RESETB        );
+    sky130fdschdudpdff$PR 			 dff0 (bufQ , D, CLK, RESET  );
+    buf                                     buf0 (Q     , bufQ          );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * dfrtp: Delay flop, inverted reset, single output.
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+
+
+`celldefine
+module dfrtp4 (
+    Q      ,
+    CLK    ,
+    D      ,
+    RESETB
+);
+
+    
+    output Q      ;
+    input  CLK    ;
+    input  D      ;
+    input  RESETB;
+
+    
+    wire bufQ;
+    wire RESET;
+
+    
+    not                                     not0 (RESET , RESETB        );
+    sky130fdschdudpdff$PR 			 dff0 (bufQ , D, CLK, RESET  );
+    buf                                     buf0 (Q     , bufQ          );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * edfxtp: Delay flop with loopback enable, non-inverted clock,
+ *         single output.
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+
+
+
+`celldefine
+module edfxtp1 (
+    Q  ,
+    CLK,
+    D  ,
+    DE
+);
+
+    
+    output Q  ;
+    input  CLK;
+    input  D  ;
+    input  DE ;
+
+    
+    wire bufQ  ;
+    wire muxout;
+
+    
+    sky130fdschdudpmux2to1             mux2to10 (muxout, bufQ, D, DE   );
+    sky130fdschdudpdff$P    			 dff0      (bufQ  , muxout, CLK   );
+    buf                                       buf0      (Q      , bufQ          );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * a221oi: 2-input AND into first two inputs of 3-input NOR.
+ *
+ *         Y = !((A1 & A2) | (B1 & B2) | C1)
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+`celldefine
+module a221oi1 (
+    Y ,
+    A1,
+    A2,
+    B1,
+    B2,
+    C1
+);
+
+    
+    output Y ;
+    input  A1;
+    input  A2;
+    input  B1;
+    input  B2;
+    input  C1;
+
+    
+    wire and0out  ;
+    wire and1out  ;
+    wire nor0outY;
+
+    
+    and and0 (and0out  , B1, B2                );
+    and and1 (and1out  , A1, A2                );
+    nor nor0 (nor0outY, and0out, C1, and1out);
+    buf buf0 (Y         , nor0outY            );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * a221oi: 2-input AND into first two inputs of 3-input NOR.
+ *
+ *         Y = !((A1 & A2) | (B1 & B2) | C1)
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+`celldefine
+module a221oi2 (
+    Y ,
+    A1,
+    A2,
+    B1,
+    B2,
+    C1
+);
+
+    
+    output Y ;
+    input  A1;
+    input  A2;
+    input  B1;
+    input  B2;
+    input  C1;
+
+    
+    wire and0out  ;
+    wire and1out  ;
+    wire nor0outY;
+
+    
+    and and0 (and0out  , B1, B2                );
+    and and1 (and1out  , A1, A2                );
+    nor nor0 (nor0outY, and0out, C1, and1out);
+    buf buf0 (Y         , nor0outY            );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * a221oi: 2-input AND into first two inputs of 3-input NOR.
+ *
+ *         Y = !((A1 & A2) | (B1 & B2) | C1)
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+`celldefine
+module a221oi4 (
+    Y ,
+    A1,
+    A2,
+    B1,
+    B2,
+    C1
+);
+
+    
+    output Y ;
+    input  A1;
+    input  A2;
+    input  B1;
+    input  B2;
+    input  C1;
+
+    
+    wire and0out  ;
+    wire and1out  ;
+    wire nor0outY;
+
+    
+    and and0 (and0out  , B1, B2                );
+    and and1 (and1out  , A1, A2                );
+    nor nor0 (nor0outY, and0out, C1, and1out);
+    buf buf0 (Y         , nor0outY            );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * sdfsbp: Scan delay flop, inverted set, non-inverted clock,
+ *         complementary outputs.
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+
+
+
+`celldefine
+module sdfsbp1 (
+    Q    ,
+    QN  ,
+    CLK  ,
+    D    ,
+    SCD  ,
+    SCE  ,
+    SETB
+);
+
+    
+    output Q    ;
+    output QN  ;
+    input  CLK  ;
+    input  D    ;
+    input  SCD  ;
+    input  SCE  ;
+    input  SETB;
+
+    
+    wire bufQ  ;
+    wire SET    ;
+    wire muxout;
+
+    
+    not                                       not0      (SET    , SETB            );
+    sky130fdschdudpmux2to1             mux2to10 (muxout, D, SCD, SCE      );
+    sky130fdschdudpdff$PS   			 dff0      (bufQ  , muxout, CLK, SET);
+    buf                                       buf0      (Q      , bufQ            );
+    not                                       not1      (QN    , bufQ            );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * sdfsbp: Scan delay flop, inverted set, non-inverted clock,
+ *         complementary outputs.
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+
+
+
+`celldefine
+module sdfsbp2 (
+    Q    ,
+    QN  ,
+    CLK  ,
+    D    ,
+    SCD  ,
+    SCE  ,
+    SETB
+);
+
+    
+    output Q    ;
+    output QN  ;
+    input  CLK  ;
+    input  D    ;
+    input  SCD  ;
+    input  SCE  ;
+    input  SETB;
+
+    
+    wire bufQ  ;
+    wire SET    ;
+    wire muxout;
+
+    
+    not                                       not0      (SET    , SETB            );
+    sky130fdschdudpmux2to1             mux2to10 (muxout, D, SCD, SCE      );
+    sky130fdschdudpdff$PS   			 dff0      (bufQ  , muxout, CLK, SET);
+    buf                                       buf0      (Q      , bufQ            );
+    not                                       not1      (QN    , bufQ            );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * nor4: 4-input NOR.
+ *
+ *       Y = !(A | B | C | D)
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+`celldefine
+module nor41 (
+    Y,
+    A,
+    B,
+    C,
+    D
+);
+
+    
+    output Y;
+    input  A;
+    input  B;
+    input  C;
+    input  D;
+
+    
+    wire nor0outY;
+
+    
+    nor nor0 (nor0outY, A, B, C, D     );
+    buf buf0 (Y         , nor0outY     );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * nor4: 4-input NOR.
+ *
+ *       Y = !(A | B | C | D)
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+`celldefine
+module nor42 (
+    Y,
+    A,
+    B,
+    C,
+    D
+);
+
+    
+    output Y;
+    input  A;
+    input  B;
+    input  C;
+    input  D;
+
+    
+    wire nor0outY;
+
+    
+    nor nor0 (nor0outY, A, B, C, D     );
+    buf buf0 (Y         , nor0outY     );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * nor4: 4-input NOR.
+ *
+ *       Y = !(A | B | C | D)
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+`celldefine
+module nor44 (
+    Y,
+    A,
+    B,
+    C,
+    D
+);
+
+    
+    output Y;
+    input  A;
+    input  B;
+    input  C;
+    input  D;
+
+    
+    wire nor0outY;
+
+    
+    nor nor0 (nor0outY, A, B, C, D     );
+    buf buf0 (Y         , nor0outY     );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * sdfxtp: Scan delay flop, non-inverted clock, single output.
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+
+
+
+`celldefine
+module sdfxtp1 (
+    Q  ,
+    CLK,
+    D  ,
+    SCD,
+    SCE
+);
+
+    
+    output Q  ;
+    input  CLK;
+    input  D  ;
+    input  SCD;
+    input  SCE;
+
+    
+    wire bufQ  ;
+    wire muxout;
+
+    
+    sky130fdschdudpmux2to1             mux2to10 (muxout, D, SCD, SCE    );
+    sky130fdschdudpdff$P    			 dff0      (bufQ  , muxout, CLK   );
+    buf                                       buf0      (Q      , bufQ          );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * sdfxtp: Scan delay flop, non-inverted clock, single output.
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+
+
+
+`celldefine
+module sdfxtp2 (
+    Q  ,
+    CLK,
+    D  ,
+    SCD,
+    SCE
+);
+
+    
+    output Q  ;
+    input  CLK;
+    input  D  ;
+    input  SCD;
+    input  SCE;
+
+    
+    wire bufQ  ;
+    wire muxout;
+
+    
+    sky130fdschdudpmux2to1             mux2to10 (muxout, D, SCD, SCE    );
+    sky130fdschdudpdff$P    			 dff0      (bufQ  , muxout, CLK   );
+    buf                                       buf0      (Q      , bufQ          );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * sdfxtp: Scan delay flop, non-inverted clock, single output.
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+
+
+
+`celldefine
+module sdfxtp4 (
+    Q  ,
+    CLK,
+    D  ,
+    SCD,
+    SCE
+);
+
+    
+    output Q  ;
+    input  CLK;
+    input  D  ;
+    input  SCD;
+    input  SCE;
+
+    
+    wire bufQ  ;
+    wire muxout;
+
+    
+    sky130fdschdudpmux2to1             mux2to10 (muxout, D, SCD, SCE    );
+    sky130fdschdudpdff$P    			 dff0      (bufQ  , muxout, CLK   );
+    buf                                       buf0      (Q      , bufQ          );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * o211ai: 2-input OR into first input of 3-input NAND.
+ *
+ *         Y = !((A1 | A2) & B1 & C1)
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+`celldefine
+module o211ai1 (
+    Y ,
+    A1,
+    A2,
+    B1,
+    C1
+);
+
+    
+    output Y ;
+    input  A1;
+    input  A2;
+    input  B1;
+    input  C1;
+
+    
+    wire or0out    ;
+    wire nand0outY;
+
+    
+    or   or0   (or0out    , A2, A1         );
+    nand nand0 (nand0outY, C1, or0out, B1);
+    buf  buf0  (Y          , nand0outY    );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * o211ai: 2-input OR into first input of 3-input NAND.
+ *
+ *         Y = !((A1 | A2) & B1 & C1)
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+`celldefine
+module o211ai2 (
+    Y ,
+    A1,
+    A2,
+    B1,
+    C1
+);
+
+    
+    output Y ;
+    input  A1;
+    input  A2;
+    input  B1;
+    input  C1;
+
+    
+    wire or0out    ;
+    wire nand0outY;
+
+    
+    or   or0   (or0out    , A2, A1         );
+    nand nand0 (nand0outY, C1, or0out, B1);
+    buf  buf0  (Y          , nand0outY    );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * o211ai: 2-input OR into first input of 3-input NAND.
+ *
+ *         Y = !((A1 | A2) & B1 & C1)
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+`celldefine
+module o211ai4 (
+    Y ,
+    A1,
+    A2,
+    B1,
+    C1
+);
+
+    
+    output Y ;
+    input  A1;
+    input  A2;
+    input  B1;
+    input  C1;
+
+    
+    wire or0out    ;
+    wire nand0outY;
+
+    
+    or   or0   (or0out    , A2, A1         );
+    nand nand0 (nand0outY, C1, or0out, B1);
+    buf  buf0  (Y          , nand0outY    );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * or4: 4-input OR.
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+`celldefine
+module or41 (
+    X,
+    A,
+    B,
+    C,
+    D
+);
+
+    
+    output X;
+    input  A;
+    input  B;
+    input  C;
+    input  D;
+
+    
+    wire or0outX;
+
+    
+    or  or0  (or0outX, D, C, B, A     );
+    buf buf0 (X        , or0outX      );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * or4: 4-input OR.
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+`celldefine
+module or42 (
+    X,
+    A,
+    B,
+    C,
+    D
+);
+
+    
+    output X;
+    input  A;
+    input  B;
+    input  C;
+    input  D;
+
+    
+    wire or0outX;
+
+    
+    or  or0  (or0outX, D, C, B, A     );
+    buf buf0 (X        , or0outX      );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * or4: 4-input OR.
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+`celldefine
+module or44 (
+    X,
+    A,
+    B,
+    C,
+    D
+);
+
+    
+    output X;
+    input  A;
+    input  B;
+    input  C;
+    input  D;
+
+    
+    wire or0outX;
+
+    
+    or  or0  (or0outX, D, C, B, A     );
+    buf buf0 (X        , or0outX      );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * buf: Buffer.
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+`celldefine
+module buf1 (
+    X,
+    A
+);
+
+    
+    output X;
+    input  A;
+
+    
+    wire buf0outX;
+
+    
+    buf buf0 (buf0outX, A              );
+    buf buf1 (X         , buf0outX     );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * buf: Buffer.
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+`celldefine
+module buf12 (
+    X,
+    A
+);
+
+    
+    output X;
+    input  A;
+
+    
+    wire buf0outX;
+
+    
+    buf buf0 (buf0outX, A              );
+    buf buf1 (X         , buf0outX     );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * buf: Buffer.
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+`celldefine
+module buf16 (
+    X,
+    A
+);
+
+    
+    output X;
+    input  A;
+
+    
+    wire buf0outX;
+
+    
+    buf buf0 (buf0outX, A              );
+    buf buf1 (X         , buf0outX     );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * buf: Buffer.
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+`celldefine
+module buf2 (
+    X,
+    A
+);
+
+    
+    output X;
+    input  A;
+
+    
+    wire buf0outX;
+
+    
+    buf buf0 (buf0outX, A              );
+    buf buf1 (X         , buf0outX     );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * buf: Buffer.
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+`celldefine
+module buf4 (
+    X,
+    A
+);
+
+    
+    output X;
+    input  A;
+
+    
+    wire buf0outX;
+
+    
+    buf buf0 (buf0outX, A              );
+    buf buf1 (X         , buf0outX     );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * buf: Buffer.
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+`celldefine
+module buf6 (
+    X,
+    A
+);
+
+    
+    output X;
+    input  A;
+
+    
+    wire buf0outX;
+
+    
+    buf buf0 (buf0outX, A              );
+    buf buf1 (X         , buf0outX     );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * buf: Buffer.
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+`celldefine
+module buf8 (
+    X,
+    A
+);
+
+    
+    output X;
+    input  A;
+
+    
+    wire buf0outX;
+
+    
+    buf buf0 (buf0outX, A              );
+    buf buf1 (X         , buf0outX     );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * sdfbbp: Scan delay flop, inverted set, inverted reset, non-inverted
+ *         clock, complementary outputs.
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+
+
+
+`celldefine
+module sdfbbp1 (
+    Q      ,
+    QN    ,
+    D      ,
+    SCD    ,
+    SCE    ,
+    CLK    ,
+    SETB  ,
+    RESETB
+);
+
+    
+    output Q      ;
+    output QN    ;
+    input  D      ;
+    input  SCD    ;
+    input  SCE    ;
+    input  CLK    ;
+    input  SETB  ;
+    input  RESETB;
+
+    
+    wire RESET  ;
+    wire SET    ;
+    wire bufQ  ;
+    wire muxout;
+
+    
+    not                                       not0      (RESET  , RESETB                 );
+    not                                       not1      (SET    , SETB                   );
+    sky130fdschdudpmux2to1             mux2to10 (muxout, D, SCD, SCE             );
+    sky130fdschdudpdff$NSR  			 dff0      (bufQ  , SET, RESET, CLK, muxout);
+    buf                                       buf0      (Q      , bufQ                   );
+    not                                       not2      (QN    , bufQ                   );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * sdfrtp: Scan delay flop, inverted reset, non-inverted clock,
+ *         single output.
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+
+
+
+`celldefine
+module sdfrtp1 (
+    Q      ,
+    CLK    ,
+    D      ,
+    SCD    ,
+    SCE    ,
+    RESETB
+);
+
+    
+    output Q      ;
+    input  CLK    ;
+    input  D      ;
+    input  SCD    ;
+    input  SCE    ;
+    input  RESETB;
+
+    
+    wire bufQ  ;
+    wire RESET  ;
+    wire muxout;
+
+    
+    not                                       not0      (RESET  , RESETB            );
+    sky130fdschdudpmux2to1             mux2to10 (muxout, D, SCD, SCE        );
+    sky130fdschdudpdff$PR   			 dff0      (bufQ  , muxout, CLK, RESET);
+    buf                                       buf0      (Q      , bufQ              );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * sdfrtp: Scan delay flop, inverted reset, non-inverted clock,
+ *         single output.
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+
+
+
+`celldefine
+module sdfrtp2 (
+    Q      ,
+    CLK    ,
+    D      ,
+    SCD    ,
+    SCE    ,
+    RESETB
+);
+
+    
+    output Q      ;
+    input  CLK    ;
+    input  D      ;
+    input  SCD    ;
+    input  SCE    ;
+    input  RESETB;
+
+    
+    wire bufQ  ;
+    wire RESET  ;
+    wire muxout;
+
+    
+    not                                       not0      (RESET  , RESETB            );
+    sky130fdschdudpmux2to1             mux2to10 (muxout, D, SCD, SCE        );
+    sky130fdschdudpdff$PR   			 dff0      (bufQ  , muxout, CLK, RESET);
+    buf                                       buf0      (Q      , bufQ              );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * sdfrtp: Scan delay flop, inverted reset, non-inverted clock,
+ *         single output.
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+
+
+
+`celldefine
+module sdfrtp4 (
+    Q      ,
+    CLK    ,
+    D      ,
+    SCD    ,
+    SCE    ,
+    RESETB
+);
+
+    
+    output Q      ;
+    input  CLK    ;
+    input  D      ;
+    input  SCD    ;
+    input  SCE    ;
+    input  RESETB;
+
+    
+    wire bufQ  ;
+    wire RESET  ;
+    wire muxout;
+
+    
+    not                                       not0      (RESET  , RESETB            );
+    sky130fdschdudpmux2to1             mux2to10 (muxout, D, SCD, SCE        );
+    sky130fdschdudpdff$PR   			 dff0      (bufQ  , muxout, CLK, RESET);
+    buf                                       buf0      (Q      , bufQ              );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * dfrbp: Delay flop, inverted reset, complementary outputs.
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+
+
+`celldefine
+module dfrbp1 (
+    Q      ,
+    QN    ,
+    CLK    ,
+    D      ,
+    RESETB
+);
+
+    
+    output Q      ;
+    output QN    ;
+    input  CLK    ;
+    input  D      ;
+    input  RESETB;
+
+    
+    wire bufQ;
+    wire RESET;
+
+    
+    not                                     not0 (RESET , RESETB        );
+    sky130fdschdudpdff$PR 			 dff0 (bufQ , D, CLK, RESET  );
+    buf                                     buf0 (Q     , bufQ          );
+    not                                     not1 (QN   , bufQ          );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * dfrbp: Delay flop, inverted reset, complementary outputs.
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+
+
+`celldefine
+module dfrbp2 (
+    Q      ,
+    QN    ,
+    CLK    ,
+    D      ,
+    RESETB
+);
+
+    
+    output Q      ;
+    output QN    ;
+    input  CLK    ;
+    input  D      ;
+    input  RESETB;
+
+    
+    wire bufQ;
+    wire RESET;
+
+    
+    not                                     not0 (RESET , RESETB        );
+    sky130fdschdudpdff$PR 			 dff0 (bufQ , D, CLK, RESET  );
+    buf                                     buf0 (Q     , bufQ          );
+    not                                     not1 (QN   , bufQ          );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * a22oi: 2-input AND into both inputs of 2-input NOR.
+ *
+ *        Y = !((A1 & A2) | (B1 & B2))
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+`celldefine
+module a22oi1 (
+    Y ,
+    A1,
+    A2,
+    B1,
+    B2
+);
+
+    
+    output Y ;
+    input  A1;
+    input  A2;
+    input  B1;
+    input  B2;
+
+    
+    wire nand0out ;
+    wire nand1out ;
+    wire and0outY;
+
+    
+    nand nand0 (nand0out , A2, A1              );
+    nand nand1 (nand1out , B2, B1              );
+    and  and0  (and0outY, nand0out, nand1out);
+    buf  buf0  (Y         , and0outY          );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * a22oi: 2-input AND into both inputs of 2-input NOR.
+ *
+ *        Y = !((A1 & A2) | (B1 & B2))
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+`celldefine
+module a22oi2 (
+    Y ,
+    A1,
+    A2,
+    B1,
+    B2
+);
+
+    
+    output Y ;
+    input  A1;
+    input  A2;
+    input  B1;
+    input  B2;
+
+    
+    wire nand0out ;
+    wire nand1out ;
+    wire and0outY;
+
+    
+    nand nand0 (nand0out , A2, A1              );
+    nand nand1 (nand1out , B2, B1              );
+    and  and0  (and0outY, nand0out, nand1out);
+    buf  buf0  (Y         , and0outY          );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * a22oi: 2-input AND into both inputs of 2-input NOR.
+ *
+ *        Y = !((A1 & A2) | (B1 & B2))
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+`celldefine
+module a22oi4 (
+    Y ,
+    A1,
+    A2,
+    B1,
+    B2
+);
+
+    
+    output Y ;
+    input  A1;
+    input  A2;
+    input  B1;
+    input  B2;
+
+    
+    wire nand0out ;
+    wire nand1out ;
+    wire and0outY;
+
+    
+    nand nand0 (nand0out , A2, A1              );
+    nand nand1 (nand1out , B2, B1              );
+    and  and0  (and0outY, nand0out, nand1out);
+    buf  buf0  (Y         , and0outY          );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * or2: 2-input OR.
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+`celldefine
+module or20 (
+    X,
+    A,
+    B
+);
+
+    
+    output X;
+    input  A;
+    input  B;
+
+    
+    wire or0outX;
+
+    
+    or  or0  (or0outX, B, A           );
+    buf buf0 (X        , or0outX      );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * or2: 2-input OR.
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+`celldefine
+module or21 (
+    X,
+    A,
+    B
+);
+
+    
+    output X;
+    input  A;
+    input  B;
+
+    
+    wire or0outX;
+
+    
+    or  or0  (or0outX, B, A           );
+    buf buf0 (X        , or0outX      );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * or2: 2-input OR.
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+`celldefine
+module or22 (
+    X,
+    A,
+    B
+);
+
+    
+    output X;
+    input  A;
+    input  B;
+
+    
+    wire or0outX;
+
+    
+    or  or0  (or0outX, B, A           );
+    buf buf0 (X        , or0outX      );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * or2: 2-input OR.
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+`celldefine
+module or24 (
+    X,
+    A,
+    B
+);
+
+    
+    output X;
+    input  A;
+    input  B;
+
+    
+    wire or0outX;
+
+    
+    or  or0  (or0outX, B, A           );
+    buf buf0 (X        , or0outX      );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * sdfrbp: Scan delay flop, inverted reset, non-inverted clock,
+ *         complementary outputs.
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+
+
+
+`celldefine
+module sdfrbp1 (
+    Q      ,
+    QN    ,
+    CLK    ,
+    D      ,
+    SCD    ,
+    SCE    ,
+    RESETB
+);
+
+    
+    output Q      ;
+    output QN    ;
+    input  CLK    ;
+    input  D      ;
+    input  SCD    ;
+    input  SCE    ;
+    input  RESETB;
+
+    
+    wire bufQ  ;
+    wire RESET  ;
+    wire muxout;
+
+    
+    not                                       not0      (RESET  , RESETB            );
+    sky130fdschdudpmux2to1             mux2to10 (muxout, D, SCD, SCE        );
+    sky130fdschdudpdff$PR   			 dff0      (bufQ  , muxout, CLK, RESET);
+    buf                                       buf0      (Q      , bufQ              );
+    not                                       not1      (QN    , bufQ              );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * sdfrbp: Scan delay flop, inverted reset, non-inverted clock,
+ *         complementary outputs.
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+
+
+
+`celldefine
+module sdfrbp2 (
+    Q      ,
+    QN    ,
+    CLK    ,
+    D      ,
+    SCD    ,
+    SCE    ,
+    RESETB
+);
+
+    
+    output Q      ;
+    output QN    ;
+    input  CLK    ;
+    input  D      ;
+    input  SCD    ;
+    input  SCE    ;
+    input  RESETB;
+
+    
+    wire bufQ  ;
+    wire RESET  ;
+    wire muxout;
+
+    
+    not                                       not0      (RESET  , RESETB            );
+    sky130fdschdudpmux2to1             mux2to10 (muxout, D, SCD, SCE        );
+    sky130fdschdudpdff$PR   			 dff0      (bufQ  , muxout, CLK, RESET);
+    buf                                       buf0      (Q      , bufQ              );
+    not                                       not1      (QN    , bufQ              );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * xnor2: 2-input exclusive NOR.
+ *
+ *        Y = !(A ^ B)
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+`celldefine
+module xnor21 (
+    Y,
+    A,
+    B
+);
+
+    
+    output Y;
+    input  A;
+    input  B;
+
+    
+    wire xnor0outY;
+
+    
+    xnor xnor0 (xnor0outY, A, B           );
+    buf  buf0  (Y          , xnor0outY    );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * xnor2: 2-input exclusive NOR.
+ *
+ *        Y = !(A ^ B)
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+`celldefine
+module xnor22 (
+    Y,
+    A,
+    B
+);
+
+    
+    output Y;
+    input  A;
+    input  B;
+
+    
+    wire xnor0outY;
+
+    
+    xnor xnor0 (xnor0outY, A, B           );
+    buf  buf0  (Y          , xnor0outY    );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * xnor2: 2-input exclusive NOR.
+ *
+ *        Y = !(A ^ B)
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+`celldefine
+module xnor24 (
+    Y,
+    A,
+    B
+);
+
+    
+    output Y;
+    input  A;
+    input  B;
+
+    
+    wire xnor0outY;
+
+    
+    xnor xnor0 (xnor0outY, A, B           );
+    buf  buf0  (Y          , xnor0outY    );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * nand3: 3-input NAND.
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+`celldefine
+module nand31 (
+    Y,
+    A,
+    B,
+    C
+);
+
+    
+    output Y;
+    input  A;
+    input  B;
+    input  C;
+
+    
+    wire nand0outY;
+
+    
+    nand nand0 (nand0outY, B, A, C        );
+    buf  buf0  (Y          , nand0outY    );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * nand3: 3-input NAND.
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+`celldefine
+module nand32 (
+    Y,
+    A,
+    B,
+    C
+);
+
+    
+    output Y;
+    input  A;
+    input  B;
+    input  C;
+
+    
+    wire nand0outY;
+
+    
+    nand nand0 (nand0outY, B, A, C        );
+    buf  buf0  (Y          , nand0outY    );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * nand3: 3-input NAND.
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+`celldefine
+module nand34 (
+    Y,
+    A,
+    B,
+    C
+);
+
+    
+    output Y;
+    input  A;
+    input  B;
+    input  C;
+
+    
+    wire nand0outY;
+
+    
+    nand nand0 (nand0outY, B, A, C        );
+    buf  buf0  (Y          , nand0outY    );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * dfxtp: Delay flop, single output.
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+
+
+`celldefine
+module dfxtp1 (
+    Q  ,
+    CLK,
+    D
+);
+
+    
+    output Q  ;
+    input  CLK;
+    input  D  ;
+
+    
+    wire bufQ;
+
+    
+    sky130fdschdudpdff$P 			 dff0 (bufQ , D, CLK         );
+    buf                                    buf0 (Q     , bufQ          );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * dfxtp: Delay flop, single output.
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+
+
+`celldefine
+module dfxtp2 (
+    Q  ,
+    CLK,
+    D
+);
+
+    
+    output Q  ;
+    input  CLK;
+    input  D  ;
+
+    
+    wire bufQ;
+
+    
+    sky130fdschdudpdff$P 			 dff0 (bufQ , D, CLK         );
+    buf                                    buf0 (Q     , bufQ          );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * dfxtp: Delay flop, single output.
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+
+
+`celldefine
+module dfxtp4 (
+    Q  ,
+    CLK,
+    D
+);
+
+    
+    output Q  ;
+    input  CLK;
+    input  D  ;
+
+    
+    wire bufQ;
+
+    
+    sky130fdschdudpdff$P 			 dff0 (bufQ , D, CLK         );
+    buf                                    buf0 (Q     , bufQ          );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * dfbbp: Delay flop, inverted set, inverted reset,
+ *        complementary outputs.
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+
+
+`celldefine
+module dfbbp1 (
+    Q      ,
+    QN    ,
+    D      ,
+    CLK    ,
+    SETB  ,
+    RESETB
+);
+
+    
+    output Q      ;
+    output QN    ;
+    input  D      ;
+    input  CLK    ;
+    input  SETB  ;
+    input  RESETB;
+
+    
+    wire RESET;
+    wire SET  ;
+    wire bufQ;
+
+    
+    not                                      not0 (RESET , RESETB           );
+    not                                      not1 (SET   , SETB             );
+    sky130fdschdudpdff$NSR 			 dff0 (bufQ , SET, RESET, CLK, D);
+    buf                                      buf0 (Q     , bufQ             );
+    not                                      not2 (QN   , bufQ             );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * dfstp: Delay flop, inverted set, single output.
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+
+
+`celldefine
+module dfstp1 (
+    Q    ,
+    CLK  ,
+    D    ,
+    SETB
+);
+
+    
+    output Q    ;
+    input  CLK  ;
+    input  D    ;
+    input  SETB;
+
+    
+    wire bufQ;
+    wire SET  ;
+
+    
+    not                                     not0 (SET   , SETB          );
+    sky130fdschdudpdff$PS 			 dff0 (bufQ , D, CLK, SET    );
+    buf                                     buf0 (Q     , bufQ          );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * dfstp: Delay flop, inverted set, single output.
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+
+
+`celldefine
+module dfstp2 (
+    Q    ,
+    CLK  ,
+    D    ,
+    SETB
+);
+
+    
+    output Q    ;
+    input  CLK  ;
+    input  D    ;
+    input  SETB;
+
+    
+    wire bufQ;
+    wire SET  ;
+
+    
+    not                                     not0 (SET   , SETB          );
+    sky130fdschdudpdff$PS 			 dff0 (bufQ , D, CLK, SET    );
+    buf                                     buf0 (Q     , bufQ          );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * dfstp: Delay flop, inverted set, single output.
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+
+
+`celldefine
+module dfstp4 (
+    Q    ,
+    CLK  ,
+    D    ,
+    SETB
+);
+
+    
+    output Q    ;
+    input  CLK  ;
+    input  D    ;
+    input  SETB;
+
+    
+    wire bufQ;
+    wire SET  ;
+
+    
+    not                                     not0 (SET   , SETB          );
+    sky130fdschdudpdff$PS 			 dff0 (bufQ , D, CLK, SET    );
+    buf                                     buf0 (Q     , bufQ          );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * dfxbp: Delay flop, complementary outputs.
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+
+
+`celldefine
+module dfxbp1 (
+    Q  ,
+    QN,
+    CLK,
+    D
+);
+
+    
+    output Q  ;
+    output QN;
+    input  CLK;
+    input  D  ;
+
+    
+    wire bufQ;
+
+    
+    sky130fdschdudpdff$P 			 dff0 (bufQ , D, CLK         );
+    buf                                    buf0 (Q     , bufQ          );
+    not                                    not0 (QN   , bufQ          );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * dfxbp: Delay flop, complementary outputs.
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+
+
+`celldefine
+module dfxbp2 (
+    Q  ,
+    QN,
+    CLK,
+    D
+);
+
+    
+    output Q  ;
+    output QN;
+    input  CLK;
+    input  D  ;
+
+    
+    wire bufQ;
+
+    
+    sky130fdschdudpdff$P 			 dff0 (bufQ , D, CLK         );
+    buf                                    buf0 (Q     , bufQ          );
+    not                                    not0 (QN   , bufQ          );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * xor3: 3-input exclusive OR.
+ *
+ *       X = A ^ B ^ C
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+`celldefine
+module xor31 (
+    X,
+    A,
+    B,
+    C
+);
+
+    
+    output X;
+    input  A;
+    input  B;
+    input  C;
+
+    
+    wire xor0outX;
+
+    
+    xor xor0 (xor0outX, A, B, C        );
+    buf buf0 (X         , xor0outX     );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * xor3: 3-input exclusive OR.
+ *
+ *       X = A ^ B ^ C
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+`celldefine
+module xor32 (
+    X,
+    A,
+    B,
+    C
+);
+
+    
+    output X;
+    input  A;
+    input  B;
+    input  C;
+
+    
+    wire xor0outX;
+
+    
+    xor xor0 (xor0outX, A, B, C        );
+    buf buf0 (X         , xor0outX     );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * and3: 3-input AND.
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+`celldefine
+module and31 (
+    X,
+    A,
+    B,
+    C
+);
+
+    
+    output X;
+    input  A;
+    input  B;
+    input  C;
+
+    
+    wire and0outX;
+
+    
+    and and0 (and0outX, C, A, B        );
+    buf buf0 (X         , and0outX     );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * and3: 3-input AND.
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+`celldefine
+module and32 (
+    X,
+    A,
+    B,
+    C
+);
+
+    
+    output X;
+    input  A;
+    input  B;
+    input  C;
+
+    
+    wire and0outX;
+
+    
+    and and0 (and0outX, C, A, B        );
+    buf buf0 (X         , and0outX     );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * and3: 3-input AND.
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+`celldefine
+module and34 (
+    X,
+    A,
+    B,
+    C
+);
+
+    
+    output X;
+    input  A;
+    input  B;
+    input  C;
+
+    
+    wire and0outX;
+
+    
+    and and0 (and0outX, C, A, B        );
+    buf buf0 (X         , and0outX     );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * sdfxbp: Scan delay flop, non-inverted clock, complementary outputs.
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+
+
+
+`celldefine
+module sdfxbp1 (
+    Q  ,
+    QN,
+    CLK,
+    D  ,
+    SCD,
+    SCE
+);
+
+    
+    output Q  ;
+    output QN;
+    input  CLK;
+    input  D  ;
+    input  SCD;
+    input  SCE;
+
+    
+    wire bufQ  ;
+    wire muxout;
+
+    
+    sky130fdschdudpmux2to1             mux2to10 (muxout, D, SCD, SCE    );
+    sky130fdschdudpdff$P    			 dff0      (bufQ  , muxout, CLK   );
+    buf                                       buf0      (Q      , bufQ          );
+    not                                       not0      (QN    , bufQ          );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * sdfxbp: Scan delay flop, non-inverted clock, complementary outputs.
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+
+
+
+`celldefine
+module sdfxbp2 (
+    Q  ,
+    QN,
+    CLK,
+    D  ,
+    SCD,
+    SCE
+);
+
+    
+    output Q  ;
+    output QN;
+    input  CLK;
+    input  D  ;
+    input  SCD;
+    input  SCE;
+
+    
+    wire bufQ  ;
+    wire muxout;
+
+    
+    sky130fdschdudpmux2to1             mux2to10 (muxout, D, SCD, SCE    );
+    sky130fdschdudpdff$P    			 dff0      (bufQ  , muxout, CLK   );
+    buf                                       buf0      (Q      , bufQ          );
+    not                                       not0      (QN    , bufQ          );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * o32ai: 3-input OR and 2-input OR into 2-input NAND.
+ *
+ *        Y = !((A1 | A2 | A3) & (B1 | B2))
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+`celldefine
+module o32ai1 (
+    Y ,
+    A1,
+    A2,
+    A3,
+    B1,
+    B2
+);
+
+    
+    output Y ;
+    input  A1;
+    input  A2;
+    input  A3;
+    input  B1;
+    input  B2;
+
+    
+    wire nor0out ;
+    wire nor1out ;
+    wire or0outY;
+
+    
+    nor nor0 (nor0out , A3, A1, A2        );
+    nor nor1 (nor1out , B1, B2            );
+    or  or0  (or0outY, nor1out, nor0out);
+    buf buf0 (Y        , or0outY         );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * o32ai: 3-input OR and 2-input OR into 2-input NAND.
+ *
+ *        Y = !((A1 | A2 | A3) & (B1 | B2))
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+`celldefine
+module o32ai2 (
+    Y ,
+    A1,
+    A2,
+    A3,
+    B1,
+    B2
+);
+
+    
+    output Y ;
+    input  A1;
+    input  A2;
+    input  A3;
+    input  B1;
+    input  B2;
+
+    
+    wire nor0out ;
+    wire nor1out ;
+    wire or0outY;
+
+    
+    nor nor0 (nor0out , A3, A1, A2        );
+    nor nor1 (nor1out , B1, B2            );
+    or  or0  (or0outY, nor1out, nor0out);
+    buf buf0 (Y        , or0outY         );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * o32ai: 3-input OR and 2-input OR into 2-input NAND.
+ *
+ *        Y = !((A1 | A2 | A3) & (B1 | B2))
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+`celldefine
+module o32ai4 (
+    Y ,
+    A1,
+    A2,
+    A3,
+    B1,
+    B2
+);
+
+    
+    output Y ;
+    input  A1;
+    input  A2;
+    input  A3;
+    input  B1;
+    input  B2;
+
+    
+    wire nor0out ;
+    wire nor1out ;
+    wire or0outY;
+
+    
+    nor nor0 (nor0out , A3, A1, A2        );
+    nor nor1 (nor1out , B1, B2            );
+    or  or0  (or0outY, nor1out, nor0out);
+    buf buf0 (Y        , or0outY         );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * a21oi: 2-input AND into first input of 2-input NOR.
+ *
+ *        Y = !((A1 & A2) | B1)
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+`celldefine
+module a21oi1 (
+    Y ,
+    A1,
+    A2,
+    B1
+);
+
+    
+    output Y ;
+    input  A1;
+    input  A2;
+    input  B1;
+
+    
+    wire and0out  ;
+    wire nor0outY;
+
+    
+    and and0 (and0out  , A1, A2         );
+    nor nor0 (nor0outY, B1, and0out   );
+    buf buf0 (Y         , nor0outY     );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * a21oi: 2-input AND into first input of 2-input NOR.
+ *
+ *        Y = !((A1 & A2) | B1)
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+`celldefine
+module a21oi2 (
+    Y ,
+    A1,
+    A2,
+    B1
+);
+
+    
+    output Y ;
+    input  A1;
+    input  A2;
+    input  B1;
+
+    
+    wire and0out  ;
+    wire nor0outY;
+
+    
+    and and0 (and0out  , A1, A2         );
+    nor nor0 (nor0outY, B1, and0out   );
+    buf buf0 (Y         , nor0outY     );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * a21oi: 2-input AND into first input of 2-input NOR.
+ *
+ *        Y = !((A1 & A2) | B1)
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+`celldefine
+module a21oi4 (
+    Y ,
+    A1,
+    A2,
+    B1
+);
+
+    
+    output Y ;
+    input  A1;
+    input  A2;
+    input  B1;
+
+    
+    wire and0out  ;
+    wire nor0outY;
+
+    
+    and and0 (and0out  , A1, A2         );
+    nor nor0 (nor0outY, B1, and0out   );
+    buf buf0 (Y         , nor0outY     );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * xnor3: 3-input exclusive NOR.
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+`celldefine
+module xnor31 (
+    X,
+    A,
+    B,
+    C
+);
+
+    
+    output X;
+    input  A;
+    input  B;
+    input  C;
+
+    
+    wire xnor0outX;
+
+    
+    xnor xnor0 (xnor0outX, A, B, C        );
+    buf  buf0  (X          , xnor0outX    );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * xnor3: 3-input exclusive NOR.
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+`celldefine
+module xnor32 (
+    X,
+    A,
+    B,
+    C
+);
+
+    
+    output X;
+    input  A;
+    input  B;
+    input  C;
+
+    
+    wire xnor0outX;
+
+    
+    xnor xnor0 (xnor0outX, A, B, C        );
+    buf  buf0  (X          , xnor0outX    );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * xnor3: 3-input exclusive NOR.
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+`celldefine
+module xnor34 (
+    X,
+    A,
+    B,
+    C
+);
+
+    
+    output X;
+    input  A;
+    input  B;
+    input  C;
+
+    
+    wire xnor0outX;
+
+    
+    xnor xnor0 (xnor0outX, A, B, C        );
+    buf  buf0  (X          , xnor0outX    );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * nor2: 2-input NOR.
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+`celldefine
+module nor21 (
+    Y,
+    A,
+    B
+);
+
+    
+    output Y;
+    input  A;
+    input  B;
+
+    
+    wire nor0outY;
+
+    
+    nor nor0 (nor0outY, A, B           );
+    buf buf0 (Y         , nor0outY     );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * nor2: 2-input NOR.
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+`celldefine
+module nor22 (
+    Y,
+    A,
+    B
+);
+
+    
+    output Y;
+    input  A;
+    input  B;
+
+    
+    wire nor0outY;
+
+    
+    nor nor0 (nor0outY, A, B           );
+    buf buf0 (Y         , nor0outY     );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * nor2: 2-input NOR.
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+`celldefine
+module nor24 (
+    Y,
+    A,
+    B
+);
+
+    
+    output Y;
+    input  A;
+    input  B;
+
+    
+    wire nor0outY;
+
+    
+    nor nor0 (nor0outY, A, B           );
+    buf buf0 (Y         , nor0outY     );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * nor2: 2-input NOR.
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+`celldefine
+module nor28 (
+    Y,
+    A,
+    B
+);
+
+    
+    output Y;
+    input  A;
+    input  B;
+
+    
+    wire nor0outY;
+
+    
+    nor nor0 (nor0outY, A, B           );
+    buf buf0 (Y         , nor0outY     );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * bufinv: Buffer followed by inverter.
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+`celldefine
+module bufinv16 (
+    Y,
+    A
+);
+
+    
+    output Y;
+    input  A;
+
+    
+    wire not0outY;
+
+    
+    not not0 (not0outY, A              );
+    buf buf0 (Y         , not0outY     );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * bufinv: Buffer followed by inverter.
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+`celldefine
+module bufinv8 (
+    Y,
+    A
+);
+
+    
+    output Y;
+    input  A;
+
+    
+    wire not0outY;
+
+    
+    not not0 (not0outY, A              );
+    buf buf0 (Y         , not0outY     );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * bufbuf: Double buffer.
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+`celldefine
+module bufbuf16 (
+    X,
+    A
+);
+
+    
+    output X;
+    input  A;
+
+    
+    wire buf0outX;
+
+    
+    buf buf0 (buf0outX, A              );
+    buf buf1 (X         , buf0outX     );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * bufbuf: Double buffer.
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+`celldefine
+module bufbuf8 (
+    X,
+    A
+);
+
+    
+    output X;
+    input  A;
+
+    
+    wire buf0outX;
+
+    
+    buf buf0 (buf0outX, A              );
+    buf buf1 (X         , buf0outX     );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * a211oi: 2-input AND into first input of 3-input NOR.
+ *
+ *         Y = !((A1 & A2) | B1 | C1)
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+`celldefine
+module a211oi1 (
+    Y ,
+    A1,
+    A2,
+    B1,
+    C1
+);
+
+    
+    output Y ;
+    input  A1;
+    input  A2;
+    input  B1;
+    input  C1;
+
+    
+    wire and0out  ;
+    wire nor0outY;
+
+    
+    and and0 (and0out  , A1, A2          );
+    nor nor0 (nor0outY, and0out, B1, C1);
+    buf buf0 (Y         , nor0outY      );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * a211oi: 2-input AND into first input of 3-input NOR.
+ *
+ *         Y = !((A1 & A2) | B1 | C1)
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+`celldefine
+module a211oi2 (
+    Y ,
+    A1,
+    A2,
+    B1,
+    C1
+);
+
+    
+    output Y ;
+    input  A1;
+    input  A2;
+    input  B1;
+    input  C1;
+
+    
+    wire and0out  ;
+    wire nor0outY;
+
+    
+    and and0 (and0out  , A1, A2          );
+    nor nor0 (nor0outY, and0out, B1, C1);
+    buf buf0 (Y         , nor0outY      );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * a211oi: 2-input AND into first input of 3-input NOR.
+ *
+ *         Y = !((A1 & A2) | B1 | C1)
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+`celldefine
+module a211oi4 (
+    Y ,
+    A1,
+    A2,
+    B1,
+    C1
+);
+
+    
+    output Y ;
+    input  A1;
+    input  A2;
+    input  B1;
+    input  C1;
+
+    
+    wire and0out  ;
+    wire nor0outY;
+
+    
+    and and0 (and0out  , A1, A2          );
+    nor nor0 (nor0outY, and0out, B1, C1);
+    buf buf0 (Y         , nor0outY      );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * o221ai: 2-input OR into first two inputs of 3-input NAND.
+ *
+ *         Y = !((A1 | A2) & (B1 | B2) & C1)
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+`celldefine
+module o221ai1 (
+    Y ,
+    A1,
+    A2,
+    B1,
+    B2,
+    C1
+);
+
+    
+    output Y ;
+    input  A1;
+    input  A2;
+    input  B1;
+    input  B2;
+    input  C1;
+
+    
+    wire or0out    ;
+    wire or1out    ;
+    wire nand0outY;
+
+    
+    or   or0   (or0out    , B2, B1              );
+    or   or1   (or1out    , A2, A1              );
+    nand nand0 (nand0outY, or1out, or0out, C1);
+    buf  buf0  (Y          , nand0outY         );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * o221ai: 2-input OR into first two inputs of 3-input NAND.
+ *
+ *         Y = !((A1 | A2) & (B1 | B2) & C1)
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+`celldefine
+module o221ai2 (
+    Y ,
+    A1,
+    A2,
+    B1,
+    B2,
+    C1
+);
+
+    
+    output Y ;
+    input  A1;
+    input  A2;
+    input  B1;
+    input  B2;
+    input  C1;
+
+    
+    wire or0out    ;
+    wire or1out    ;
+    wire nand0outY;
+
+    
+    or   or0   (or0out    , B2, B1              );
+    or   or1   (or1out    , A2, A1              );
+    nand nand0 (nand0outY, or1out, or0out, C1);
+    buf  buf0  (Y          , nand0outY         );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * o221ai: 2-input OR into first two inputs of 3-input NAND.
+ *
+ *         Y = !((A1 | A2) & (B1 | B2) & C1)
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+`celldefine
+module o221ai4 (
+    Y ,
+    A1,
+    A2,
+    B1,
+    B2,
+    C1
+);
+
+    
+    output Y ;
+    input  A1;
+    input  A2;
+    input  B1;
+    input  B2;
+    input  C1;
+
+    
+    wire or0out    ;
+    wire or1out    ;
+    wire nand0outY;
+
+    
+    or   or0   (or0out    , B2, B1              );
+    or   or1   (or1out    , A2, A1              );
+    nand nand0 (nand0outY, or1out, or0out, C1);
+    buf  buf0  (Y          , nand0outY         );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * o22ai: 2-input OR into both inputs of 2-input NAND.
+ *
+ *        Y = !((A1 | A2) & (B1 | B2))
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+`celldefine
+module o22ai1 (
+    Y ,
+    A1,
+    A2,
+    B1,
+    B2
+);
+
+    
+    output Y ;
+    input  A1;
+    input  A2;
+    input  B1;
+    input  B2;
+
+    
+    wire nor0out ;
+    wire nor1out ;
+    wire or0outY;
+
+    
+    nor nor0 (nor0out , B1, B2            );
+    nor nor1 (nor1out , A1, A2            );
+    or  or0  (or0outY, nor1out, nor0out);
+    buf buf0 (Y        , or0outY         );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * o22ai: 2-input OR into both inputs of 2-input NAND.
+ *
+ *        Y = !((A1 | A2) & (B1 | B2))
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+`celldefine
+module o22ai2 (
+    Y ,
+    A1,
+    A2,
+    B1,
+    B2
+);
+
+    
+    output Y ;
+    input  A1;
+    input  A2;
+    input  B1;
+    input  B2;
+
+    
+    wire nor0out ;
+    wire nor1out ;
+    wire or0outY;
+
+    
+    nor nor0 (nor0out , B1, B2            );
+    nor nor1 (nor1out , A1, A2            );
+    or  or0  (or0outY, nor1out, nor0out);
+    buf buf0 (Y        , or0outY         );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * o22ai: 2-input OR into both inputs of 2-input NAND.
+ *
+ *        Y = !((A1 | A2) & (B1 | B2))
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+`celldefine
+module o22ai4 (
+    Y ,
+    A1,
+    A2,
+    B1,
+    B2
+);
+
+    
+    output Y ;
+    input  A1;
+    input  A2;
+    input  B1;
+    input  B2;
+
+    
+    wire nor0out ;
+    wire nor1out ;
+    wire or0outY;
+
+    
+    nor nor0 (nor0out , B1, B2            );
+    nor nor1 (nor1out , A1, A2            );
+    or  or0  (or0outY, nor1out, nor0out);
+    buf buf0 (Y        , or0outY         );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * a222oi: 2-input AND into all inputs of 3-input NOR.
+ *
+ *         Y = !((A1 & A2) | (B1 & B2) | (C1 & C2))
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+`celldefine
+module a222oi1 (
+    Y ,
+    A1,
+    A2,
+    B1,
+    B2,
+    C1,
+    C2
+);
+
+    
+    output Y ;
+    input  A1;
+    input  A2;
+    input  B1;
+    input  B2;
+    input  C1;
+    input  C2;
+
+    
+    wire nand0out ;
+    wire nand1out ;
+    wire nand2out ;
+    wire and0outY;
+
+    
+    nand nand0 (nand0out , A2, A1                         );
+    nand nand1 (nand1out , B2, B1                         );
+    nand nand2 (nand2out , C2, C1                         );
+    and  and0  (and0outY, nand0out, nand1out, nand2out);
+    buf  buf0  (Y         , and0outY                     );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * nand2: 2-input NAND.
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+`celldefine
+module nand21 (
+    Y,
+    A,
+    B
+);
+
+    
+    output Y;
+    input  A;
+    input  B;
+
+    
+    wire nand0outY;
+
+    
+    nand nand0 (nand0outY, B, A           );
+    buf  buf0  (Y          , nand0outY    );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * nand2: 2-input NAND.
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+`celldefine
+module nand22 (
+    Y,
+    A,
+    B
+);
+
+    
+    output Y;
+    input  A;
+    input  B;
+
+    
+    wire nand0outY;
+
+    
+    nand nand0 (nand0outY, B, A           );
+    buf  buf0  (Y          , nand0outY    );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * nand2: 2-input NAND.
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+`celldefine
+module nand24 (
+    Y,
+    A,
+    B
+);
+
+    
+    output Y;
+    input  A;
+    input  B;
+
+    
+    wire nand0outY;
+
+    
+    nand nand0 (nand0outY, B, A           );
+    buf  buf0  (Y          , nand0outY    );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * nand2: 2-input NAND.
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+`celldefine
+module nand28 (
+    Y,
+    A,
+    B
+);
+
+    
+    output Y;
+    input  A;
+    input  B;
+
+    
+    wire nand0outY;
+
+    
+    nand nand0 (nand0outY, B, A           );
+    buf  buf0  (Y          , nand0outY    );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * sedfxbp: Scan delay flop, data enable, non-inverted clock,
+ *          complementary outputs.
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+
+
+
+`celldefine
+module sedfxbp1 (
+    Q  ,
+    QN,
+    CLK,
+    D  ,
+    DE ,
+    SCD,
+    SCE
+);
+
+    
+    output Q  ;
+    output QN;
+    input  CLK;
+    input  D  ;
+    input  DE ;
+    input  SCD;
+    input  SCE;
+
+    
+    wire bufQ  ;
+    wire muxout;
+    wire ded   ;
+
+    
+    sky130fdschdudpmux2to1             mux2to10 (muxout, ded, SCD, SCE );
+    sky130fdschdudpmux2to1             mux2to11 (ded   , bufQ, D, DE   );
+    sky130fdschdudpdff$P    			 dff0      (bufQ  , muxout, CLK   );
+    buf                                       buf0      (Q      , bufQ          );
+    not                                       not0      (QN    , bufQ          );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * sedfxbp: Scan delay flop, data enable, non-inverted clock,
+ *          complementary outputs.
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+
+
+
+`celldefine
+module sedfxbp2 (
+    Q  ,
+    QN,
+    CLK,
+    D  ,
+    DE ,
+    SCD,
+    SCE
+);
+
+    
+    output Q  ;
+    output QN;
+    input  CLK;
+    input  D  ;
+    input  DE ;
+    input  SCD;
+    input  SCE;
+
+    
+    wire bufQ  ;
+    wire muxout;
+    wire ded   ;
+
+    
+    sky130fdschdudpmux2to1             mux2to10 (muxout, ded, SCD, SCE );
+    sky130fdschdudpmux2to1             mux2to11 (ded   , bufQ, D, DE   );
+    sky130fdschdudpdff$P    			 dff0      (bufQ  , muxout, CLK   );
+    buf                                       buf0      (Q      , bufQ          );
+    not                                       not0      (QN    , bufQ          );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * mux4: 4-input multiplexer.
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+
+
+`celldefine
+module mux41 (
+    X ,
+    A0,
+    A1,
+    A2,
+    A3,
+    S0,
+    S1
+);
+
+    
+    output X ;
+    input  A0;
+    input  A1;
+    input  A2;
+    input  A3;
+    input  S0;
+    input  S1;
+
+    
+    wire mux4to20outX;
+
+    
+    sky130fdschdudpmux4to2 mux4to20 (mux4to20outX, A0, A1, A2, A3, S0, S1);
+    buf                           buf0      (X              , mux4to20outX       );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * mux4: 4-input multiplexer.
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+
+
+`celldefine
+module mux42 (
+    X ,
+    A0,
+    A1,
+    A2,
+    A3,
+    S0,
+    S1
+);
+
+    
+    output X ;
+    input  A0;
+    input  A1;
+    input  A2;
+    input  A3;
+    input  S0;
+    input  S1;
+
+    
+    wire mux4to20outX;
+
+    
+    sky130fdschdudpmux4to2 mux4to20 (mux4to20outX, A0, A1, A2, A3, S0, S1);
+    buf                           buf0      (X              , mux4to20outX       );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * mux4: 4-input multiplexer.
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+
+
+`celldefine
+module mux44 (
+    X ,
+    A0,
+    A1,
+    A2,
+    A3,
+    S0,
+    S1
+);
+
+    
+    output X ;
+    input  A0;
+    input  A1;
+    input  A2;
+    input  A3;
+    input  S0;
+    input  S1;
+
+    
+    wire mux4to20outX;
+
+    
+    sky130fdschdudpmux4to2 mux4to20 (mux4to20outX, A0, A1, A2, A3, S0, S1);
+    buf                           buf0      (X              , mux4to20outX       );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * and4: 4-input AND.
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+`celldefine
+module and41 (
+    X,
+    A,
+    B,
+    C,
+    D
+);
+
+    
+    output X;
+    input  A;
+    input  B;
+    input  C;
+    input  D;
+
+    
+    wire and0outX;
+
+    
+    and and0 (and0outX, A, B, C, D     );
+    buf buf0 (X         , and0outX     );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * and4: 4-input AND.
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+`celldefine
+module and42 (
+    X,
+    A,
+    B,
+    C,
+    D
+);
+
+    
+    output X;
+    input  A;
+    input  B;
+    input  C;
+    input  D;
+
+    
+    wire and0outX;
+
+    
+    and and0 (and0outX, A, B, C, D     );
+    buf buf0 (X         , and0outX     );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * and4: 4-input AND.
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+`celldefine
+module and44 (
+    X,
+    A,
+    B,
+    C,
+    D
+);
+
+    
+    output X;
+    input  A;
+    input  B;
+    input  C;
+    input  D;
+
+    
+    wire and0outX;
+
+    
+    and and0 (and0outX, A, B, C, D     );
+    buf buf0 (X         , and0outX     );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * sedfxtp: Scan delay flop, data enable, non-inverted clock,
+ *          single output.
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+
+
+
+`celldefine
+module sedfxtp1 (
+    Q  ,
+    CLK,
+    D  ,
+    DE ,
+    SCD,
+    SCE
+);
+
+    
+    output Q  ;
+    input  CLK;
+    input  D  ;
+    input  DE ;
+    input  SCD;
+    input  SCE;
+
+    
+    wire bufQ  ;
+    wire muxout;
+    wire ded   ;
+
+    
+    sky130fdschdudpmux2to1             mux2to10 (muxout, ded, SCD, SCE );
+    sky130fdschdudpmux2to1             mux2to11 (ded   , bufQ, D, DE   );
+    sky130fdschdudpdff$P    			 dff0      (bufQ  , muxout, CLK   );
+    buf                                       buf0      (Q      , bufQ          );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * sedfxtp: Scan delay flop, data enable, non-inverted clock,
+ *          single output.
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+
+
+
+`celldefine
+module sedfxtp2 (
+    Q  ,
+    CLK,
+    D  ,
+    DE ,
+    SCD,
+    SCE
+);
+
+    
+    output Q  ;
+    input  CLK;
+    input  D  ;
+    input  DE ;
+    input  SCD;
+    input  SCE;
+
+    
+    wire bufQ  ;
+    wire muxout;
+    wire ded   ;
+
+    
+    sky130fdschdudpmux2to1             mux2to10 (muxout, ded, SCD, SCE );
+    sky130fdschdudpmux2to1             mux2to11 (ded   , bufQ, D, DE   );
+    sky130fdschdudpdff$P    			 dff0      (bufQ  , muxout, CLK   );
+    buf                                       buf0      (Q      , bufQ          );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * sedfxtp: Scan delay flop, data enable, non-inverted clock,
+ *          single output.
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+
+
+
+`celldefine
+module sedfxtp4 (
+    Q  ,
+    CLK,
+    D  ,
+    DE ,
+    SCD,
+    SCE
+);
+
+    
+    output Q  ;
+    input  CLK;
+    input  D  ;
+    input  DE ;
+    input  SCD;
+    input  SCE;
+
+    
+    wire bufQ  ;
+    wire muxout;
+    wire ded   ;
+
+    
+    sky130fdschdudpmux2to1             mux2to10 (muxout, ded, SCD, SCE );
+    sky130fdschdudpmux2to1             mux2to11 (ded   , bufQ, D, DE   );
+    sky130fdschdudpdff$P    			 dff0      (bufQ  , muxout, CLK   );
+    buf                                       buf0      (Q      , bufQ          );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * inv: Inverter.
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+`celldefine
+module inv1 (
+    Y,
+    A
+);
+
+    
+    output Y;
+    input  A;
+
+    
+    wire not0outY;
+
+    
+    not not0 (not0outY, A              );
+    buf buf0 (Y         , not0outY     );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * inv: Inverter.
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+`celldefine
+module inv12 (
+    Y,
+    A
+);
+
+    
+    output Y;
+    input  A;
+
+    
+    wire not0outY;
+
+    
+    not not0 (not0outY, A              );
+    buf buf0 (Y         , not0outY     );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * inv: Inverter.
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+`celldefine
+module inv16 (
+    Y,
+    A
+);
+
+    
+    output Y;
+    input  A;
+
+    
+    wire not0outY;
+
+    
+    not not0 (not0outY, A              );
+    buf buf0 (Y         , not0outY     );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * inv: Inverter.
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+`celldefine
+module inv2 (
+    Y,
+    A
+);
+
+    
+    output Y;
+    input  A;
+
+    
+    wire not0outY;
+
+    
+    not not0 (not0outY, A              );
+    buf buf0 (Y         , not0outY     );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * inv: Inverter.
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+`celldefine
+module inv4 (
+    Y,
+    A
+);
+
+    
+    output Y;
+    input  A;
+
+    
+    wire not0outY;
+
+    
+    not not0 (not0outY, A              );
+    buf buf0 (Y         , not0outY     );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * inv: Inverter.
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+`celldefine
+module inv6 (
+    Y,
+    A
+);
+
+    
+    output Y;
+    input  A;
+
+    
+    wire not0outY;
+
+    
+    not not0 (not0outY, A              );
+    buf buf0 (Y         , not0outY     );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * inv: Inverter.
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+`celldefine
+module inv8 (
+    Y,
+    A
+);
+
+    
+    output Y;
+    input  A;
+
+    
+    wire not0outY;
+
+    
+    not not0 (not0outY, A              );
+    buf buf0 (Y         , not0outY     );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * and2: 2-input AND.
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+`celldefine
+module and20 (
+    X,
+    A,
+    B
+);
+
+    
+    output X;
+    input  A;
+    input  B;
+
+    
+    wire and0outX;
+
+    
+    and and0 (and0outX, A, B           );
+    buf buf0 (X         , and0outX     );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * and2: 2-input AND.
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+`celldefine
+module and21 (
+    X,
+    A,
+    B
+);
+
+    
+    output X;
+    input  A;
+    input  B;
+
+    
+    wire and0outX;
+
+    
+    and and0 (and0outX, A, B           );
+    buf buf0 (X         , and0outX     );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * and2: 2-input AND.
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+`celldefine
+module and22 (
+    X,
+    A,
+    B
+);
+
+    
+    output X;
+    input  A;
+    input  B;
+
+    
+    wire and0outX;
+
+    
+    and and0 (and0outX, A, B           );
+    buf buf0 (X         , and0outX     );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * and2: 2-input AND.
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+`celldefine
+module and24 (
+    X,
+    A,
+    B
+);
+
+    
+    output X;
+    input  A;
+    input  B;
+
+    
+    wire and0outX;
+
+    
+    and and0 (and0outX, A, B           );
+    buf buf0 (X         , and0outX     );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * sdfstp: Scan delay flop, inverted set, non-inverted clock,
+ *         single output.
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+
+
+
+`celldefine
+module sdfstp1 (
+    Q    ,
+    CLK  ,
+    D    ,
+    SCD  ,
+    SCE  ,
+    SETB
+);
+
+    
+    output Q    ;
+    input  CLK  ;
+    input  D    ;
+    input  SCD  ;
+    input  SCE  ;
+    input  SETB;
+
+    
+    wire bufQ  ;
+    wire SET    ;
+    wire muxout;
+
+    
+    not                                       not0      (SET    , SETB            );
+    sky130fdschdudpmux2to1             mux2to10 (muxout, D, SCD, SCE      );
+    sky130fdschdudpdff$PS   			 dff0      (bufQ  , muxout, CLK, SET);
+    buf                                       buf0      (Q      , bufQ            );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * sdfstp: Scan delay flop, inverted set, non-inverted clock,
+ *         single output.
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+
+
+
+`celldefine
+module sdfstp2 (
+    Q    ,
+    CLK  ,
+    D    ,
+    SCD  ,
+    SCE  ,
+    SETB
+);
+
+    
+    output Q    ;
+    input  CLK  ;
+    input  D    ;
+    input  SCD  ;
+    input  SCE  ;
+    input  SETB;
+
+    
+    wire bufQ  ;
+    wire SET    ;
+    wire muxout;
+
+    
+    not                                       not0      (SET    , SETB            );
+    sky130fdschdudpmux2to1             mux2to10 (muxout, D, SCD, SCE      );
+    sky130fdschdudpdff$PS   			 dff0      (bufQ  , muxout, CLK, SET);
+    buf                                       buf0      (Q      , bufQ            );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * sdfstp: Scan delay flop, inverted set, non-inverted clock,
+ *         single output.
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+
+
+
+`celldefine
+module sdfstp4 (
+    Q    ,
+    CLK  ,
+    D    ,
+    SCD  ,
+    SCE  ,
+    SETB
+);
+
+    
+    output Q    ;
+    input  CLK  ;
+    input  D    ;
+    input  SCD  ;
+    input  SCE  ;
+    input  SETB;
+
+    
+    wire bufQ  ;
+    wire SET    ;
+    wire muxout;
+
+    
+    not                                       not0      (SET    , SETB            );
+    sky130fdschdudpmux2to1             mux2to10 (muxout, D, SCD, SCE      );
+    sky130fdschdudpdff$PS   			 dff0      (bufQ  , muxout, CLK, SET);
+    buf                                       buf0      (Q      , bufQ            );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * dfsbp: Delay flop, inverted set, complementary outputs.
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+
+
+`celldefine
+module dfsbp1 (
+    Q    ,
+    QN  ,
+    CLK  ,
+    D    ,
+    SETB
+);
+
+    
+    output Q    ;
+    output QN  ;
+    input  CLK  ;
+    input  D    ;
+    input  SETB;
+
+    
+    wire bufQ;
+    wire SET  ;
+
+    
+    not                                     not0 (SET   , SETB          );
+    sky130fdschdudpdff$PS 			 dff0 (bufQ , D, CLK, SET    );
+    buf                                     buf0 (Q     , bufQ          );
+    not                                     not1 (QN   , bufQ          );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * dfsbp: Delay flop, inverted set, complementary outputs.
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+
+
+`celldefine
+module dfsbp2 (
+    Q    ,
+    QN  ,
+    CLK  ,
+    D    ,
+    SETB
+);
+
+    
+    output Q    ;
+    output QN  ;
+    input  CLK  ;
+    input  D    ;
+    input  SETB;
+
+    
+    wire bufQ;
+    wire SET  ;
+
+    
+    not                                     not0 (SET   , SETB          );
+    sky130fdschdudpdff$PS 			 dff0 (bufQ , D, CLK, SET    );
+    buf                                     buf0 (Q     , bufQ          );
+    not                                     not1 (QN   , bufQ          );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * xor2: 2-input exclusive OR.
+ *
+ *       X = A ^ B
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+`celldefine
+module xor21 (
+    X,
+    A,
+    B
+);
+
+    
+    output X;
+    input  A;
+    input  B;
+
+    
+    wire xor0outX;
+
+    
+    xor xor0 (xor0outX, B, A           );
+    buf buf0 (X         , xor0outX     );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * xor2: 2-input exclusive OR.
+ *
+ *       X = A ^ B
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+`celldefine
+module xor22 (
+    X,
+    A,
+    B
+);
+
+    
+    output X;
+    input  A;
+    input  B;
+
+    
+    wire xor0outX;
+
+    
+    xor xor0 (xor0outX, B, A           );
+    buf buf0 (X         , xor0outX     );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * xor2: 2-input exclusive OR.
+ *
+ *       X = A ^ B
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+`celldefine
+module xor24 (
+    X,
+    A,
+    B
+);
+
+    
+    output X;
+    input  A;
+    input  B;
+
+    
+    wire xor0outX;
+
+    
+    xor xor0 (xor0outX, B, A           );
+    buf buf0 (X         , xor0outX     );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * nor3: 3-input NOR.
+ *
+ *       Y = !(A | B | C | !D)
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+`celldefine
+module nor31 (
+    Y,
+    A,
+    B,
+    C
+);
+
+    
+    output Y;
+    input  A;
+    input  B;
+    input  C;
+
+    
+    wire nor0outY;
+
+    
+    nor nor0 (nor0outY, C, A, B        );
+    buf buf0 (Y         , nor0outY     );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * nor3: 3-input NOR.
+ *
+ *       Y = !(A | B | C | !D)
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+`celldefine
+module nor32 (
+    Y,
+    A,
+    B,
+    C
+);
+
+    
+    output Y;
+    input  A;
+    input  B;
+    input  C;
+
+    
+    wire nor0outY;
+
+    
+    nor nor0 (nor0outY, C, A, B        );
+    buf buf0 (Y         , nor0outY     );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * nor3: 3-input NOR.
+ *
+ *       Y = !(A | B | C | !D)
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+`celldefine
+module nor34 (
+    Y,
+    A,
+    B,
+    C
+);
+
+    
+    output Y;
+    input  A;
+    input  B;
+    input  C;
+
+    
+    wire nor0outY;
+
+    
+    nor nor0 (nor0outY, C, A, B        );
+    buf buf0 (Y         , nor0outY     );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * mux2: 2-input multiplexer.
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+
+
+`celldefine
+module mux21 (
+    X ,
+    A0,
+    A1,
+    S
+);
+
+    
+    output X ;
+    input  A0;
+    input  A1;
+    input  S ;
+
+    
+    wire mux2to10outX;
+
+    
+    sky130fdschdudpmux2to1 mux2to10 (mux2to10outX, A0, A1, S      );
+    buf                           buf0      (X              , mux2to10outX);
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * mux2: 2-input multiplexer.
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+
+
+`celldefine
+module mux22 (
+    X ,
+    A0,
+    A1,
+    S
+);
+
+    
+    output X ;
+    input  A0;
+    input  A1;
+    input  S ;
+
+    
+    wire mux2to10outX;
+
+    
+    sky130fdschdudpmux2to1 mux2to10 (mux2to10outX, A0, A1, S      );
+    buf                           buf0      (X              , mux2to10outX);
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * mux2: 2-input multiplexer.
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+
+
+`celldefine
+module mux24 (
+    X ,
+    A0,
+    A1,
+    S
+);
+
+    
+    output X ;
+    input  A0;
+    input  A1;
+    input  S ;
+
+    
+    wire mux2to10outX;
+
+    
+    sky130fdschdudpmux2to1 mux2to10 (mux2to10outX, A0, A1, S      );
+    buf                           buf0      (X              , mux2to10outX);
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * mux2: 2-input multiplexer.
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+
+
+`celldefine
+module mux28 (
+    X ,
+    A0,
+    A1,
+    S
+);
+
+    
+    output X ;
+    input  A0;
+    input  A1;
+    input  S ;
+
+    
+    wire mux2to10outX;
+
+    
+    sky130fdschdudpmux2to1 mux2to10 (mux2to10outX, A0, A1, S      );
+    buf                           buf0      (X              , mux2to10outX);
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * o21ai: 2-input OR into first input of 2-input NAND.
+ *
+ *        Y = !((A1 | A2) & B1)
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+`celldefine
+module o21ai0 (
+    Y ,
+    A1,
+    A2,
+    B1
+);
+
+    
+    output Y ;
+    input  A1;
+    input  A2;
+    input  B1;
+
+    
+    wire or0out    ;
+    wire nand0outY;
+
+    
+    or   or0   (or0out    , A2, A1         );
+    nand nand0 (nand0outY, B1, or0out    );
+    buf  buf0  (Y          , nand0outY    );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * o21ai: 2-input OR into first input of 2-input NAND.
+ *
+ *        Y = !((A1 | A2) & B1)
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+`celldefine
+module o21ai1 (
+    Y ,
+    A1,
+    A2,
+    B1
+);
+
+    
+    output Y ;
+    input  A1;
+    input  A2;
+    input  B1;
+
+    
+    wire or0out    ;
+    wire nand0outY;
+
+    
+    or   or0   (or0out    , A2, A1         );
+    nand nand0 (nand0outY, B1, or0out    );
+    buf  buf0  (Y          , nand0outY    );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * o21ai: 2-input OR into first input of 2-input NAND.
+ *
+ *        Y = !((A1 | A2) & B1)
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+`celldefine
+module o21ai2 (
+    Y ,
+    A1,
+    A2,
+    B1
+);
+
+    
+    output Y ;
+    input  A1;
+    input  A2;
+    input  B1;
+
+    
+    wire or0out    ;
+    wire nand0outY;
+
+    
+    or   or0   (or0out    , A2, A1         );
+    nand nand0 (nand0outY, B1, or0out    );
+    buf  buf0  (Y          , nand0outY    );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * o21ai: 2-input OR into first input of 2-input NAND.
+ *
+ *        Y = !((A1 | A2) & B1)
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+`celldefine
+module o21ai4 (
+    Y ,
+    A1,
+    A2,
+    B1
+);
+
+    
+    output Y ;
+    input  A1;
+    input  A2;
+    input  B1;
+
+    
+    wire or0out    ;
+    wire nand0outY;
+
+    
+    or   or0   (or0out    , A2, A1         );
+    nand nand0 (nand0outY, B1, or0out    );
+    buf  buf0  (Y          , nand0outY    );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * or3: 3-input OR.
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+`celldefine
+module or31 (
+    X,
+    A,
+    B,
+    C
+);
+
+    
+    output X;
+    input  A;
+    input  B;
+    input  C;
+
+    
+    wire or0outX;
+
+    
+    or  or0  (or0outX, B, A, C        );
+    buf buf0 (X        , or0outX      );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * or3: 3-input OR.
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+`celldefine
+module or32 (
+    X,
+    A,
+    B,
+    C
+);
+
+    
+    output X;
+    input  A;
+    input  B;
+    input  C;
+
+    
+    wire or0outX;
+
+    
+    or  or0  (or0outX, B, A, C        );
+    buf buf0 (X        , or0outX      );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * or3: 3-input OR.
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+`celldefine
+module or34 (
+    X,
+    A,
+    B,
+    C
+);
+
+    
+    output X;
+    input  A;
+    input  B;
+    input  C;
+
+    
+    wire or0outX;
+
+    
+    or  or0  (or0outX, B, A, C        );
+    buf buf0 (X        , or0outX      );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * nand4: 4-input NAND.
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+`celldefine
+module nand41 (
+    Y,
+    A,
+    B,
+    C,
+    D
+);
+
+    
+    output Y;
+    input  A;
+    input  B;
+    input  C;
+    input  D;
+
+    
+    wire nand0outY;
+
+    
+    nand nand0 (nand0outY, D, C, B, A     );
+    buf  buf0  (Y          , nand0outY    );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * nand4: 4-input NAND.
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+`celldefine
+module nand42 (
+    Y,
+    A,
+    B,
+    C,
+    D
+);
+
+    
+    output Y;
+    input  A;
+    input  B;
+    input  C;
+    input  D;
+
+    
+    wire nand0outY;
+
+    
+    nand nand0 (nand0outY, D, C, B, A     );
+    buf  buf0  (Y          , nand0outY    );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * nand4: 4-input NAND.
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+`celldefine
+module nand44 (
+    Y,
+    A,
+    B,
+    C,
+    D
+);
+
+    
+    output Y;
+    input  A;
+    input  B;
+    input  C;
+    input  D;
+
+    
+    wire nand0outY;
+
+    
+    nand nand0 (nand0outY, D, C, B, A     );
+    buf  buf0  (Y          , nand0outY    );
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * mux2i: 2-input multiplexer, output inverted.
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+
+
+`celldefine
+module mux2i1 (
+    Y ,
+    A0,
+    A1,
+    S
+);
+
+    
+    output Y ;
+    input  A0;
+    input  A1;
+    input  S ;
+
+    
+    wire mux2to1n0outY;
+
+    
+    sky130fdschdudpmux2to1N mux2to1n0 (mux2to1n0outY, A0, A1, S        );
+    buf                             buf0        (Y                , mux2to1n0outY);
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * mux2i: 2-input multiplexer, output inverted.
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+
+
+`celldefine
+module mux2i2 (
+    Y ,
+    A0,
+    A1,
+    S
+);
+
+    
+    output Y ;
+    input  A0;
+    input  A1;
+    input  S ;
+
+    
+    wire mux2to1n0outY;
+
+    
+    sky130fdschdudpmux2to1N mux2to1n0 (mux2to1n0outY, A0, A1, S        );
+    buf                             buf0        (Y                , mux2to1n0outY);
+
+endmodule
+`endcelldefine
+
+/*
+ * Copyright 2020 The SkyWater PDK Authors
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     https:
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ * SPDX-License-Identifier: Apache-2.0
+*/
+
+
+
+/**
+ * mux2i: 2-input multiplexer, output inverted.
+ *
+ * Verilog simulation functional model.
+ */
+
+`timescale 1ns / 1ps
+
+
+`celldefine
+module mux2i4 (
+    Y ,
+    A0,
+    A1,
+    S
+);
+
+    
+    output Y ;
+    input  A0;
+    input  A1;
+    input  S ;
+
+    
+    wire mux2to1n0outY;
+
+    
+    sky130fdschdudpmux2to1N mux2to1n0 (mux2to1n0outY, A0, A1, S        );
+    buf                             buf0        (Y                , mux2to1n0outY);
+
+endmodule
+`endcelldefine
+
+
+
