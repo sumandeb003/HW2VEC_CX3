@@ -1,4 +1,4 @@
-import os, sys
+import os, sys, argparse
 sys.path.append(os.path.dirname(sys.path[0]))
 from hw2vec.hw2graph import *
 from hw2vec.config import Config
@@ -42,24 +42,40 @@ def TrustHub_to_graph(cfg, circuit_path):
     save_path = os.path.join(circuit_path, f'{hw_design}_{data[0].label}_topModule_{cfg.graph_type}.pt')
     torch.save(data[0], save_path)
 
+
+
 if __name__ == '__main__':
     #redirect output messages - print statements - to a log file
     print('starting...')
+    logger = open('TrustHub2graph.log','w')
+    
+    parser = argparse.ArgumentParser(description='Choose type of target graph')
+    parser.add_argument("-g", "--graphtype", type = str, default = 'DFG', help = "Supply type of target graph - AST, DFG, or UG (undirected graph)")
+    args = parser.parse_args()
+    assert args.graphtype in ['DFG', 'AST', 'UG']
+    cfg.graph_type = args.graphtype
+    
     try:
     	os.remove('TrustHub2graph.log')
-        logger = open('TrustHub2graph.log','w')
     except:
     	pass
-    #log = open('TrustHub2graph.log', 'a')
-    #sys.stdout = log
-    #delete all previous .pt files in all sub-directories of directory_path
+    
     directory_path = '../assets/datasets/MyTrustHub4GraphGPS' #like, path to TjFree or TjIn
-    print('starting: delete_all_dotptfiles_in_all_subdirectories(directory_path)', file = logger)
-    dst_folder = os.path.join(directory_path,'TrustHubGraphDataset')
+    #delete all previous .pt files in all sub-directories of directory_path
+    print('deleting all .pt files in all subdirectories in directory_path', file = logger)
     delete_all_dotptfiles_in_all_subdirectories(directory_path)
     print ('done: delete_all_dotptfiles_in_all_subdirectories(directory_path)', file = logger)
+    
+    dst_folder = os.path.join(directory_path,'TrustHubGraphDataset')
+    if not os.path.exists(dst_folder):
+        os.makedirs(dst_folder)
+    
+    graph_folder = os.path.join(dst_folder, cfg.graph_type)
+    if not os.path.exists(graph_folder):
+        os.makedirs(graph_folder)
+
     #create new .pt files
-    cfg = Config(sys.argv[1:]) #because of the following 4 lines, the statement 'cfg = Config(sys.argv[1:]) has no use
+    #cfg = Config(sys.argv[1:]) #because of the following 4 lines, the statement 'cfg = Config(sys.argv[1:]) has no use
     #iterate through all folders in TjFree
     for type in ['TjFree', 'TjIn']:
         type_path = os.join(directory_path, type)
@@ -67,16 +83,14 @@ if __name__ == '__main__':
             circuit_path = Path(os.path.join(type_path,circuit))
             print('===================================================================', file = logger)
             print (f'TrustHub_to_graph: circuit - {circuit_path}', file = logger)
-            #do both AST and DFG
-            for graphtype in ['AST', 'DFG']:
-                cfg.graph_type = graphtype
-                print (f'TrustHub_to_graph: graphtype - {cfg.graph_type}', file = logger)
-                try:
-                    TrustHub_to_graph(cfg, circuit_path)
-                except Exception as error:
-                    print("ERROR:	", type(error).__name__, "–", error, file = logger)
+            print (f'TrustHub_to_graph: graphtype - {cfg.graph_type}', file = logger)
+            #create graph for each circuit
+            try:
+                TrustHub_to_graph(cfg, circuit_path)
+            except Exception as error:
+                print("ERROR:	", type(error).__name__, "–", error, file = logger)
             
-            copy_all_dotptfiles(circuit_path, dst_folder)
+            #copy_all_dotptfiles(circuit_path, dst_folder)
             print('===================================================================', file = logger)
     
     #zip all the graphs
@@ -91,5 +105,4 @@ if __name__ == '__main__':
     #??
     #os.rename(osp.join(self.root, 'asqol_graph_raw'), self.raw_dir)
     #os.unlink(path)
-
     #log.close()
