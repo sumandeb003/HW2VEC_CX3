@@ -1,6 +1,6 @@
 import os
-import torch
-from torch_geometric.data import download_url, extract_zip
+#import torch
+#from torch_geometric.data import download_url, extract_zip
 
 #id = '1mgBILYWXRyY9jAXeslmpKgwilP1etvSs'
 #url = f'https://drive.usercontent.google.com/download?id={id}&confirm=t'
