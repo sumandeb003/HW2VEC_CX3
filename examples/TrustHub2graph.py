@@ -13,7 +13,7 @@ def delete_all_dotptfiles_in_all_subdirectories(directory_path):
 		for circuit in os.listdir(subdir_path):
 			if circuit.endswith('.pt'):
 				circuit_path = os.path.join(subdir_path,circuit)
-				print('Deleting: ', circuit_path)
+				print('Deleting: ', circuit_path, file = logger)
 				os.remove(circuit_path)
 
 def copy_all_dotptfiles(src_folder, dst_folder):
@@ -33,7 +33,7 @@ def TrustHub_to_graph(cfg, circuit_path):
     #TJIN = 1
     #TJFREE = 0
     data = data_proc.get_graphs()
-    print (f'TrustHub_to_graph: data - {data}')
+    print (f'TrustHub_to_graph: data - {data}', file = logger)
     hw_design = str(hw_design_path).split("/")[-2].replace('_','-')
     if "TjFree" == str(hw_design_path).split("/")[-3]:
     	data[0].label = 'TjFree'
@@ -47,16 +47,17 @@ if __name__ == '__main__':
     print('starting...')
     try:
     	os.remove('TrustHub2graph.log')
+        logger = open('TrustHub2graph.log','w')
     except:
     	pass
     #log = open('TrustHub2graph.log', 'a')
     #sys.stdout = log
     #delete all previous .pt files in all sub-directories of directory_path
     directory_path = '../assets/datasets/MyTrustHub4GraphGPS' #like, path to TjFree or TjIn
-    print('starting: delete_all_dotptfiles_in_all_subdirectories(directory_path)')
+    print('starting: delete_all_dotptfiles_in_all_subdirectories(directory_path)', file = logger)
     dst_folder = os.path.join(directory_path,'TrustHubGraphDataset')
     delete_all_dotptfiles_in_all_subdirectories(directory_path)
-    print ('done: delete_all_dotptfiles_in_all_subdirectories(directory_path)')
+    print ('done: delete_all_dotptfiles_in_all_subdirectories(directory_path)', file = logger)
     #create new .pt files
     cfg = Config(sys.argv[1:]) #because of the following 4 lines, the statement 'cfg = Config(sys.argv[1:]) has no use
     #iterate through all folders in TjFree
@@ -64,24 +65,25 @@ if __name__ == '__main__':
         type_path = os.join(directory_path, type)
         for circuit in os.listdir(type_path):
             circuit_path = Path(os.path.join(type_path,circuit))
-            print('===================================================================')
-            print (f'TrustHub_to_graph: circuit - {circuit_path}')
+            print('===================================================================', file = logger)
+            print (f'TrustHub_to_graph: circuit - {circuit_path}', file = logger)
             #do both AST and DFG
             for graphtype in ['AST', 'DFG']:
                 cfg.graph_type = graphtype
-                print (f'TrustHub_to_graph: graphtype - {cfg.graph_type}')
+                print (f'TrustHub_to_graph: graphtype - {cfg.graph_type}', file = logger)
                 try:
                     TrustHub_to_graph(cfg, circuit_path)
                 except Exception as error:
-                    print("ERROR:	", type(error).__name__, "–", error)
+                    print("ERROR:	", type(error).__name__, "–", error, file = logger)
             
             copy_all_dotptfiles(circuit_path, dst_folder)
-            print('===================================================================')
+            print('===================================================================', file = logger)
     
     #zip all the graphs
     zippedfile = os.path.join(directory_path, 'TrustHubGraphDataset.zip')
     cmd = 'zip ' + zippedfile + ' -r ' + dst_folder
     os.system(cmd)
+    print('Finished...')
     #id ='1mgBILYWXRyY9jAXeslmpKgwilP1etvSs'
     #download_google_url(id,os.getcwd(),'try.zip')
     #extract_zip('try.zip','try')
