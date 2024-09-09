@@ -7,5 +7,5 @@ import os
 
 #path = download_url(url, os.path.join(os.getcwd(),'raw'))
 #extract_zip(path,'raw')
-f=open('log','w')
+f=open('./TrustHub2graph.log','w')
 print ("Hello World2",file=f)
