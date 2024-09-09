@@ -9,8 +9,8 @@ import os
 #extract_zip(path,'raw')
 try:
     os.remove('log.log')
-    logger = open('log.log','w')
 except:
     pass
+logger = open('log.log','w')
 print ("Hello World2",file=logger)
 logger.close()
