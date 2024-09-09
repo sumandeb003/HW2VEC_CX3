@@ -7,6 +7,10 @@ import os
 
 #path = download_url(url, os.path.join(os.getcwd(),'raw'))
 #extract_zip(path,'raw')
-logger = open('log.log','w')
+try:
+    	os.remove('log.log')
+        logger = open('log.log','w')
+except:
+    	pass
 print ("Hello World2",file=logger)
 logger.close()

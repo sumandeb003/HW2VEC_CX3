@@ -83,6 +83,7 @@ if __name__ == '__main__':
     zippedfile = os.path.join(directory_path, 'TrustHubGraphDataset.zip')
     cmd = 'zip ' + zippedfile + ' -r ' + dst_folder
     os.system(cmd)
+    logger.close()
     print('Finished...')
     #id ='1mgBILYWXRyY9jAXeslmpKgwilP1etvSs'
     #download_google_url(id,os.getcwd(),'try.zip')
