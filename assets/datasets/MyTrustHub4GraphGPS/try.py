@@ -8,9 +8,9 @@ import os
 #path = download_url(url, os.path.join(os.getcwd(),'raw'))
 #extract_zip(path,'raw')
 try:
-    	os.remove('log.log')
-        logger = open('log.log','w')
+    os.remove('log.log')
+    logger = open('log.log','w')
 except:
-    	pass
+    pass
 print ("Hello World2",file=logger)
 logger.close()
