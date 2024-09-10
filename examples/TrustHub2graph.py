@@ -39,15 +39,17 @@ def TrustHub_to_graph(cfg, circuit_path, copy_folder):#ToDo: add for undirected;
 if __name__ == '__main__':
     #redirect output messages - print statements - to a log file
     print('Starting...')
-    logger = open('TrustHub2graph.log','w')
+    
     cfg = Config(sys.argv[1:])
     assert cfg.graph_type in ['DFG', 'AST', 'CFG'] #ToDo: add for undirected graphs; prior, check for small directed graphs like adder
-    print(f'Converting circuits to {cfg.graph_type}s', file = logger)
     
     try:
-    	os.remove('TrustHub2graph.log')
+    	os.remove(f'TrustHub2{cfg.graph_type}s.log')
     except:
     	pass
+    logger = open(f'TrustHub2{cfg.graph_type}s.log','w')
+    
+    print(f'Converting circuits to {cfg.graph_type}s', file = logger)
     
     directory_path = '../assets/datasets/MyTrustHub4GraphGPS/try' #like, path to TjFree or TjIn
     #delete all previous .pt files in all sub-directories of directory_path
@@ -82,8 +84,9 @@ if __name__ == '__main__':
     #zip all the graphs
     zippedfile = f'TrustHub{cfg.graph_type}s.zip'
     zippedfile = os.path.join(dst_folder, zippedfile)
-    cmd1 = 'zip ' + zippedfile + ' -r ' + graph_folder# + ' | ' + 'rm -r ' + graph_folder
-    #cmd2 = 'rm -r ' + graph_folder
-    os.system(cmd1)
+    cmd = 'zip ' + zippedfile + ' -r ' + graph_folder
+    os.system(cmd)
+    cmd = 'rm -r ' + graph_folder
+    os.system(cmd)
     logger.close()
     print('Finished...')
