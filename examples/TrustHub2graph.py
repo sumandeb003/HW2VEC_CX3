@@ -37,10 +37,9 @@ def TrustHub_to_graph(cfg, circuit_path, copy_folder):
     shutil.copy2(file, copy_folder)
 
 
-
 if __name__ == '__main__':
     #redirect output messages - print statements - to a log file
-    print('starting...')
+    print('Starting...')
     logger = open('TrustHub2graph.log','w')
     
     parser = argparse.ArgumentParser(description='Choose type of target graph')
