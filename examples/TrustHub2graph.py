@@ -64,7 +64,7 @@ if __name__ == '__main__':
     #create new .pt files
     #iterate through all folders in TjFree
     for type in ['TjFree', 'TjIn']:
-        type_path = os.join(directory_path, type)
+        type_path = os.path.join(directory_path, type)
         for circuit in os.listdir(type_path):
             circuit_path = Path(os.path.join(type_path,circuit))
             print('===================================================================', file = logger)
