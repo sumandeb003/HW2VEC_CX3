@@ -16,15 +16,8 @@ def delete_all_dotptfiles_in_all_subdirectories(directory_path):
 				print('Deleting: ', circuit_path, file = logger)
 				os.remove(circuit_path)
 
-def copy_all_dotptfiles(src_folder, dst_folder):
-    if not os.path.exists(dst_folder):
-        os.makedirs(dst_folder)
-    files = glob.iglob(os.path.join(circuit_path, '*.pt'))
-    for file in files:
-        shutil.copy2(file, dst_folder)
 
-
-def TrustHub_to_graph(cfg, circuit_path):
+def TrustHub_to_graph(cfg, circuit_path, copy_folder):
     hw2graph = HW2GRAPH(cfg)
     hw_design_path = hw2graph.preprocess(circuit_path) #flatten all .v files to one .v file, remove comments, remove underscores, rename as topModule.v
     hardware_nxgraph = hw2graph.process(hw_design_path) #generate AST/DFG (JSON format) of the topModule.v
@@ -39,8 +32,9 @@ def TrustHub_to_graph(cfg, circuit_path):
     	data[0].label = 'TjFree'
     else:
     	data[0].label = 'TjIn'
-    save_path = os.path.join(circuit_path, f'{hw_design}_{data[0].label}_topModule_{cfg.graph_type}.pt')
-    torch.save(data[0], save_path)
+    file = os.path.join(circuit_path, f'{hw_design}_{data[0].label}_topModule_{cfg.graph_type}.pt')
+    torch.save(data[0], file)
+    shutil.copy2(file, copy_folder)
 
 
 
@@ -86,7 +80,7 @@ if __name__ == '__main__':
             print (f'TrustHub_to_graph: graphtype - {cfg.graph_type}', file = logger)
             #create graph for each circuit
             try:
-                TrustHub_to_graph(cfg, circuit_path)
+                TrustHub_to_graph(cfg, circuit_path, graph_folder)
             except Exception as error:
                 print("ERROR:	", type(error).__name__, "–", error, file = logger)
             
@@ -94,15 +88,9 @@ if __name__ == '__main__':
             print('===================================================================', file = logger)
     
     #zip all the graphs
-    zippedfile = os.path.join(directory_path, 'TrustHubGraphDataset.zip')
-    cmd = 'zip ' + zippedfile + ' -r ' + dst_folder
-    os.system(cmd)
+    zippedfile = os.path.join(dst_folder, 'TrustHubGraphDataset.zip')
+    cmd1 = 'zip ' + zippedfile + ' -r ' + graph_folder
+    cmd2 = 'rm -r ' + graph_folder
+    os.system(cmd1 + ' | ' + cmd2)
     logger.close()
     print('Finished...')
-    #id ='1mgBILYWXRyY9jAXeslmpKgwilP1etvSs'
-    #download_google_url(id,os.getcwd(),'try.zip')
-    #extract_zip('try.zip','try')
-    #??
-    #os.rename(osp.join(self.root, 'asqol_graph_raw'), self.raw_dir)
-    #os.unlink(path)
-    #log.close()
