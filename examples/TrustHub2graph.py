@@ -1,4 +1,4 @@
-import os, sys, argparse
+import os, sys
 sys.path.append(os.path.dirname(sys.path[0]))
 from hw2vec.hw2graph import *
 from hw2vec.config import Config
@@ -16,10 +16,10 @@ def delete_dotptfiles_in_all_subdirectories(cfg, directory_path):
 				os.remove(circuit_path)
 
 
-def TrustHub_to_graph(cfg, circuit_path, copy_folder):
+def TrustHub_to_graph(cfg, circuit_path, copy_folder):#ToDo: add for undirected; prior, check for small directed graphs like adder
     hw2graph = HW2GRAPH(cfg)
     hw_design_path = hw2graph.preprocess(circuit_path) #flatten all .v files to one .v file, remove comments, remove underscores, rename as topModule.v
-    hardware_nxgraph = hw2graph.process(hw_design_path) #generate AST/DFG (JSON format) of the topModule.v
+    hardware_nxgraph = hw2graph.process(hw_design_path) #generate AST/DFG/CFG (JSON format) of the topModule.v
     data_proc = DataProcessor(cfg)
     data_proc.process(hardware_nxgraph)#normalize the graph and create node-feature vectors X and adjacency matrix A
     #TJIN = 1
@@ -40,12 +40,8 @@ if __name__ == '__main__':
     #redirect output messages - print statements - to a log file
     print('Starting...')
     logger = open('TrustHub2graph.log','w')
-    
-    parser = argparse.ArgumentParser(description='Choose type of target graph')
-    parser.add_argument("-g", "--graphtype", type = str, default = 'DFG', help = "Supply type of target graph - AST, DFG, or UG (undirected graph)")
-    args = parser.parse_args()
-    assert args.graphtype in ['DFG', 'AST', 'UG']
-    cfg.graph_type = args.graphtype
+    cfg = Config(sys.argv[1:])
+    assert cfg.graph_type in ['DFG', 'AST', 'CFG'] #ToDo: add for undirected graphs; prior, check for small directed graphs like adder
     print(f'Converting circuits to {cfg.graph_type}s', file = logger)
     
     try:
@@ -66,7 +62,6 @@ if __name__ == '__main__':
         os.makedirs(graph_folder)
 
     #create new .pt files
-    #cfg = Config(sys.argv[1:]) #because of the following 4 lines, the statement 'cfg = Config(sys.argv[1:]) has no use
     #iterate through all folders in TjFree
     for type in ['TjFree', 'TjIn']:
         type_path = os.join(directory_path, type)
@@ -77,7 +72,7 @@ if __name__ == '__main__':
             print (f'TrustHub_to_graph: graphtype - {cfg.graph_type}', file = logger)
             #create graph for each circuit
             try:
-                TrustHub_to_graph(cfg, circuit_path, graph_folder)
+                TrustHub_to_graph(cfg, circuit_path, graph_folder)#ToDO: add for undirected graphs; prior, check for small directed graphs like adder
             except Exception as error:
                 print("ERROR:	", type(error).__name__, "–", error, file = logger)
             
