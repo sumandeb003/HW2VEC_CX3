@@ -82,8 +82,8 @@ if __name__ == '__main__':
     #zip all the graphs
     zippedfile = f'TrustHub{cfg.graph_type}s.zip'
     zippedfile = os.path.join(dst_folder, zippedfile)
-    cmd1 = 'zip ' + zippedfile + ' -r ' + graph_folder
-    cmd2 = 'rm -r ' + graph_folder
-    os.system(cmd1 + ' | ' + cmd2)
+    cmd1 = 'zip ' + zippedfile + ' -r ' + graph_folder + ' | ' + 'rm -r ' + graph_folder
+    #cmd2 = 'rm -r ' + graph_folder
+    os.system(cmd1)
     logger.close()
     print('Finished...')
