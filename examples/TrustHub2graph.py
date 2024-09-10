@@ -5,7 +5,6 @@ from hw2vec.config import Config
 from pathlib import Path
 import glob, shutil
 import torch
-from torch_geometric.data import (download_google_url,extract_zip,)
 
 def delete_dotptfiles_in_all_subdirectories(cfg, directory_path):
 	for subdir in os.listdir(directory_path):
