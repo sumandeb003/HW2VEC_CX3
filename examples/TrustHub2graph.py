@@ -54,7 +54,7 @@ if __name__ == '__main__':
     except:
     	pass
     
-    directory_path = '../assets/datasets/MyTrustHub4GraphGPS' #like, path to TjFree or TjIn
+    directory_path = '../assets/datasets/try' #like, path to TjFree or TjIn
     #delete all previous .pt files in all sub-directories of directory_path
     delete_dotptfiles_in_all_subdirectories(cfg, directory_path)
     
