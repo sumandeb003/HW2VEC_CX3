@@ -7,13 +7,13 @@ import glob, shutil
 import torch
 from torch_geometric.data import (download_google_url,extract_zip,)
 
-def delete_all_dotptfiles_in_all_subdirectories(directory_path):
+def delete_dotptfiles_in_all_subdirectories(cfg, directory_path):
 	for subdir in os.listdir(directory_path):
 		subdir_path = os.path.join(directory_path,subdir)
 		for circuit in os.listdir(subdir_path):
-			if circuit.endswith('.pt'):
+			if circuit.endswith(f'{cfg.graph_type}.pt'):
 				circuit_path = os.path.join(subdir_path,circuit)
-				print('Deleting: ', circuit_path, file = logger)
+				print('Deleting the old: ', circuit_path, file = logger)
 				os.remove(circuit_path)
 
 
@@ -48,6 +48,7 @@ if __name__ == '__main__':
     args = parser.parse_args()
     assert args.graphtype in ['DFG', 'AST', 'UG']
     cfg.graph_type = args.graphtype
+    print(f'Converting circuits to {cfg.graph_type}s', file = logger)
     
     try:
     	os.remove('TrustHub2graph.log')
@@ -56,9 +57,7 @@ if __name__ == '__main__':
     
     directory_path = '../assets/datasets/MyTrustHub4GraphGPS' #like, path to TjFree or TjIn
     #delete all previous .pt files in all sub-directories of directory_path
-    print('deleting all .pt files in all subdirectories in directory_path', file = logger)
-    delete_all_dotptfiles_in_all_subdirectories(directory_path)
-    print ('done: delete_all_dotptfiles_in_all_subdirectories(directory_path)', file = logger)
+    delete_dotptfiles_in_all_subdirectories(cfg, directory_path)
     
     dst_folder = os.path.join(directory_path,'TrustHubGraphDataset')
     if not os.path.exists(dst_folder):
@@ -88,7 +87,8 @@ if __name__ == '__main__':
             print('===================================================================', file = logger)
     
     #zip all the graphs
-    zippedfile = os.path.join(dst_folder, 'TrustHubGraphDataset.zip')
+    zippedfile = f'TrustHub{cfg.graph_type}s.zip'
+    zippedfile = os.path.join(dst_folder, zippedfile)
     cmd1 = 'zip ' + zippedfile + ' -r ' + graph_folder
     cmd2 = 'rm -r ' + graph_folder
     os.system(cmd1 + ' | ' + cmd2)
