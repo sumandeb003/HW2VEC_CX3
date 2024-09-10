@@ -40,8 +40,8 @@ if __name__ == '__main__':
     #redirect output messages - print statements - to a log file
     print('Starting...')
     
-    cfg = Config(sys.argv[1:])
-    assert cfg.graph_type in ['DFG', 'AST', 'CFG'] #ToDo: add for undirected graphs; prior, check for small directed graphs like adder
+    cfg = Config(sys.argv[1:])#ToDO 1: CFG or DFG? 2: Why CFG doesn't work??
+    assert cfg.graph_type in ['DFG', 'AST', 'CFG'] #ToDo 3: add for undirected graphs; prior, check for small directed graphs like adder
     
     try:
     	os.remove(f'TrustHub2{cfg.graph_type}s.log')
