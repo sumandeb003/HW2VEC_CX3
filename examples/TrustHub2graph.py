@@ -15,7 +15,6 @@ def delete_dotptfiles_in_all_subdirectories(cfg, directory_path):
 				print('Deleting the old: ', circuit_path, file = logger)
 				os.remove(circuit_path)
 
-
 def TrustHub_to_graph(cfg, circuit_path, copy_folder):#ToDo: add for undirected; prior, check for small directed graphs like adder
     hw2graph = HW2GRAPH(cfg)
     hw_design_path = hw2graph.preprocess(circuit_path) #flatten all .v files to one .v file, remove comments, remove underscores, rename as topModule.v
