@@ -1,0 +1,4 @@
+Converting circuits to CFGs
+===================================================================
+TrustHub_to_graph: circuit - ../assets/datasets/MyTrustHub4GraphGPS/try/TjFree/xtea
+TrustHub_to_graph: graphtype - CFG

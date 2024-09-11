@@ -1,0 +1,11 @@
+Converting circuits to ASTs
+===================================================================
+TrustHub_to_graph: circuit - ../assets/datasets/MyTrustHub4GraphGPS/try/TjFree/xtea
+TrustHub_to_graph: graphtype - AST
+TrustHub_to_graph: data - [Data(x=[218], edge_index=[2, 217], label=[218], name='xtea', hw_name='xtea', hw_type='TjFree')]
+===================================================================
+===================================================================
+TrustHub_to_graph: circuit - ../assets/datasets/MyTrustHub4GraphGPS/try/TjIn/vectoradd_TP1
+TrustHub_to_graph: graphtype - AST
+TrustHub_to_graph: data - [Data(x=[1111], edge_index=[2, 1110], label=[1111], name='vectoradd_TP1', hw_name='vectoradd_TP1', hw_type='TjIn')]
+===================================================================
