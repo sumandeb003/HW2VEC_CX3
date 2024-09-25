@@ -6,8 +6,8 @@ from pathlib import Path
 import glob, shutil
 import torch
 
-def delete_dotptfiles_in_all_subdirectories(cfg, directory_path):
-	for subdir in os.listdir(directory_path):
+def delete_dotptfiles_in_all_subdirectories(cfg, directory_path):#deletes all .pt files in all the circuit folders
+	for subdir in os.listdir(directory_path): # directory_path is path to TjFree and TjIn
 		subdir_path = os.path.join(directory_path,subdir)
 		for circuit in os.listdir(subdir_path):
 			if circuit.endswith(f'{cfg.graph_type}.pt'):
@@ -15,7 +15,7 @@ def delete_dotptfiles_in_all_subdirectories(cfg, directory_path):
 				print('Deleting the old: ', circuit_path, file = logger)
 				os.remove(circuit_path)
 
-def TrustHub_to_graph(cfg, circuit_path, copy_folder):#ToDo: add for undirected; prior, check for small directed graphs like adder
+def TrustHub_to_graph(cfg, circuit_path, copy_folder):
     hw2graph = HW2GRAPH(cfg)
     hw_design_path = hw2graph.preprocess(circuit_path) #flatten all .v files to one .v file, remove comments, remove underscores, rename as topModule.v
     hardware_nxgraph = hw2graph.process(hw_design_path) #generate AST/DFG/CFG (JSON format) of the topModule.v
@@ -25,7 +25,7 @@ def TrustHub_to_graph(cfg, circuit_path, copy_folder):#ToDo: add for undirected;
     #TJFREE = 0
     data = data_proc.get_graphs()
     print (f'TrustHub_to_graph: data - {data}', file = logger)
-    hw_design = str(hw_design_path).split("/")[-2].replace('_','-')
+    hw_design = str(hw_design_path).split("/")[-2].replace('_','-') #naming of the graph files created
     if "TjFree" == str(hw_design_path).split("/")[-3]:
     	data[0].label = 'TjFree'
     else:
@@ -50,20 +50,20 @@ if __name__ == '__main__':
     
     print(f'Converting circuits to {cfg.graph_type}s', file = logger)
     
-    directory_path = '../assets/datasets/MyTrustHub4GraphGPS/try' #like, path to TjFree or TjIn
+    directory_path = '../assets/datasets/MyTrustHub4GraphGPS/try' #like, path to TjFree and TjIn
     #delete all previous .pt files in all sub-directories of directory_path
     delete_dotptfiles_in_all_subdirectories(cfg, directory_path)
     
-    dst_folder = os.path.join(directory_path,'TrustHubGraphDataset')
+    dst_folder = os.path.join(directory_path,'TrustHubGraphDataset') #'../assets/datasets/MyTrustHub4GraphGPS/try/TrustHubGraphDataset'
     if not os.path.exists(dst_folder):
         os.makedirs(dst_folder)
     
-    graph_folder = os.path.join(dst_folder, cfg.graph_type)
+    graph_folder = os.path.join(dst_folder, cfg.graph_type) #'../assets/datasets/MyTrustHub4GraphGPS/try/TrustHubGraphDataset/DFG'; this folder is deleted later
     if not os.path.exists(graph_folder):
         os.makedirs(graph_folder)
 
     #create new .pt files
-    #iterate through all folders in TjFree
+    #iterate through all folders in TjFree and TjIn
     for type in ['TjFree', 'TjIn']:
         type_path = os.path.join(directory_path, type)
         for circuit in os.listdir(type_path):
@@ -82,7 +82,7 @@ if __name__ == '__main__':
     
     #zip all the graphs
     zippedfile = f'TrustHub{cfg.graph_type}s.zip'
-    zippedfile = os.path.join(dst_folder, zippedfile)
+    zippedfile = os.path.join(dst_folder, zippedfile) #'../assets/datasets/MyTrustHub4GraphGPS/try/TrustHubGraphDataset/TrustHubDFGs.zip
     cmd = 'zip ' + zippedfile + ' -r ' + graph_folder
     os.system(cmd)
     cmd = 'rm -r ' + graph_folder
