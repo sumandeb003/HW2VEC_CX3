@@ -85,7 +85,7 @@ if __name__ == '__main__':
     
     # At this point of this code execution, all the graphs are in graph_folder which is inside dst_folder
     # Next, zip all the graphs
-    zippedfile = f'TrustHub{cfg.graph_type}s.zip'
+    zippedfile = f'TrustHub{cfg.graph_type}s'
     os.chdir(dst_folder)
     graph_folder = cfg.graph_type
     if os.path.isfile(zippedfile):
