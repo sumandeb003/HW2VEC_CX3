@@ -40,7 +40,8 @@ def TrustHub_to_graph(cfg, circuit_path, copy_folder):
 if __name__ == '__main__':
     #redirect output messages - print statements - to a log file
     print('Starting...')
-    
+    curr_path = '/rds/general/user/sdeb2/home/HW2VEC_CX3/examples'
+    os.chdir(curr_path)
     cfg = Config(sys.argv[1:])#ToDO 1: CFG or DFG? 2: Why CFG doesn't work??
     assert cfg.graph_type in ['DFG', 'AST', 'CFG'] #ToDo 3: add for undirected graphs; prior, check for small directed graphs like adder
     
