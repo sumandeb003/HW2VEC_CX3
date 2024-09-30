@@ -53,7 +53,7 @@ if __name__ == '__main__':
     
     print(f'Converting circuits to {cfg.graph_type}s', file = logger)
     
-    directory_path = '../assets/datasets/MyTrustHub4GraphGPS/try' #like, path to TjFree and TjIn
+    directory_path = '../assets/datasets/MyTrustHub4GraphGPS' #like, path to TjFree and TjIn
     #delete all previous .pt files in all sub-directories of directory_path
     delete_dotptfiles_in_all_subdirectories(cfg, directory_path)
     
@@ -90,10 +90,7 @@ if __name__ == '__main__':
     graph_folder = cfg.graph_type
     if os.path.isfile(zippedfile):
         os.remove(zippedfile)
-    #zippedfile = os.path.join(dst_folder, zippedfile) #'../assets/datasets/MyTrustHub4GraphGPS/try/TrustHubGraphs/TrustHubDFGs.zip
-    #cmd = 'zip ' + zippedfile + ' -r ' + graph_folder
-    #os.system(cmd)
-    shutil.make_archive(zippedfile, 'zip', graph_folder)
+    shutil.make_archive(zippedfile, 'zip', graph_folder)#'../assets/datasets/MyTrustHub4GraphGPS/try/TrustHubGraphs/TrustHubDFGs.zip
     shutil.rmtree(graph_folder)
     logger.close()
     print('Finished...')
