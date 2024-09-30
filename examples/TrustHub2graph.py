@@ -88,11 +88,14 @@ if __name__ == '__main__':
     zippedfile = f'TrustHub{cfg.graph_type}s.zip'
     os.chdir(dst_folder)
     graph_folder = cfg.graph_type
+    if os.path.isfile(zippedfile):
+        os.remove(zippedfile)
     #zippedfile = os.path.join(dst_folder, zippedfile) #'../assets/datasets/MyTrustHub4GraphGPS/try/TrustHubGraphs/TrustHubDFGs.zip
     cmd = 'zip ' + zippedfile + ' -r ' + graph_folder
     os.system(cmd)
-    cmd = 'rm -r ' + graph_folder
-    os.system(cmd)
+    shutil.rmtree(graph_folder)
+    #cmd = 'rm -r ' + graph_folder
+    #os.system(cmd)
     logger.close()
     print('Finished...')
     
