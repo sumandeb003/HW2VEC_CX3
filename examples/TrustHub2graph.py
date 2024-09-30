@@ -41,7 +41,7 @@ if __name__ == '__main__':
     #redirect output messages - print statements - to a log file
     print('Starting...')
     curr_path = '/rds/general/user/sdeb2/home/HW2VEC_CX3/examples'
-    os.chdir(curr_path)
+    os.chdir(curr_path) #else, the paths mentioned in the class 'Config' of 'hw2vec/config.py' cannot be found
     cfg = Config(sys.argv[1:])#ToDO 1: CFG or DFG? 2: Why CFG doesn't work??
     assert cfg.graph_type in ['DFG', 'AST', 'CFG'] #ToDo 3: add for undirected graphs; prior, check for small directed graphs like adder
     
@@ -57,11 +57,11 @@ if __name__ == '__main__':
     #delete all previous .pt files in all sub-directories of directory_path
     delete_dotptfiles_in_all_subdirectories(cfg, directory_path)
     
-    dst_folder = os.path.join(directory_path,'TrustHubGraphDataset') #'../assets/datasets/MyTrustHub4GraphGPS/try/TrustHubGraphDataset'
+    dst_folder = os.path.join(directory_path,'TrustHubGraphs') #'../assets/datasets/MyTrustHub4GraphGPS/try/TrustHubGraphs'
     if not os.path.exists(dst_folder):
         os.makedirs(dst_folder)
     
-    graph_folder = os.path.join(dst_folder, cfg.graph_type) #'../assets/datasets/MyTrustHub4GraphGPS/try/TrustHubGraphDataset/DFG'; this folder is deleted later
+    graph_folder = os.path.join(dst_folder, cfg.graph_type) #'../assets/datasets/MyTrustHub4GraphGPS/try/TrustHubGraphs/DFG'; this folder is deleted later
     if not os.path.exists(graph_folder):
         os.makedirs(graph_folder)
 
@@ -83,9 +83,12 @@ if __name__ == '__main__':
             #copy_all_dotptfiles(circuit_path, dst_folder)
             print('===================================================================', file = logger)
     
-    #zip all the graphs
+    # At this point of this code execution, all the graphs are in graph_folder which is inside dst_folder
+    # Next, zip all the graphs
     zippedfile = f'TrustHub{cfg.graph_type}s.zip'
-    zippedfile = os.path.join(dst_folder, zippedfile) #'../assets/datasets/MyTrustHub4GraphGPS/try/TrustHubGraphDataset/TrustHubDFGs.zip
+    os.chdir(dst_folder)
+    graph_folder = os.path.join(os.getcwd(), cfg.graph_type)
+    #zippedfile = os.path.join(dst_folder, zippedfile) #'../assets/datasets/MyTrustHub4GraphGPS/try/TrustHubGraphs/TrustHubDFGs.zip
     cmd = 'zip ' + zippedfile + ' -r ' + graph_folder
     os.system(cmd)
     cmd = 'rm -r ' + graph_folder
@@ -100,3 +103,6 @@ if __name__ == '__main__':
 #TjFree
 #['c880-SL640', 'c880-CY310', 'JC-SW130_s38584', 'spi_master', 'c880-NS2440', 'c880-NC4360', 'encoder8to3_2', 'partial', 'vectoradd', 'RC5', 'c880-NC3080', 'case_in_func', 'PIC16F84', 'led_main', 'c880-NC2440', 'c432-CY530', 'TRIT_c2670', 'c499-RN320', 'blocking', 'c880-SL2560', 'TRIT_s15850scan', 'count', 'c499-NS2510', 'decimal_width', 'JC-SW130_s5378', 'c432-NR1720', 'syncRAM', 'deepcase', 'c880-NR2120', 'RC6', 'c499-CS640', 'TRIT_c6288', 'c432-SL640', 'c432-RN320', 'bcdToseg_6', 'statemachine', 'c499-CS1280', 'adder4bit_3', 'JC-SW130_s1488', 'JC-SW130_s38417', 'generate_instance', 'TRIT_c5315', 'encoder8to3_6', 'bcdToseg_8', 'vga', 'c499-NS1870', 'c499-RN640', 'c432-NS2360', 'c880-RN1280', 'function', 'c432-BE280', 'bcdToseg_3', 'ram', 'c880-SL1280', 'c432-NC2360', 'c432-CY290', 'ptr_clock_reset', 'c432-RN640', 'c880-NR4360', 'c432-CS1280', 'c880-NS2120', 'TRIT_s1423scan', 'c432-NS1400', 'generate', 'c499-RN1280', 'c499-CY270', 'adder4bit_7', 'reset', 'c432-CY1020', 'adder4bit_6', 'JC-SW130_s9234', 'c432-SL320', 'c432-RN1280', 'c880-NC2120', 'signed_task', 'c432-NC1720', 'c499-CY2060', 'c880-CY590', 'adder4bit_2', 'WB_CONMAX', 'decimal_signed', 'c880-RN2560', 'JC-SW130_s1238', 'encoder8to3_3', 'c499-NR1870', 'casex', 'c432-SL1280', 'c880-RN320', 'c499-NR2510', 'case', 'xtea', 'c880-CY3880', 'bcdToseg_7', 'bcdToseg_5', 'c499-SL320', 'bcdToseg_2', 'instance_empty_params', 'c880-NR3080', 'c880-NR2440', 'c499-NC1550', 'instance_array', 'adder4bit_5', 'encoder8to3_5', 'c499-CY520', 'c432-NR1400', 'c499-CS320', 'primitive', 'bcdToseg_1', 'c432-NR2360', 'AES', 'supply', 'c880-CY2030', 'det_1011', 'c880-NS3080', 'c499-CY1040', 'c499-NR1550', 'c499-NC2510', 'JC-SW130_s953', 'partselect_assign', 'c432-CS320', 'c432-CY2000', 'c499-NS1550', 'decimal', 'c432-NS1720', 'c880-CY1070', 'c880-NS4360', 'c499-SL640', 'c880-RN640', 'encoder8to3_1', 'encoder8to3_4', 'c880-SL320', 'c880-CS320', 'c499-SL1280', 'TRIT_s13207scan', 'c880-CS640', 'adder4bit_4', 'c880-CS2560', 'c499-NC1870', 'delay', 'bcdToseg_4', 'c880-CS1280', 'JC-SW130_s1196', 'c432-CS640', 'RS232', 'adder4bit_1', 'c432-NC1400', 'TRIT_c3540', 'TRIT_s35932scan']
 #list_TjFree = [hw+'_TjFree_topModule_{cfg.graph_type}.pt' for hw in os.listdir(os.path.join(os.path.expanduser('~'),'HW2VEC_CX3/assets/datasets/MyTrustHub4GraphGPS/TjFree'))]
+
+#To Do:
+# What does cfg do?
