@@ -91,11 +91,10 @@ if __name__ == '__main__':
     if os.path.isfile(zippedfile):
         os.remove(zippedfile)
     #zippedfile = os.path.join(dst_folder, zippedfile) #'../assets/datasets/MyTrustHub4GraphGPS/try/TrustHubGraphs/TrustHubDFGs.zip
-    cmd = 'zip ' + zippedfile + ' -r ' + graph_folder
-    os.system(cmd)
-    shutil.rmtree(graph_folder)
-    #cmd = 'rm -r ' + graph_folder
+    #cmd = 'zip ' + zippedfile + ' -r ' + graph_folder
     #os.system(cmd)
+    shutil.make_archive(zippedfile, 'zip', graph_folder)
+    shutil.rmtree(graph_folder)
     logger.close()
     print('Finished...')
     
