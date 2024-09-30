@@ -87,7 +87,7 @@ if __name__ == '__main__':
     # Next, zip all the graphs
     zippedfile = f'TrustHub{cfg.graph_type}s.zip'
     os.chdir(dst_folder)
-    graph_folder = os.path.join(os.getcwd(), cfg.graph_type)
+    graph_folder = cfg.graph_type
     #zippedfile = os.path.join(dst_folder, zippedfile) #'../assets/datasets/MyTrustHub4GraphGPS/try/TrustHubGraphs/TrustHubDFGs.zip
     cmd = 'zip ' + zippedfile + ' -r ' + graph_folder
     os.system(cmd)
