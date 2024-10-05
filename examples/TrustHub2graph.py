@@ -32,6 +32,7 @@ def TrustHub_to_graph(cfg, circuit_path, copy_folder):
     	data[0].label = 'TjIn'
     
     data[0].y = data[0].label
+    data[0].x = data[0].reshape(data[0].num_nodes, data[0].num_node_features)
     file = os.path.join(circuit_path, f'{hw_design}___{data[0].label}___topModule___{cfg.graph_type}.pt')
     torch.save(data[0], file)
     shutil.copy2(file, copy_folder)
