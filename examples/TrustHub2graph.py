@@ -31,9 +31,8 @@ def TrustHub_to_graph(cfg, circuit_path, copy_folder):
     print (f'TrustHub_to_graph: data - {data}', file = logger)
     hw_design = str(hw_design_path).split("/")[-2] #naming of the graph files created******************************************
     if "TjFree" == str(hw_design_path).split("/")[-3]:
-    	data[0].label = 'TjFree' # attributes 'label' and 'hw_type' are same
         data[0].y = torch.tensor([TJFREE])
-        
+        data[0].label = 'TjFree' # attributes 'label' and 'hw_type' are same        
     else:
     	data[0].label = 'TjIn' # attributes 'label' and 'hw_type' are same
         data[0].y = torch.tensor([TJIN])
