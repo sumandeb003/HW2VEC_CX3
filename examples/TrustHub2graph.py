@@ -21,17 +21,19 @@ def TrustHub_to_graph(cfg, circuit_path, copy_folder):
     hardware_nxgraph = hw2graph.process(hw_design_path) #generate AST/DFG/CFG (JSON format) of the topModule.v
     data_proc = DataProcessor(cfg)
     data_proc.process(hardware_nxgraph)#normalize the graph and create node-feature vectors X and adjacency matrix A
-    #TJIN = 1
-    #TJFREE = 0
+    TJIN = 1
+    TJFREE = 0
     data = data_proc.get_graphs()
     print (f'TrustHub_to_graph: data - {data}', file = logger)
     hw_design = str(hw_design_path).split("/")[-2] #naming of the graph files created******************************************
     if "TjFree" == str(hw_design_path).split("/")[-3]:
-    	data[0].label = 'TjFree'
+    	data[0].label = 'TjFree' # attributes 'label' and 'hw_type' are same
+        data[0].y = torch.tensor([TJFREE])
     else:
-    	data[0].label = 'TjIn'
+    	data[0].label = 'TjIn' # attributes 'label' and 'hw_type' are same
+        data[0].y = torch.tensor([TJIN])
     
-    data[0].y = data[0].label
+    
     data[0].x = data[0].x.float()
     data[0].x = torch.reshape(data[0].x,(data[0].num_nodes, data[0].num_node_features))
     file = os.path.join(circuit_path, f'{hw_design}___{data[0].label}___topModule___{cfg.graph_type}.pt')
