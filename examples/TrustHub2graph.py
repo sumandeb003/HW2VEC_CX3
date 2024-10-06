@@ -1,3 +1,7 @@
+# conda activate hw2vec_python37_pyg_pygraphviz
+# 
+
+
 import os, sys
 sys.path.append(os.path.dirname(sys.path[0]))
 from hw2vec.hw2graph import *
