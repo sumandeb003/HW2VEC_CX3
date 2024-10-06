@@ -1,0 +1,53 @@
+s1238_T0141_S LOG
+****************************************************************
+ TRIT-ASIC Generated Trojans.  The design generated is for academic use only.
+ Please cite the following if using the benchmark provided:
+J. Cruz, Y. Huang, P. Mishra, S. Bhunia, 
+"An Automated Configurable Trojan Insertion Framework for Dynamic Trust Benchmarks", DATE, 2018
+
+****************************************************************
+TROJAN STATS:
+
+Number of Trojans: 1
+****************************************************************
+================================================================
+Trojan 0
+================================================================
+-----
+Type
+-----
+2-bit FSM with following state transitions:
+0->1->2->3
+
+-------
+Effect
+-------
+The Trojan alters the following signal(s)...
+n482
+
+---------------------
+Activation Condition
+---------------------
+The Trojan is triggered by the following internal signals and activation values...
+n338:0 n349:0 n416:0 n497:0 
+
+------------
+TROJAN BODY
+------------
+	dfrtp_1 troj41_0_state_reg_0_( .D(troj41_0_n8), .CLK(CLK), .RESET_B(troj41_0_n1), .Q(troj41_0_state_0_) );
+	dfrtp_1 troj41_0_state_reg_1_( .D(troj41_0_n7), .CLK(CLK), .RESET_B(troj41_0_n1), .Q(troj41_0_state_1_) );
+	edfxtp_1 troj41_0_Trojan_out41_0_reg( .D(troj41_0_N13), .DE(troj41_0_N18), .CLK(CLK), .Q(Trojan_out_41_0) );
+	inv_2 troj41_0_U3( .A(RST), .Y(troj41_0_n1) );
+	o21ai_1 troj41_0_U4( .A1(troj41_0_n3), .A2(troj41_0_n4), .B1(troj41_0_n5), .Y(troj41_0_n7) );
+	nor4_2 troj41_0_U5( .A(n349), .B(n338), .C(n497), .D(n416), .Y(Trigger_en_41_0) );
+	xnor2_1 troj41_0_U6( .A(troj41_0_n2), .B(tempn482), .Y(n482) );
+	nand2_1 troj41_0_U7( .A(Trojan_out_41_0), .B(Trigger_en_41_0), .Y(troj41_0_n2) );
+	xnor2_1 troj41_0_U8( .A(troj41_0_state_0_), .B(troj41_0_n4), .Y(troj41_0_n8) );
+	or2_0 troj41_0_U9( .A(troj41_0_n6), .B(troj41_0_N13), .X(troj41_0_n4) );
+	nor2_1 troj41_0_U10( .A(RST), .B(troj41_0_n6), .Y(troj41_0_N18) );
+	inv_1 troj41_0_U11( .A(Trigger_en_41_0), .Y(troj41_0_n6) );
+	nor2_1 troj41_0_U12( .A(troj41_0_n5), .B(troj41_0_n3), .Y(troj41_0_N13) );
+	inv_1 troj41_0_U13( .A(troj41_0_state_0_), .Y(troj41_0_n3) );
+	inv_1 troj41_0_U14( .A(troj41_0_state_1_), .Y(troj41_0_n5) );
+
+================================================================

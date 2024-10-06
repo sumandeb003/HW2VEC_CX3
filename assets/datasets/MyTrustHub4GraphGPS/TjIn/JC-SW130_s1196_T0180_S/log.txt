@@ -1,0 +1,63 @@
+s1196_T0180_S LOG
+****************************************************************
+ TRIT-ASIC Generated Trojans.  The design generated is for academic use only.
+ Please cite the following if using the benchmark provided:
+J. Cruz, Y. Huang, P. Mishra, S. Bhunia, 
+"An Automated Configurable Trojan Insertion Framework for Dynamic Trust Benchmarks", DATE, 2018
+
+****************************************************************
+TROJAN STATS:
+
+Number of Trojans: 1
+****************************************************************
+================================================================
+Trojan 0
+================================================================
+-----
+Type
+-----
+3-bit FSM with following state transitions:
+0->2->3->4->1
+
+-------
+Effect
+-------
+The Trojan alters the following signal(s)...
+n371
+
+---------------------
+Activation Condition
+---------------------
+The Trojan is triggered by the following internal signals and activation values...
+n275:0 n294:0 n345:0 n507:0 n508:0 
+
+------------
+TROJAN BODY
+------------
+	dfrtp_1 troj30_0_state_reg_0_( .D(troj30_0_n16), .CLK(CLK), .RESET_B(troj30_0_n2), .Q(troj30_0_state_0_) );
+	dfrtp_1 troj30_0_state_reg_2_( .D(troj30_0_n15), .CLK(CLK), .RESET_B(troj30_0_n2), .Q(troj30_0_state_2_) );
+	dfrtp_1 troj30_0_state_reg_1_( .D(troj30_0_n14), .CLK(CLK), .RESET_B(troj30_0_n2), .Q(troj30_0_state_1_) );
+	edfxtp_1 troj30_0_Trojan_out30_0_reg( .D(troj30_0_N27), .DE(troj30_0_N33), .CLK(CLK), .Q(Trojan_out_30_0) );
+	o21ai_0 troj30_0_U3( .A1(troj30_0_state_1_), .A2(troj30_0_state_0_), .B1(troj30_0_state_2_), .Y(troj30_0_n1) );
+	and2_0 troj30_0_U4( .A(Trigger_en_30_0), .B(troj30_0_n1), .X(troj30_0_N26) );
+	inv_2 troj30_0_U5( .A(RST), .Y(troj30_0_n2) );
+	o32ai_2 troj30_0_U6( .A1(troj30_0_n4), .A2(troj30_0_state_2_), .A3(troj30_0_state_0_), .B1(troj30_0_n5), .B2(troj30_0_n6), .Y(troj30_0_n14) );
+	o32ai_2 troj30_0_U7( .A1(troj30_0_n7), .A2(troj30_0_state_2_), .A3(troj30_0_n4), .B1(troj30_0_n8), .B2(troj30_0_n5), .Y(troj30_0_n15) );
+	o32ai_2 troj30_0_U8( .A1(troj30_0_n9), .A2(troj30_0_state_0_), .A3(troj30_0_n4), .B1(troj30_0_n7), .B2(troj30_0_n5), .Y(troj30_0_n16) );
+	o21ai_1 troj30_0_U9( .A1(troj30_0_state_1_), .A2(troj30_0_n7), .B1(Trigger_en_30_0), .Y(troj30_0_n11) );
+	o21ai_1 troj30_0_U10( .A1(troj30_0_state_0_), .A2(troj30_0_state_1_), .B1(troj30_0_state_2_), .Y(troj30_0_n10) );
+	nor3_2 troj30_0_U11( .A(n294), .B(n275), .C(troj30_0_n12), .Y(Trigger_en_30_0) );
+	nor3_2 troj30_0_U12( .A(troj30_0_n7), .B(troj30_0_state_2_), .C(troj30_0_state_1_), .Y(troj30_0_N27) );
+	xnor2_1 troj30_0_U13( .A(troj30_0_n3), .B(tempn371), .Y(n371) );
+	nand2_1 troj30_0_U14( .A(Trojan_out_30_0), .B(Trigger_en_30_0), .Y(troj30_0_n3) );
+	inv_1 troj30_0_U15( .A(troj30_0_state_1_), .Y(troj30_0_n6) );
+	inv_1 troj30_0_U16( .A(troj30_0_state_2_), .Y(troj30_0_n8) );
+	inv_1 troj30_0_U17( .A(troj30_0_n5), .Y(troj30_0_n4) );
+	nand2_1 troj30_0_U18( .A(troj30_0_n10), .B(troj30_0_n11), .Y(troj30_0_n5) );
+	xnor2_1 troj30_0_U19( .A(troj30_0_state_1_), .B(troj30_0_state_2_), .Y(troj30_0_n9) );
+	or3_1 troj30_0_U20( .A(n508), .B(n507), .C(n345), .X(troj30_0_n12) );
+	nor2_1 troj30_0_U21( .A(RST), .B(troj30_0_n13), .Y(troj30_0_N33) );
+	inv_1 troj30_0_U22( .A(troj30_0_N26), .Y(troj30_0_n13) );
+	inv_1 troj30_0_U23( .A(troj30_0_state_0_), .Y(troj30_0_n7) );
+
+================================================================

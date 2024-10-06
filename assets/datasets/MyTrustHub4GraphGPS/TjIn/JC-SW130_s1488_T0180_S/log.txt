@@ -1,0 +1,54 @@
+s1488_T0180_S LOG
+****************************************************************
+ TRIT-ASIC Generated Trojans.  The design generated is for academic use only.
+ Please cite the following if using the benchmark provided:
+J. Cruz, Y. Huang, P. Mishra, S. Bhunia, 
+"An Automated Configurable Trojan Insertion Framework for Dynamic Trust Benchmarks", DATE, 2018
+
+****************************************************************
+TROJAN STATS:
+
+Number of Trojans: 1
+****************************************************************
+================================================================
+Trojan 0
+================================================================
+-----
+Type
+-----
+2-bit FSM with following state transitions:
+0->1->2->3
+
+-------
+Effect
+-------
+The Trojan alters the following signal(s)...
+n458
+
+---------------------
+Activation Condition
+---------------------
+The Trojan is triggered by the following internal signals and activation values...
+n382:0 n498:0 n521:0 n523:0 n538:0 
+
+------------
+TROJAN BODY
+------------
+	dfrtp_1 troj30_0_state_reg_0_( .D(troj30_0_n9), .CLK(CLK), .RESET_B(troj30_0_n1), .Q(troj30_0_state_0_) );
+	dfrtp_1 troj30_0_state_reg_1_( .D(troj30_0_n8), .CLK(CLK), .RESET_B(troj30_0_n1), .Q(troj30_0_state_1_) );
+	edfxtp_1 troj30_0_Trojan_out30_0_reg( .D(troj30_0_N13), .DE(troj30_0_N18), .CLK(CLK), .Q(Trojan_out_30_0) );
+	inv_2 troj30_0_U3( .A(RST), .Y(troj30_0_n1) );
+	o21ai_1 troj30_0_U4( .A1(troj30_0_n3), .A2(troj30_0_n4), .B1(troj30_0_n5), .Y(troj30_0_n8) );
+	nor3_2 troj30_0_U5( .A(n498), .B(n382), .C(troj30_0_n7), .Y(Trigger_en_30_0) );
+	xnor2_1 troj30_0_U6( .A(troj30_0_n2), .B(tempn458), .Y(n458) );
+	nand2_1 troj30_0_U7( .A(Trojan_out_30_0), .B(Trigger_en_30_0), .Y(troj30_0_n2) );
+	xnor2_1 troj30_0_U8( .A(troj30_0_state_0_), .B(troj30_0_n4), .Y(troj30_0_n9) );
+	or2_0 troj30_0_U9( .A(troj30_0_n6), .B(troj30_0_N13), .X(troj30_0_n4) );
+	nor2_1 troj30_0_U10( .A(RST), .B(troj30_0_n6), .Y(troj30_0_N18) );
+	inv_1 troj30_0_U11( .A(Trigger_en_30_0), .Y(troj30_0_n6) );
+	or3_1 troj30_0_U12( .A(n538), .B(n523), .C(n521), .X(troj30_0_n7) );
+	nor2_1 troj30_0_U13( .A(troj30_0_n5), .B(troj30_0_n3), .Y(troj30_0_N13) );
+	inv_1 troj30_0_U14( .A(troj30_0_state_0_), .Y(troj30_0_n3) );
+	inv_1 troj30_0_U15( .A(troj30_0_state_1_), .Y(troj30_0_n5) );
+
+================================================================

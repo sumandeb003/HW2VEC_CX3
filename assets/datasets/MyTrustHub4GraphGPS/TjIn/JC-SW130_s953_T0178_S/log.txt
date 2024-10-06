@@ -1,0 +1,50 @@
+s953_T0178_S LOG
+****************************************************************
+ TRIT-ASIC Generated Trojans.  The design generated is for academic use only.
+ Please cite the following if using the benchmark provided:
+J. Cruz, Y. Huang, P. Mishra, S. Bhunia, 
+"An Automated Configurable Trojan Insertion Framework for Dynamic Trust Benchmarks", DATE, 2018
+
+****************************************************************
+TROJAN STATS:
+
+Number of Trojans: 1
+****************************************************************
+================================================================
+Trojan 0
+================================================================
+-----
+Type
+-----
+2-bit counter
+
+-------
+Effect
+-------
+The Trojan alters the following signal(s)...
+DFF_12_N3
+
+---------------------
+Activation Condition
+---------------------
+The Trojan is triggered by the following internal signals and activation values...
+DFF_11_N3:0 DFF_13_N3:0 DFF_25_N3:0 n290:0 n315:0 
+
+------------
+TROJAN BODY
+------------
+	dfrtp_1 troj28_0_counter_reg_0_( .D(troj28_0_n2), .CLK(CLK), .RESET_B(troj28_0_N4), .Q(troj28_0_counter_0_) );
+	dfrtp_1 troj28_0_counter_reg_1_( .D(troj28_0_n1), .CLK(CLK), .RESET_B(troj28_0_N4), .Q(troj28_0_counter_1_) );
+	edfxtp_1 troj28_0_Trojan_out28_0_reg( .D(troj28_0_N5), .DE(troj28_0_N4), .CLK(CLK), .Q(Trojan_out_28_0) );
+	mux2_1 troj28_0_U3( .A0(troj28_0_counter_1_), .A1(troj28_0_N3), .S(Trigger_en_28_0), .X(troj28_0_n1) );
+	xor2_1 troj28_0_U4( .A(troj28_0_counter_0_), .B(Trigger_en_28_0), .X(troj28_0_n2) );
+	nor3_2 troj28_0_U5( .A(DFF_13_N3), .B(DFF_11_N3), .C(troj28_0_n4), .Y(Trigger_en_28_0) );
+	xnor2_1 troj28_0_U6( .A(troj28_0_n3), .B(tempDFF_12_N3), .Y(DFF_12_N3) );
+	nand2_1 troj28_0_U7( .A(Trojan_out_28_0), .B(Trigger_en_28_0), .Y(troj28_0_n3) );
+	or3_1 troj28_0_U8( .A(n315), .B(n290), .C(DFF_25_N3), .X(troj28_0_n4) );
+	and2_0 troj28_0_U9( .A(troj28_0_counter_0_), .B(troj28_0_counter_1_), .X(troj28_0_N5) );
+	inv_1 troj28_0_U10( .A(RST), .Y(troj28_0_N4) );
+	xnor2_1 troj28_0_U11( .A(troj28_0_counter_1_), .B(troj28_0_N2), .Y(troj28_0_N3) );
+	inv_1 troj28_0_U12( .A(troj28_0_counter_0_), .Y(troj28_0_N2) );
+
+================================================================

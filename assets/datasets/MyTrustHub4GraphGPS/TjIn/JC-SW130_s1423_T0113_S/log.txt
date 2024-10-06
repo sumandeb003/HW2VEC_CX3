@@ -1,0 +1,53 @@
+s1423_T0113_S LOG
+****************************************************************
+ TRIT-ASIC Generated Trojans.  The design generated is for academic use only.
+ Please cite the following if using the benchmark provided:
+J. Cruz, Y. Huang, P. Mishra, S. Bhunia, 
+"An Automated Configurable Trojan Insertion Framework for Dynamic Trust Benchmarks", DATE, 2018
+
+****************************************************************
+TROJAN STATS:
+
+Number of Trojans: 1
+****************************************************************
+================================================================
+Trojan 0
+================================================================
+-----
+Type
+-----
+2-bit FSM with following state transitions:
+0->3->1->2
+
+-------
+Effect
+-------
+The Trojan alters the following signal(s)...
+n381
+
+---------------------
+Activation Condition
+---------------------
+The Trojan is triggered by the following internal signals and activation values...
+n322:0 n324:0 n523:0 n560:0 
+
+------------
+TROJAN BODY
+------------
+	dfrtp_1 troj13_0_state_reg_0_( .D(troj13_0_n8), .CLK(CLK), .RESET_B(troj13_0_n1), .Q(troj13_0_state_0_) );
+	dfrtp_1 troj13_0_state_reg_1_( .D(troj13_0_n7), .CLK(CLK), .RESET_B(troj13_0_n1), .Q(troj13_0_state_1_) );
+	edfxtp_1 troj13_0_Trojan_out13_0_reg( .D(troj13_0_N13), .DE(troj13_0_N18), .CLK(CLK), .Q(Trojan_out_13_0) );
+	inv_2 troj13_0_U3( .A(RST), .Y(troj13_0_n1) );
+	nor4_2 troj13_0_U4( .A(n324), .B(n322), .C(n560), .D(n523), .Y(Trigger_en_13_0) );
+	xnor2_1 troj13_0_U5( .A(troj13_0_n2), .B(tempn381), .Y(n381) );
+	nand2_1 troj13_0_U6( .A(Trojan_out_13_0), .B(Trigger_en_13_0), .Y(troj13_0_n2) );
+	xnor2_1 troj13_0_U7( .A(troj13_0_state_1_), .B(troj13_0_n3), .Y(troj13_0_n7) );
+	xor2_1 troj13_0_U8( .A(troj13_0_state_0_), .B(troj13_0_n4), .X(troj13_0_n8) );
+	nor2_1 troj13_0_U9( .A(troj13_0_state_1_), .B(troj13_0_n3), .Y(troj13_0_n4) );
+	or2_0 troj13_0_U10( .A(troj13_0_n5), .B(troj13_0_N13), .X(troj13_0_n3) );
+	nor2_1 troj13_0_U11( .A(RST), .B(troj13_0_n5), .Y(troj13_0_N18) );
+	inv_1 troj13_0_U12( .A(Trigger_en_13_0), .Y(troj13_0_n5) );
+	nor2_1 troj13_0_U13( .A(troj13_0_n6), .B(troj13_0_state_0_), .Y(troj13_0_N13) );
+	inv_1 troj13_0_U14( .A(troj13_0_state_1_), .Y(troj13_0_n6) );
+
+================================================================

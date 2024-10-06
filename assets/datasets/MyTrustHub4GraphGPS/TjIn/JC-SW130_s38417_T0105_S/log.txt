@@ -1,0 +1,49 @@
+s38417_T0105_S LOG
+****************************************************************
+ TRIT-ASIC Generated Trojans.  The design generated is for academic use only.
+ Please cite the following if using the benchmark provided:
+J. Cruz, Y. Huang, P. Mishra, S. Bhunia, 
+"An Automated Configurable Trojan Insertion Framework for Dynamic Trust Benchmarks", DATE, 2018
+
+****************************************************************
+TROJAN STATS:
+
+Number of Trojans: 1
+****************************************************************
+================================================================
+Trojan 0
+================================================================
+-----
+Type
+-----
+2-bit counter
+
+-------
+Effect
+-------
+The Trojan alters the following signal(s)...
+n9252
+
+---------------------
+Activation Condition
+---------------------
+The Trojan is triggered by the following internal signals and activation values...
+n6016:0 n6129:0 n6946:0 n9611:0 
+
+------------
+TROJAN BODY
+------------
+	dfrtp_1 troj5_0_counter_reg_0_( .D(troj5_0_n2), .CLK(CLK), .RESET_B(troj5_0_N4), .Q(troj5_0_counter_0_) );
+	dfrtp_1 troj5_0_counter_reg_1_( .D(troj5_0_n1), .CLK(CLK), .RESET_B(troj5_0_N4), .Q(troj5_0_counter_1_) );
+	edfxtp_1 troj5_0_Trojan_out5_0_reg( .D(troj5_0_N5), .DE(troj5_0_N4), .CLK(CLK), .Q(Trojan_out_5_0) );
+	mux2_1 troj5_0_U3( .A0(troj5_0_counter_1_), .A1(troj5_0_N3), .S(Trigger_en_5_0), .X(troj5_0_n1) );
+	xor2_1 troj5_0_U4( .A(troj5_0_counter_0_), .B(Trigger_en_5_0), .X(troj5_0_n2) );
+	nor4_2 troj5_0_U5( .A(n6129), .B(n6016), .C(n9611), .D(n6946), .Y(Trigger_en_5_0) );
+	xnor2_1 troj5_0_U6( .A(troj5_0_n3), .B(tempn9252), .Y(n9252) );
+	nand2_1 troj5_0_U7( .A(Trojan_out_5_0), .B(Trigger_en_5_0), .Y(troj5_0_n3) );
+	and2_0 troj5_0_U8( .A(troj5_0_counter_0_), .B(troj5_0_counter_1_), .X(troj5_0_N5) );
+	inv_1 troj5_0_U9( .A(RST), .Y(troj5_0_N4) );
+	xnor2_1 troj5_0_U10( .A(troj5_0_counter_1_), .B(troj5_0_N2), .Y(troj5_0_N3) );
+	inv_1 troj5_0_U11( .A(troj5_0_counter_0_), .Y(troj5_0_N2) );
+
+================================================================

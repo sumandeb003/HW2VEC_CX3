@@ -1,0 +1,47 @@
+s38584_T0004_C_L_A LOG
+****************************************************************
+ TRIT-ASIC Generated Trojans.  The design generated is for academic use only.
+ Please cite the following if using the benchmark provided:
+J. Cruz, Y. Huang, P. Mishra, S. Bhunia, 
+"An Automated Configurable Trojan Insertion Framework for Dynamic Trust Benchmarks", DATE, 2018
+
+****************************************************************
+TROJAN STATS:
+
+Number of Trojans: 1
+****************************************************************
+================================================================
+Trojan 0
+================================================================
+-----
+Type
+-----
+Combinational
+
+-------
+Effect
+-------
+The Trojan leaks the following signal(s) through power side channel ...
+n9728
+
+---------------------
+Activation Condition
+---------------------
+Always On
+
+
+------------
+TROJAN BODY
+------------
+	nand2_1 troj4_0_Trojan4_0(.A(troj4_0_RO4_0out9), .B(n9728), .Y(troj4_0_RO4_0out0) );
+	nor2_1 troj4_0_RO4_0troj0(.A(troj4_0_RO4_0out0), .B(troj4_0_RO4_0out0), .Y(troj4_0_RO4_0out1) );
+	nor2_1 troj4_0_RO4_0troj1(.A(troj4_0_RO4_0out1), .B(troj4_0_RO4_0out1), .Y(troj4_0_RO4_0out2) );
+	nor2_1 troj4_0_RO4_0troj2(.A(troj4_0_RO4_0out2), .B(troj4_0_RO4_0out2), .Y(troj4_0_RO4_0out3) );
+	nor2_1 troj4_0_RO4_0troj3(.A(troj4_0_RO4_0out3), .B(troj4_0_RO4_0out3), .Y(troj4_0_RO4_0out4) );
+	nor2_1 troj4_0_RO4_0troj4(.A(troj4_0_RO4_0out4), .B(troj4_0_RO4_0out4), .Y(troj4_0_RO4_0out5) );
+	nor2_1 troj4_0_RO4_0troj5(.A(troj4_0_RO4_0out5), .B(troj4_0_RO4_0out5), .Y(troj4_0_RO4_0out6) );
+	nor2_1 troj4_0_RO4_0troj6(.A(troj4_0_RO4_0out6), .B(troj4_0_RO4_0out6), .Y(troj4_0_RO4_0out7) );
+	nor2_1 troj4_0_RO4_0troj7(.A(troj4_0_RO4_0out7), .B(troj4_0_RO4_0out7), .Y(troj4_0_RO4_0out8) );
+	nor2_1 troj4_0_RO4_0troj8(.A(troj4_0_RO4_0out8), .B(troj4_0_RO4_0out8), .Y(troj4_0_RO4_0out9) );
+
+================================================================

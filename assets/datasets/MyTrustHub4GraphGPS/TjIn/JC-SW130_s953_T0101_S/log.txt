@@ -1,0 +1,49 @@
+s953_T0101_S LOG
+****************************************************************
+ TRIT-ASIC Generated Trojans.  The design generated is for academic use only.
+ Please cite the following if using the benchmark provided:
+J. Cruz, Y. Huang, P. Mishra, S. Bhunia, 
+"An Automated Configurable Trojan Insertion Framework for Dynamic Trust Benchmarks", DATE, 2018
+
+****************************************************************
+TROJAN STATS:
+
+Number of Trojans: 1
+****************************************************************
+================================================================
+Trojan 0
+================================================================
+-----
+Type
+-----
+2-bit counter
+
+-------
+Effect
+-------
+The Trojan alters the following signal(s)...
+n225
+
+---------------------
+Activation Condition
+---------------------
+The Trojan is triggered by the following internal signals and activation values...
+n240:0 n294:0 n334:0 n364:0 
+
+------------
+TROJAN BODY
+------------
+	dfrtp_1 troj1_0_counter_reg_0_( .D(troj1_0_n2), .CLK(CLK), .RESET_B(troj1_0_N4), .Q(troj1_0_counter_0_) );
+	dfrtp_1 troj1_0_counter_reg_1_( .D(troj1_0_n1), .CLK(CLK), .RESET_B(troj1_0_N4), .Q(troj1_0_counter_1_) );
+	edfxtp_1 troj1_0_Trojan_out1_0_reg( .D(troj1_0_N5), .DE(troj1_0_N4), .CLK(CLK), .Q(Trojan_out_1_0) );
+	mux2_1 troj1_0_U3( .A0(troj1_0_counter_1_), .A1(troj1_0_N3), .S(Trigger_en_1_0), .X(troj1_0_n1) );
+	xor2_1 troj1_0_U4( .A(troj1_0_counter_0_), .B(Trigger_en_1_0), .X(troj1_0_n2) );
+	nor4_2 troj1_0_U5( .A(n294), .B(n240), .C(n364), .D(n334), .Y(Trigger_en_1_0) );
+	xnor2_1 troj1_0_U6( .A(troj1_0_n3), .B(tempn225), .Y(n225) );
+	nand2_1 troj1_0_U7( .A(Trojan_out_1_0), .B(Trigger_en_1_0), .Y(troj1_0_n3) );
+	and2_0 troj1_0_U8( .A(troj1_0_counter_0_), .B(troj1_0_counter_1_), .X(troj1_0_N5) );
+	inv_1 troj1_0_U9( .A(RST), .Y(troj1_0_N4) );
+	xnor2_1 troj1_0_U10( .A(troj1_0_counter_1_), .B(troj1_0_N2), .Y(troj1_0_N3) );
+	inv_1 troj1_0_U11( .A(troj1_0_counter_0_), .Y(troj1_0_N2) );
+
+================================================================

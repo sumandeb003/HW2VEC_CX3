@@ -1,0 +1,56 @@
+s1196_T0182_S LOG
+****************************************************************
+ TRIT-ASIC Generated Trojans.  The design generated is for academic use only.
+ Please cite the following if using the benchmark provided:
+J. Cruz, Y. Huang, P. Mishra, S. Bhunia, 
+"An Automated Configurable Trojan Insertion Framework for Dynamic Trust Benchmarks", DATE, 2018
+
+****************************************************************
+TROJAN STATS:
+
+Number of Trojans: 1
+****************************************************************
+================================================================
+Trojan 0
+================================================================
+-----
+Type
+-----
+2-bit FSM with following state transitions:
+0->2->1
+
+-------
+Effect
+-------
+The Trojan alters the following signal(s)...
+n477
+
+---------------------
+Activation Condition
+---------------------
+The Trojan is triggered by the following internal signals and activation values...
+n277:0 n316:0 n359:0 n365:0 n371:0 
+
+------------
+TROJAN BODY
+------------
+	dfrtp_1 troj32_0_state_reg_0_( .D(troj32_0_n13), .CLK(CLK), .RESET_B(troj32_0_n1), .Q(troj32_0_state_0_) );
+	dfrtp_1 troj32_0_state_reg_1_( .D(troj32_0_n12), .CLK(CLK), .RESET_B(troj32_0_n1), .Q(troj32_0_state_1_) );
+	edfxtp_1 troj32_0_Trojan_out32_0_reg( .D(troj32_0_state_0_), .DE(troj32_0_n5), .CLK(CLK), .Q(Trojan_out_32_0) );
+	inv_2 troj32_0_U3( .A(RST), .Y(troj32_0_n1) );
+	nor3_2 troj32_0_U4( .A(RST), .B(troj32_0_n7), .C(troj32_0_n3), .Y(troj32_0_n5) );
+	o32ai_2 troj32_0_U5( .A1(troj32_0_n9), .A2(troj32_0_state_0_), .A3(troj32_0_n8), .B1(troj32_0_n6), .B2(troj32_0_n10), .Y(troj32_0_n13) );
+	a21oi_2 troj32_0_U6( .A1(troj32_0_n6), .A2(Trigger_en_32_0), .B1(troj32_0_n7), .Y(troj32_0_n8) );
+	nor3_2 troj32_0_U7( .A(n316), .B(n277), .C(troj32_0_n11), .Y(Trigger_en_32_0) );
+	xor2_1 troj32_0_U8( .A(tempn477), .B(troj32_0_n2), .X(n477) );
+	nor2_1 troj32_0_U9( .A(troj32_0_n3), .B(troj32_0_n4), .Y(troj32_0_n2) );
+	inv_1 troj32_0_U10( .A(Trojan_out_32_0), .Y(troj32_0_n4) );
+	inv_1 troj32_0_U11( .A(Trigger_en_32_0), .Y(troj32_0_n3) );
+	xnor2_1 troj32_0_U12( .A(troj32_0_state_1_), .B(troj32_0_n8), .Y(troj32_0_n12) );
+	inv_1 troj32_0_U13( .A(troj32_0_n8), .Y(troj32_0_n10) );
+	nor2_1 troj32_0_U14( .A(troj32_0_n9), .B(troj32_0_n6), .Y(troj32_0_n7) );
+	inv_1 troj32_0_U15( .A(troj32_0_state_0_), .Y(troj32_0_n6) );
+	inv_1 troj32_0_U16( .A(troj32_0_state_1_), .Y(troj32_0_n9) );
+	or3_1 troj32_0_U17( .A(n371), .B(n365), .C(n359), .X(troj32_0_n11) );
+
+================================================================

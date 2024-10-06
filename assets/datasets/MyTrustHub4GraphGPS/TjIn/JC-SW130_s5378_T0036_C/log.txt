@@ -1,0 +1,46 @@
+s5378_T0036_C LOG
+****************************************************************
+ TRIT-ASIC Generated Trojans.  The design generated is for academic use only.
+ Please cite the following if using the benchmark provided:
+J. Cruz, Y. Huang, P. Mishra, S. Bhunia, 
+"An Automated Configurable Trojan Insertion Framework for Dynamic Trust Benchmarks", DATE, 2018
+
+****************************************************************
+TROJAN STATS:
+
+Number of Trojans: 1
+****************************************************************
+================================================================
+Trojan 0
+================================================================
+-----
+Type
+-----
+Combinational
+
+-------
+Effect
+-------
+The Trojan alters the following signal(s)...
+n1033
+
+---------------------
+Activation Condition
+---------------------
+The Trojan is triggered by the following internal signals and activation values...
+DFF_150_N3:0 DFF_170_N3:0 DFF_175_N3:0 DFF_35_N3:0 DFF_9_N3:0 n1056:0 n720:0 n786:0 n940:0 n998:0 
+
+------------
+TROJAN BODY
+------------
+	xor2_1 troj36_0_U1( .A(tempn1033), .B(Trigger_en_36_0), .X(n1033) );
+	inv_1 troj36_0_U2( .A(troj36_0_n1), .Y(Trigger_en_36_0) );
+	or4_1 troj36_0_U3( .A(DFF_170_N3), .B(DFF_150_N3), .C(troj36_0_n2), .D(troj36_0_n3), .X(troj36_0_n1) );
+	or4_1 troj36_0_U4( .A(n720), .B(n1056), .C(n786), .D(troj36_0_n4), .X(troj36_0_n3) );
+	inv_1 troj36_0_U5( .A(troj36_0_n5), .Y(troj36_0_n4) );
+	nor2_1 troj36_0_U6( .A(n998), .B(n940), .Y(troj36_0_n5) );
+	nand2_1 troj36_0_U7( .A(troj36_0_n6), .B(troj36_0_n7), .Y(troj36_0_n2) );
+	inv_1 troj36_0_U8( .A(DFF_175_N3), .Y(troj36_0_n7) );
+	nor2_1 troj36_0_U9( .A(DFF_9_N3), .B(DFF_35_N3), .Y(troj36_0_n6) );
+
+================================================================

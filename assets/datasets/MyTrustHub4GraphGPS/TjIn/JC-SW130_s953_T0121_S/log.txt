@@ -1,0 +1,49 @@
+s953_T0121_S LOG
+****************************************************************
+ TRIT-ASIC Generated Trojans.  The design generated is for academic use only.
+ Please cite the following if using the benchmark provided:
+J. Cruz, Y. Huang, P. Mishra, S. Bhunia, 
+"An Automated Configurable Trojan Insertion Framework for Dynamic Trust Benchmarks", DATE, 2018
+
+****************************************************************
+TROJAN STATS:
+
+Number of Trojans: 1
+****************************************************************
+================================================================
+Trojan 0
+================================================================
+-----
+Type
+-----
+2-bit counter
+
+-------
+Effect
+-------
+The Trojan alters the following signal(s)...
+DFF_21_N3
+
+---------------------
+Activation Condition
+---------------------
+The Trojan is triggered by the following internal signals and activation values...
+DFF_6_N3:0 n272:0 n369:0 n430:0 
+
+------------
+TROJAN BODY
+------------
+	dfrtp_1 troj21_0_counter_reg_0_( .D(troj21_0_n2), .CLK(CLK), .RESET_B(troj21_0_N4), .Q(troj21_0_counter_0_) );
+	dfrtp_1 troj21_0_counter_reg_1_( .D(troj21_0_n1), .CLK(CLK), .RESET_B(troj21_0_N4), .Q(troj21_0_counter_1_) );
+	edfxtp_1 troj21_0_Trojan_out21_0_reg( .D(troj21_0_N5), .DE(troj21_0_N4), .CLK(CLK), .Q(Trojan_out_21_0) );
+	mux2_1 troj21_0_U3( .A0(troj21_0_counter_1_), .A1(troj21_0_N3), .S(Trigger_en_21_0), .X(troj21_0_n1) );
+	xor2_1 troj21_0_U4( .A(troj21_0_counter_0_), .B(Trigger_en_21_0), .X(troj21_0_n2) );
+	nor4_2 troj21_0_U5( .A(n272), .B(DFF_6_N3), .C(n430), .D(n369), .Y(Trigger_en_21_0) );
+	xnor2_1 troj21_0_U6( .A(troj21_0_n3), .B(tempDFF_21_N3), .Y(DFF_21_N3) );
+	nand2_1 troj21_0_U7( .A(Trojan_out_21_0), .B(Trigger_en_21_0), .Y(troj21_0_n3) );
+	and2_0 troj21_0_U8( .A(troj21_0_counter_0_), .B(troj21_0_counter_1_), .X(troj21_0_N5) );
+	inv_1 troj21_0_U9( .A(RST), .Y(troj21_0_N4) );
+	xnor2_1 troj21_0_U10( .A(troj21_0_counter_1_), .B(troj21_0_N2), .Y(troj21_0_N3) );
+	inv_1 troj21_0_U11( .A(troj21_0_counter_0_), .Y(troj21_0_N2) );
+
+================================================================

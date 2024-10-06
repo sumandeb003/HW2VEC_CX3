@@ -1,0 +1,53 @@
+s1423_T0107_S LOG
+****************************************************************
+ TRIT-ASIC Generated Trojans.  The design generated is for academic use only.
+ Please cite the following if using the benchmark provided:
+J. Cruz, Y. Huang, P. Mishra, S. Bhunia, 
+"An Automated Configurable Trojan Insertion Framework for Dynamic Trust Benchmarks", DATE, 2018
+
+****************************************************************
+TROJAN STATS:
+
+Number of Trojans: 1
+****************************************************************
+================================================================
+Trojan 0
+================================================================
+-----
+Type
+-----
+2-bit FSM with following state transitions:
+0->1->2->3
+
+-------
+Effect
+-------
+The Trojan alters the following signal(s)...
+n297
+
+---------------------
+Activation Condition
+---------------------
+The Trojan is triggered by the following internal signals and activation values...
+n310:0 n453:0 n482:0 n567:0 
+
+------------
+TROJAN BODY
+------------
+	dfrtp_1 troj7_0_state_reg_0_( .D(troj7_0_n8), .CLK(CLK), .RESET_B(troj7_0_n1), .Q(troj7_0_state_0_) );
+	dfrtp_1 troj7_0_state_reg_1_( .D(troj7_0_n7), .CLK(CLK), .RESET_B(troj7_0_n1), .Q(troj7_0_state_1_) );
+	edfxtp_1 troj7_0_Trojan_out7_0_reg( .D(troj7_0_N13), .DE(troj7_0_N18), .CLK(CLK), .Q(Trojan_out_7_0) );
+	inv_2 troj7_0_U3( .A(RST), .Y(troj7_0_n1) );
+	o21ai_1 troj7_0_U4( .A1(troj7_0_n3), .A2(troj7_0_n4), .B1(troj7_0_n5), .Y(troj7_0_n7) );
+	nor4_2 troj7_0_U5( .A(n453), .B(n310), .C(n567), .D(n482), .Y(Trigger_en_7_0) );
+	xnor2_1 troj7_0_U6( .A(troj7_0_n2), .B(tempn297), .Y(n297) );
+	nand2_1 troj7_0_U7( .A(Trojan_out_7_0), .B(Trigger_en_7_0), .Y(troj7_0_n2) );
+	xnor2_1 troj7_0_U8( .A(troj7_0_state_0_), .B(troj7_0_n4), .Y(troj7_0_n8) );
+	or2_0 troj7_0_U9( .A(troj7_0_n6), .B(troj7_0_N13), .X(troj7_0_n4) );
+	nor2_1 troj7_0_U10( .A(RST), .B(troj7_0_n6), .Y(troj7_0_N18) );
+	inv_1 troj7_0_U11( .A(Trigger_en_7_0), .Y(troj7_0_n6) );
+	nor2_1 troj7_0_U12( .A(troj7_0_n5), .B(troj7_0_n3), .Y(troj7_0_N13) );
+	inv_1 troj7_0_U13( .A(troj7_0_state_0_), .Y(troj7_0_n3) );
+	inv_1 troj7_0_U14( .A(troj7_0_state_1_), .Y(troj7_0_n5) );
+
+================================================================

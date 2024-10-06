@@ -1,0 +1,74 @@
+s1196_T0018_S_L_A LOG
+****************************************************************
+ TRIT-ASIC Generated Trojans.  The design generated is for academic use only.
+ Please cite the following if using the benchmark provided:
+J. Cruz, Y. Huang, P. Mishra, S. Bhunia, 
+"An Automated Configurable Trojan Insertion Framework for Dynamic Trust Benchmarks", DATE, 2018
+
+****************************************************************
+TROJAN STATS:
+
+Number of Trojans: 1
+****************************************************************
+================================================================
+Trojan 0
+================================================================
+-----
+Type
+-----
+12-bit NLFSR with seed 110101001001 based on MOLES Trojan
+-------
+Effect
+-------
+The Trojan leaks the following signal(s) through power side channel ...
+n420
+
+---------------------
+Activation Condition
+---------------------
+Always On
+
+
+------------
+TROJAN BODY
+------------
+	dfxtp_1 troj8_0_nlfsr_stream8_0_reg_0_( .D(troj8_0_N2), .CLK(CLK), .Q(troj8_0_nlfsr_stream8_0_0_) );
+	dfxtp_1 troj8_0_nlfsr_stream8_0_reg_11_( .D(troj8_0_N13), .CLK(CLK), .Q(troj8_0_nlfsr_stream8_0_11_) );
+	dfxtp_1 troj8_0_nlfsr_stream8_0_reg_10_( .D(troj8_0_N12), .CLK(CLK), .Q(troj8_0_nlfsr_stream8_0_10_) );
+	dfxtp_1 troj8_0_nlfsr_stream8_0_reg_9_( .D(troj8_0_N11), .CLK(CLK), .Q(troj8_0_nlfsr_stream8_0_9_) );
+	dfxtp_1 troj8_0_nlfsr_stream8_0_reg_8_( .D(troj8_0_N10), .CLK(CLK), .Q(troj8_0_nlfsr_stream8_0_8_) );
+	dfxtp_1 troj8_0_nlfsr_stream8_0_reg_7_( .D(troj8_0_N9), .CLK(CLK), .Q(troj8_0_nlfsr_stream8_0_7_) );
+	dfxtp_1 troj8_0_nlfsr_stream8_0_reg_6_( .D(troj8_0_N8), .CLK(CLK), .Q(troj8_0_nlfsr_stream8_0_6_) );
+	dfxtp_1 troj8_0_nlfsr_stream8_0_reg_5_( .D(troj8_0_N7), .CLK(CLK), .Q(troj8_0_nlfsr_stream8_0_5_) );
+	dfxtp_1 troj8_0_nlfsr_stream8_0_reg_4_( .D(troj8_0_N6), .CLK(CLK), .Q(troj8_0_nlfsr_stream8_0_4_) );
+	dfxtp_1 troj8_0_nlfsr_stream8_0_reg_3_( .D(troj8_0_N5), .CLK(CLK), .Q(troj8_0_nlfsr_stream8_0_3_) );
+	dfxtp_1 troj8_0_nlfsr_stream8_0_reg_2_( .D(troj8_0_N4), .CLK(CLK), .Q(troj8_0_nlfsr_stream8_0_2_) );
+	dfxtp_1 troj8_0_nlfsr_stream8_0_reg_1_( .D(troj8_0_N3), .CLK(CLK), .Q(troj8_0_nlfsr_stream8_0_1_) );
+	dfxtp_1 troj8_0_load8_0_reg_7_( .D(troj8_0_N14), .CLK(CLK), .Q(troj8_0_load8_0_7_) );
+	dfxtp_1 troj8_0_load8_0_reg_6_( .D(troj8_0_N14), .CLK(CLK), .Q(troj8_0_load8_0_6_) );
+	dfxtp_1 troj8_0_load8_0_reg_5_( .D(troj8_0_N14), .CLK(CLK), .Q(troj8_0_load8_0_5_) );
+	dfxtp_1 troj8_0_load8_0_reg_4_( .D(troj8_0_N14), .CLK(CLK), .Q(troj8_0_load8_0_4_) );
+	dfxtp_1 troj8_0_load8_0_reg_3_( .D(troj8_0_N14), .CLK(CLK), .Q(troj8_0_load8_0_3_) );
+	dfxtp_1 troj8_0_load8_0_reg_2_( .D(troj8_0_N14), .CLK(CLK), .Q(troj8_0_load8_0_2_) );
+	dfxtp_1 troj8_0_load8_0_reg_1_( .D(troj8_0_N14), .CLK(CLK), .Q(troj8_0_load8_0_1_) );
+	dfxtp_1 troj8_0_load8_0_reg_0_( .D(troj8_0_N14), .CLK(CLK), .Q(troj8_0_load8_0_0_) );
+	and2_0 troj8_0_U3( .A(troj8_0_nlfsr_stream8_0_8_), .B(RST), .X(troj8_0_N9) );
+	or2_0 troj8_0_U4( .A(troj8_0_n1), .B(troj8_0_nlfsr_stream8_0_7_), .X(troj8_0_N8) );
+	and2_0 troj8_0_U5( .A(troj8_0_nlfsr_stream8_0_6_), .B(RST), .X(troj8_0_N7) );
+	and2_0 troj8_0_U6( .A(troj8_0_nlfsr_stream8_0_5_), .B(RST), .X(troj8_0_N6) );
+	or2_0 troj8_0_U7( .A(troj8_0_n1), .B(troj8_0_nlfsr_stream8_0_4_), .X(troj8_0_N5) );
+	and2_0 troj8_0_U8( .A(troj8_0_nlfsr_stream8_0_3_), .B(RST), .X(troj8_0_N4) );
+	and2_0 troj8_0_U9( .A(troj8_0_nlfsr_stream8_0_2_), .B(RST), .X(troj8_0_N3) );
+	or2_0 troj8_0_U10( .A(troj8_0_n1), .B(troj8_0_nlfsr_stream8_0_1_), .X(troj8_0_N2) );
+	xor2_1 troj8_0_U11( .A(troj8_0_nlfsr_stream8_0_0_), .B(n420), .X(troj8_0_N14) );
+	nand2_1 troj8_0_U12( .A(troj8_0_n2), .B(RST), .Y(troj8_0_N13) );
+	xor2_1 troj8_0_U13( .A(troj8_0_n3), .B(troj8_0_n4), .X(troj8_0_n2) );
+	xor2_1 troj8_0_U14( .A(troj8_0_nlfsr_stream8_0_7_), .B(troj8_0_nlfsr_stream8_0_4_), .X(troj8_0_n4) );
+	xor2_1 troj8_0_U15( .A(troj8_0_n5), .B(troj8_0_nlfsr_stream8_0_0_), .X(troj8_0_n3) );
+	nand2_1 troj8_0_U16( .A(troj8_0_nlfsr_stream8_0_1_), .B(troj8_0_nlfsr_stream8_0_7_), .Y(troj8_0_n5) );
+	or2_0 troj8_0_U17( .A(troj8_0_nlfsr_stream8_0_11_), .B(troj8_0_n1), .X(troj8_0_N12) );
+	and2_0 troj8_0_U18( .A(troj8_0_nlfsr_stream8_0_10_), .B(RST), .X(troj8_0_N11) );
+	or2_0 troj8_0_U19( .A(troj8_0_nlfsr_stream8_0_9_), .B(troj8_0_n1), .X(troj8_0_N10) );
+	inv_1 troj8_0_U20( .A(RST), .Y(troj8_0_n1) );
+
+================================================================

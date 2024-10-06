@@ -1,0 +1,50 @@
+s9234_T0158_S LOG
+****************************************************************
+ TRIT-ASIC Generated Trojans.  The design generated is for academic use only.
+ Please cite the following if using the benchmark provided:
+J. Cruz, Y. Huang, P. Mishra, S. Bhunia, 
+"An Automated Configurable Trojan Insertion Framework for Dynamic Trust Benchmarks", DATE, 2018
+
+****************************************************************
+TROJAN STATS:
+
+Number of Trojans: 1
+****************************************************************
+================================================================
+Trojan 0
+================================================================
+-----
+Type
+-----
+2-bit counter
+
+-------
+Effect
+-------
+The Trojan alters the following signal(s)...
+g4105
+
+---------------------
+Activation Condition
+---------------------
+The Trojan is triggered by the following internal signals and activation values...
+DFF_111_N3:0 DFF_87_N3:0 DFF_90_N3:0 n817:0 n903:0 
+
+------------
+TROJAN BODY
+------------
+	dfrtp_1 troj8_0_counter_reg_0_( .D(troj8_0_n2), .CLK(CLK), .RESET_B(troj8_0_N4), .Q(troj8_0_counter_0_) );
+	dfrtp_1 troj8_0_counter_reg_1_( .D(troj8_0_n1), .CLK(CLK), .RESET_B(troj8_0_N4), .Q(troj8_0_counter_1_) );
+	edfxtp_1 troj8_0_Trojan_out8_0_reg( .D(troj8_0_N5), .DE(troj8_0_N4), .CLK(CLK), .Q(Trojan_out_8_0) );
+	mux2_1 troj8_0_U3( .A0(troj8_0_counter_1_), .A1(troj8_0_N3), .S(Trigger_en_8_0), .X(troj8_0_n1) );
+	xor2_1 troj8_0_U4( .A(troj8_0_counter_0_), .B(Trigger_en_8_0), .X(troj8_0_n2) );
+	nor3_2 troj8_0_U5( .A(DFF_87_N3), .B(DFF_111_N3), .C(troj8_0_n4), .Y(Trigger_en_8_0) );
+	xnor2_1 troj8_0_U6( .A(troj8_0_n3), .B(tempg4105), .Y(g4105) );
+	nand2_1 troj8_0_U7( .A(Trojan_out_8_0), .B(Trigger_en_8_0), .Y(troj8_0_n3) );
+	or3_1 troj8_0_U8( .A(n903), .B(n817), .C(DFF_90_N3), .X(troj8_0_n4) );
+	and2_0 troj8_0_U9( .A(troj8_0_counter_0_), .B(troj8_0_counter_1_), .X(troj8_0_N5) );
+	inv_1 troj8_0_U10( .A(RST), .Y(troj8_0_N4) );
+	xnor2_1 troj8_0_U11( .A(troj8_0_counter_1_), .B(troj8_0_N2), .Y(troj8_0_N3) );
+	inv_1 troj8_0_U12( .A(troj8_0_counter_0_), .Y(troj8_0_N2) );
+
+================================================================

@@ -1,0 +1,41 @@
+s1488_T0078_C LOG
+****************************************************************
+ TRIT-ASIC Generated Trojans.  The design generated is for academic use only.
+ Please cite the following if using the benchmark provided:
+J. Cruz, Y. Huang, P. Mishra, S. Bhunia, 
+"An Automated Configurable Trojan Insertion Framework for Dynamic Trust Benchmarks", DATE, 2018
+
+****************************************************************
+TROJAN STATS:
+
+Number of Trojans: 1
+****************************************************************
+================================================================
+Trojan 0
+================================================================
+-----
+Type
+-----
+Combinational
+
+-------
+Effect
+-------
+The Trojan alters the following signal(s)...
+v13_D_13
+
+---------------------
+Activation Condition
+---------------------
+The Trojan is triggered by the following internal signals and activation values...
+n434:0 n457:1 n465:0 n483:0 n495:1 n564:0 
+
+------------
+TROJAN BODY
+------------
+	xor2_1 troj28_0_U1( .A(tempv13_D_13), .B(Trigger_en_28_0), .X(v13_D_13) );
+	and4_1 troj28_0_U2( .A(n457), .B(troj28_0_n1), .C(n495), .D(troj28_0_n2), .X(Trigger_en_28_0) );
+	nor3_1 troj28_0_U3( .A(n465), .B(n564), .C(n483), .Y(troj28_0_n2) );
+	inv_1 troj28_0_U4( .A(n434), .Y(troj28_0_n1) );
+
+================================================================

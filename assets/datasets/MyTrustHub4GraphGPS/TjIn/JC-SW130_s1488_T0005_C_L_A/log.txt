@@ -1,0 +1,61 @@
+s1488_T0005_C_L_A LOG
+****************************************************************
+ TRIT-ASIC Generated Trojans.  The design generated is for academic use only.
+ Please cite the following if using the benchmark provided:
+J. Cruz, Y. Huang, P. Mishra, S. Bhunia, 
+"An Automated Configurable Trojan Insertion Framework for Dynamic Trust Benchmarks", DATE, 2018
+
+****************************************************************
+TROJAN STATS:
+
+Number of Trojans: 1
+****************************************************************
+================================================================
+Trojan 0
+================================================================
+-----
+Type
+-----
+Combinational
+
+-------
+Effect
+-------
+The Trojan leaks the following signal(s) through power side channel ...
+n499
+
+---------------------
+Activation Condition
+---------------------
+Always On
+
+
+------------
+TROJAN BODY
+------------
+	nand2_1 troj5_0_Trojan5_0(.A(troj5_0_RO5_0out23), .B(n499), .Y(troj5_0_RO5_0out0) );
+	nand2_1 troj5_0_RO5_0troj0(.A(troj5_0_RO5_0out0), .B(troj5_0_RO5_0out0), .Y(troj5_0_RO5_0out1) );
+	nand2_1 troj5_0_RO5_0troj1(.A(troj5_0_RO5_0out1), .B(troj5_0_RO5_0out1), .Y(troj5_0_RO5_0out2) );
+	nand2_1 troj5_0_RO5_0troj2(.A(troj5_0_RO5_0out2), .B(troj5_0_RO5_0out2), .Y(troj5_0_RO5_0out3) );
+	nand2_1 troj5_0_RO5_0troj3(.A(troj5_0_RO5_0out3), .B(troj5_0_RO5_0out3), .Y(troj5_0_RO5_0out4) );
+	nand2_1 troj5_0_RO5_0troj4(.A(troj5_0_RO5_0out4), .B(troj5_0_RO5_0out4), .Y(troj5_0_RO5_0out5) );
+	nand2_1 troj5_0_RO5_0troj5(.A(troj5_0_RO5_0out5), .B(troj5_0_RO5_0out5), .Y(troj5_0_RO5_0out6) );
+	nand2_1 troj5_0_RO5_0troj6(.A(troj5_0_RO5_0out6), .B(troj5_0_RO5_0out6), .Y(troj5_0_RO5_0out7) );
+	nand2_1 troj5_0_RO5_0troj7(.A(troj5_0_RO5_0out7), .B(troj5_0_RO5_0out7), .Y(troj5_0_RO5_0out8) );
+	nand2_1 troj5_0_RO5_0troj8(.A(troj5_0_RO5_0out8), .B(troj5_0_RO5_0out8), .Y(troj5_0_RO5_0out9) );
+	nand2_1 troj5_0_RO5_0troj9(.A(troj5_0_RO5_0out9), .B(troj5_0_RO5_0out9), .Y(troj5_0_RO5_0out10) );
+	nand2_1 troj5_0_RO5_0troj10(.A(troj5_0_RO5_0out10), .B(troj5_0_RO5_0out10), .Y(troj5_0_RO5_0out11) );
+	nand2_1 troj5_0_RO5_0troj11(.A(troj5_0_RO5_0out11), .B(troj5_0_RO5_0out11), .Y(troj5_0_RO5_0out12) );
+	nand2_1 troj5_0_RO5_0troj12(.A(troj5_0_RO5_0out12), .B(troj5_0_RO5_0out12), .Y(troj5_0_RO5_0out13) );
+	nand2_1 troj5_0_RO5_0troj13(.A(troj5_0_RO5_0out13), .B(troj5_0_RO5_0out13), .Y(troj5_0_RO5_0out14) );
+	nand2_1 troj5_0_RO5_0troj14(.A(troj5_0_RO5_0out14), .B(troj5_0_RO5_0out14), .Y(troj5_0_RO5_0out15) );
+	nand2_1 troj5_0_RO5_0troj15(.A(troj5_0_RO5_0out15), .B(troj5_0_RO5_0out15), .Y(troj5_0_RO5_0out16) );
+	nand2_1 troj5_0_RO5_0troj16(.A(troj5_0_RO5_0out16), .B(troj5_0_RO5_0out16), .Y(troj5_0_RO5_0out17) );
+	nand2_1 troj5_0_RO5_0troj17(.A(troj5_0_RO5_0out17), .B(troj5_0_RO5_0out17), .Y(troj5_0_RO5_0out18) );
+	nand2_1 troj5_0_RO5_0troj18(.A(troj5_0_RO5_0out18), .B(troj5_0_RO5_0out18), .Y(troj5_0_RO5_0out19) );
+	nand2_1 troj5_0_RO5_0troj19(.A(troj5_0_RO5_0out19), .B(troj5_0_RO5_0out19), .Y(troj5_0_RO5_0out20) );
+	nand2_1 troj5_0_RO5_0troj20(.A(troj5_0_RO5_0out20), .B(troj5_0_RO5_0out20), .Y(troj5_0_RO5_0out21) );
+	nand2_1 troj5_0_RO5_0troj21(.A(troj5_0_RO5_0out21), .B(troj5_0_RO5_0out21), .Y(troj5_0_RO5_0out22) );
+	nand2_1 troj5_0_RO5_0troj22(.A(troj5_0_RO5_0out22), .B(troj5_0_RO5_0out22), .Y(troj5_0_RO5_0out23) );
+
+================================================================

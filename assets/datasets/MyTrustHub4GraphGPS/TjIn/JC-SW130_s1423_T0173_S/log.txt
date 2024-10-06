@@ -1,0 +1,50 @@
+s1423_T0173_S LOG
+****************************************************************
+ TRIT-ASIC Generated Trojans.  The design generated is for academic use only.
+ Please cite the following if using the benchmark provided:
+J. Cruz, Y. Huang, P. Mishra, S. Bhunia, 
+"An Automated Configurable Trojan Insertion Framework for Dynamic Trust Benchmarks", DATE, 2018
+
+****************************************************************
+TROJAN STATS:
+
+Number of Trojans: 1
+****************************************************************
+================================================================
+Trojan 0
+================================================================
+-----
+Type
+-----
+2-bit counter
+
+-------
+Effect
+-------
+The Trojan alters the following signal(s)...
+n410
+
+---------------------
+Activation Condition
+---------------------
+The Trojan is triggered by the following internal signals and activation values...
+n257:0 n355:0 n514:0 n580:0 n582:0 
+
+------------
+TROJAN BODY
+------------
+	dfrtp_1 troj23_0_counter_reg_0_( .D(troj23_0_n2), .CLK(CLK), .RESET_B(troj23_0_N4), .Q(troj23_0_counter_0_) );
+	dfrtp_1 troj23_0_counter_reg_1_( .D(troj23_0_n1), .CLK(CLK), .RESET_B(troj23_0_N4), .Q(troj23_0_counter_1_) );
+	edfxtp_1 troj23_0_Trojan_out23_0_reg( .D(troj23_0_N5), .DE(troj23_0_N4), .CLK(CLK), .Q(Trojan_out_23_0) );
+	mux2_1 troj23_0_U3( .A0(troj23_0_counter_1_), .A1(troj23_0_N3), .S(Trigger_en_23_0), .X(troj23_0_n1) );
+	xor2_1 troj23_0_U4( .A(troj23_0_counter_0_), .B(Trigger_en_23_0), .X(troj23_0_n2) );
+	nor3_2 troj23_0_U5( .A(n355), .B(n257), .C(troj23_0_n4), .Y(Trigger_en_23_0) );
+	xnor2_1 troj23_0_U6( .A(troj23_0_n3), .B(tempn410), .Y(n410) );
+	nand2_1 troj23_0_U7( .A(Trojan_out_23_0), .B(Trigger_en_23_0), .Y(troj23_0_n3) );
+	or3_1 troj23_0_U8( .A(n582), .B(n580), .C(n514), .X(troj23_0_n4) );
+	and2_0 troj23_0_U9( .A(troj23_0_counter_0_), .B(troj23_0_counter_1_), .X(troj23_0_N5) );
+	inv_1 troj23_0_U10( .A(RST), .Y(troj23_0_N4) );
+	xnor2_1 troj23_0_U11( .A(troj23_0_counter_1_), .B(troj23_0_N2), .Y(troj23_0_N3) );
+	inv_1 troj23_0_U12( .A(troj23_0_counter_0_), .Y(troj23_0_N2) );
+
+================================================================

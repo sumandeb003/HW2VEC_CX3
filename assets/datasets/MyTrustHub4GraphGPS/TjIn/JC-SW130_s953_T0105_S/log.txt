@@ -1,0 +1,52 @@
+s953_T0105_S LOG
+****************************************************************
+ TRIT-ASIC Generated Trojans.  The design generated is for academic use only.
+ Please cite the following if using the benchmark provided:
+J. Cruz, Y. Huang, P. Mishra, S. Bhunia, 
+"An Automated Configurable Trojan Insertion Framework for Dynamic Trust Benchmarks", DATE, 2018
+
+****************************************************************
+TROJAN STATS:
+
+Number of Trojans: 1
+****************************************************************
+================================================================
+Trojan 0
+================================================================
+-----
+Type
+-----
+2-bit FSM with following state transitions:
+0->2->3->1
+
+-------
+Effect
+-------
+The Trojan alters the following signal(s)...
+n341
+
+---------------------
+Activation Condition
+---------------------
+The Trojan is triggered by the following internal signals and activation values...
+n225:0 n244:0 n250:0 n374:0 
+
+------------
+TROJAN BODY
+------------
+	dfrtp_1 troj5_0_state_reg_0_( .D(troj5_0_n7), .CLK(CLK), .RESET_B(troj5_0_n1), .Q(troj5_0_state_0_) );
+	dfrtp_1 troj5_0_state_reg_1_( .D(troj5_0_n6), .CLK(CLK), .RESET_B(troj5_0_n1), .Q(troj5_0_state_1_) );
+	edfxtp_1 troj5_0_Trojan_out5_0_reg( .D(troj5_0_N13), .DE(troj5_0_N18), .CLK(CLK), .Q(Trojan_out_5_0) );
+	inv_2 troj5_0_U3( .A(RST), .Y(troj5_0_n1) );
+	o22ai_2 troj5_0_U4( .A1(troj5_0_state_0_), .A2(troj5_0_n3), .B1(Trigger_en_5_0), .B2(troj5_0_n4), .Y(troj5_0_n6) );
+	o21ai_1 troj5_0_U5( .A1(troj5_0_n3), .A2(troj5_0_n4), .B1(troj5_0_n5), .Y(troj5_0_n7) );
+	nor4_2 troj5_0_U6( .A(n244), .B(n225), .C(n374), .D(n250), .Y(Trigger_en_5_0) );
+	xnor2_1 troj5_0_U7( .A(troj5_0_n2), .B(tempn341), .Y(n341) );
+	nand2_1 troj5_0_U8( .A(Trojan_out_5_0), .B(Trigger_en_5_0), .Y(troj5_0_n2) );
+	inv_1 troj5_0_U9( .A(troj5_0_state_1_), .Y(troj5_0_n4) );
+	nor2_1 troj5_0_U10( .A(RST), .B(troj5_0_n3), .Y(troj5_0_N18) );
+	inv_1 troj5_0_U11( .A(Trigger_en_5_0), .Y(troj5_0_n3) );
+	nor2_1 troj5_0_U12( .A(troj5_0_state_1_), .B(troj5_0_n5), .Y(troj5_0_N13) );
+	inv_1 troj5_0_U13( .A(troj5_0_state_0_), .Y(troj5_0_n5) );
+
+================================================================

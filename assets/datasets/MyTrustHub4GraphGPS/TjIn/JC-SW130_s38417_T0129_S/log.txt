@@ -1,0 +1,49 @@
+s38417_T0129_S LOG
+****************************************************************
+ TRIT-ASIC Generated Trojans.  The design generated is for academic use only.
+ Please cite the following if using the benchmark provided:
+J. Cruz, Y. Huang, P. Mishra, S. Bhunia, 
+"An Automated Configurable Trojan Insertion Framework for Dynamic Trust Benchmarks", DATE, 2018
+
+****************************************************************
+TROJAN STATS:
+
+Number of Trojans: 1
+****************************************************************
+================================================================
+Trojan 0
+================================================================
+-----
+Type
+-----
+2-bit counter
+
+-------
+Effect
+-------
+The Trojan alters the following signal(s)...
+g8251
+
+---------------------
+Activation Condition
+---------------------
+The Trojan is triggered by the following internal signals and activation values...
+n4409:0 n4888:0 n5227:0 n5:0 
+
+------------
+TROJAN BODY
+------------
+	dfrtp_1 troj29_0_counter_reg_0_( .D(troj29_0_n2), .CLK(CLK), .RESET_B(troj29_0_N4), .Q(troj29_0_counter_0_) );
+	dfrtp_1 troj29_0_counter_reg_1_( .D(troj29_0_n1), .CLK(CLK), .RESET_B(troj29_0_N4), .Q(troj29_0_counter_1_) );
+	edfxtp_1 troj29_0_Trojan_out29_0_reg( .D(troj29_0_N5), .DE(troj29_0_N4), .CLK(CLK), .Q(Trojan_out_29_0) );
+	mux2_1 troj29_0_U3( .A0(troj29_0_counter_1_), .A1(troj29_0_N3), .S(Trigger_en_29_0), .X(troj29_0_n1) );
+	xor2_1 troj29_0_U4( .A(troj29_0_counter_0_), .B(Trigger_en_29_0), .X(troj29_0_n2) );
+	nor4_2 troj29_0_U5( .A(n4888), .B(n4409), .C(n5227), .D(n5), .Y(Trigger_en_29_0) );
+	xnor2_1 troj29_0_U6( .A(troj29_0_n3), .B(tempg8251), .Y(g8251) );
+	nand2_1 troj29_0_U7( .A(Trojan_out_29_0), .B(Trigger_en_29_0), .Y(troj29_0_n3) );
+	and2_0 troj29_0_U8( .A(troj29_0_counter_0_), .B(troj29_0_counter_1_), .X(troj29_0_N5) );
+	inv_1 troj29_0_U9( .A(RST), .Y(troj29_0_N4) );
+	xnor2_1 troj29_0_U10( .A(troj29_0_counter_1_), .B(troj29_0_N2), .Y(troj29_0_N3) );
+	inv_1 troj29_0_U11( .A(troj29_0_counter_0_), .Y(troj29_0_N2) );
+
+================================================================

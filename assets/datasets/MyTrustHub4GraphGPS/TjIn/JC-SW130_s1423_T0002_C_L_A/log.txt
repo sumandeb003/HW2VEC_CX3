@@ -1,0 +1,51 @@
+s1423_T0002_C_L_A LOG
+****************************************************************
+ TRIT-ASIC Generated Trojans.  The design generated is for academic use only.
+ Please cite the following if using the benchmark provided:
+J. Cruz, Y. Huang, P. Mishra, S. Bhunia, 
+"An Automated Configurable Trojan Insertion Framework for Dynamic Trust Benchmarks", DATE, 2018
+
+****************************************************************
+TROJAN STATS:
+
+Number of Trojans: 1
+****************************************************************
+================================================================
+Trojan 0
+================================================================
+-----
+Type
+-----
+Combinational
+
+-------
+Effect
+-------
+The Trojan leaks the following signal(s) through power side channel ...
+n476
+
+---------------------
+Activation Condition
+---------------------
+Always On
+
+
+------------
+TROJAN BODY
+------------
+	nand2_1 troj2_0_Trojan2_0(.A(troj2_0_RO2_0out13), .B(n476), .Y(troj2_0_RO2_0out0) );
+	nor3_1 troj2_0_RO2_0troj0(.A(troj2_0_RO2_0out0), .B(troj2_0_RO2_0out0), .C(troj2_0_RO2_0out0), .Y(troj2_0_RO2_0out1) );
+	nor3_1 troj2_0_RO2_0troj1(.A(troj2_0_RO2_0out1), .B(troj2_0_RO2_0out1), .C(troj2_0_RO2_0out1), .Y(troj2_0_RO2_0out2) );
+	nor3_1 troj2_0_RO2_0troj2(.A(troj2_0_RO2_0out2), .B(troj2_0_RO2_0out2), .C(troj2_0_RO2_0out2), .Y(troj2_0_RO2_0out3) );
+	nor3_1 troj2_0_RO2_0troj3(.A(troj2_0_RO2_0out3), .B(troj2_0_RO2_0out3), .C(troj2_0_RO2_0out3), .Y(troj2_0_RO2_0out4) );
+	nor3_1 troj2_0_RO2_0troj4(.A(troj2_0_RO2_0out4), .B(troj2_0_RO2_0out4), .C(troj2_0_RO2_0out4), .Y(troj2_0_RO2_0out5) );
+	nor3_1 troj2_0_RO2_0troj5(.A(troj2_0_RO2_0out5), .B(troj2_0_RO2_0out5), .C(troj2_0_RO2_0out5), .Y(troj2_0_RO2_0out6) );
+	nor3_1 troj2_0_RO2_0troj6(.A(troj2_0_RO2_0out6), .B(troj2_0_RO2_0out6), .C(troj2_0_RO2_0out6), .Y(troj2_0_RO2_0out7) );
+	nor3_1 troj2_0_RO2_0troj7(.A(troj2_0_RO2_0out7), .B(troj2_0_RO2_0out7), .C(troj2_0_RO2_0out7), .Y(troj2_0_RO2_0out8) );
+	nor3_1 troj2_0_RO2_0troj8(.A(troj2_0_RO2_0out8), .B(troj2_0_RO2_0out8), .C(troj2_0_RO2_0out8), .Y(troj2_0_RO2_0out9) );
+	nor3_1 troj2_0_RO2_0troj9(.A(troj2_0_RO2_0out9), .B(troj2_0_RO2_0out9), .C(troj2_0_RO2_0out9), .Y(troj2_0_RO2_0out10) );
+	nor3_1 troj2_0_RO2_0troj10(.A(troj2_0_RO2_0out10), .B(troj2_0_RO2_0out10), .C(troj2_0_RO2_0out10), .Y(troj2_0_RO2_0out11) );
+	nor3_1 troj2_0_RO2_0troj11(.A(troj2_0_RO2_0out11), .B(troj2_0_RO2_0out11), .C(troj2_0_RO2_0out11), .Y(troj2_0_RO2_0out12) );
+	nor3_1 troj2_0_RO2_0troj12(.A(troj2_0_RO2_0out12), .B(troj2_0_RO2_0out12), .C(troj2_0_RO2_0out12), .Y(troj2_0_RO2_0out13) );
+
+================================================================

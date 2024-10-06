@@ -1,0 +1,49 @@
+s38417_T0119_S LOG
+****************************************************************
+ TRIT-ASIC Generated Trojans.  The design generated is for academic use only.
+ Please cite the following if using the benchmark provided:
+J. Cruz, Y. Huang, P. Mishra, S. Bhunia, 
+"An Automated Configurable Trojan Insertion Framework for Dynamic Trust Benchmarks", DATE, 2018
+
+****************************************************************
+TROJAN STATS:
+
+Number of Trojans: 1
+****************************************************************
+================================================================
+Trojan 0
+================================================================
+-----
+Type
+-----
+2-bit counter
+
+-------
+Effect
+-------
+The Trojan alters the following signal(s)...
+n7926
+
+---------------------
+Activation Condition
+---------------------
+The Trojan is triggered by the following internal signals and activation values...
+n6531:0 n8149:0 n8317:0 n8792:0 
+
+------------
+TROJAN BODY
+------------
+	dfrtp_1 troj19_0_counter_reg_0_( .D(troj19_0_n2), .CLK(CLK), .RESET_B(troj19_0_N4), .Q(troj19_0_counter_0_) );
+	dfrtp_1 troj19_0_counter_reg_1_( .D(troj19_0_n1), .CLK(CLK), .RESET_B(troj19_0_N4), .Q(troj19_0_counter_1_) );
+	edfxtp_1 troj19_0_Trojan_out19_0_reg( .D(troj19_0_N5), .DE(troj19_0_N4), .CLK(CLK), .Q(Trojan_out_19_0) );
+	mux2_1 troj19_0_U3( .A0(troj19_0_counter_1_), .A1(troj19_0_N3), .S(Trigger_en_19_0), .X(troj19_0_n1) );
+	xor2_1 troj19_0_U4( .A(troj19_0_counter_0_), .B(Trigger_en_19_0), .X(troj19_0_n2) );
+	nor4_2 troj19_0_U5( .A(n8149), .B(n6531), .C(n8792), .D(n8317), .Y(Trigger_en_19_0) );
+	xnor2_1 troj19_0_U6( .A(troj19_0_n3), .B(tempn7926), .Y(n7926) );
+	nand2_1 troj19_0_U7( .A(Trojan_out_19_0), .B(Trigger_en_19_0), .Y(troj19_0_n3) );
+	and2_0 troj19_0_U8( .A(troj19_0_counter_0_), .B(troj19_0_counter_1_), .X(troj19_0_N5) );
+	inv_1 troj19_0_U9( .A(RST), .Y(troj19_0_N4) );
+	xnor2_1 troj19_0_U10( .A(troj19_0_counter_1_), .B(troj19_0_N2), .Y(troj19_0_N3) );
+	inv_1 troj19_0_U11( .A(troj19_0_counter_0_), .Y(troj19_0_N2) );
+
+================================================================

@@ -1,0 +1,63 @@
+s9234_T0003_C_L_A LOG
+****************************************************************
+ TRIT-ASIC Generated Trojans.  The design generated is for academic use only.
+ Please cite the following if using the benchmark provided:
+J. Cruz, Y. Huang, P. Mishra, S. Bhunia, 
+"An Automated Configurable Trojan Insertion Framework for Dynamic Trust Benchmarks", DATE, 2018
+
+****************************************************************
+TROJAN STATS:
+
+Number of Trojans: 1
+****************************************************************
+================================================================
+Trojan 0
+================================================================
+-----
+Type
+-----
+Combinational
+
+-------
+Effect
+-------
+The Trojan leaks the following signal(s) through power side channel ...
+n649
+
+---------------------
+Activation Condition
+---------------------
+Always On
+
+
+------------
+TROJAN BODY
+------------
+	nand2_1 troj3_0_Trojan3_0(.A(troj3_0_RO3_0out25), .B(n649), .Y(troj3_0_RO3_0out0) );
+	nand3_1 troj3_0_RO3_0troj0(.A(troj3_0_RO3_0out0), .B(troj3_0_RO3_0out0), .C(troj3_0_RO3_0out0), .Y(troj3_0_RO3_0out1) );
+	nand3_1 troj3_0_RO3_0troj1(.A(troj3_0_RO3_0out1), .B(troj3_0_RO3_0out1), .C(troj3_0_RO3_0out1), .Y(troj3_0_RO3_0out2) );
+	nand3_1 troj3_0_RO3_0troj2(.A(troj3_0_RO3_0out2), .B(troj3_0_RO3_0out2), .C(troj3_0_RO3_0out2), .Y(troj3_0_RO3_0out3) );
+	nand3_1 troj3_0_RO3_0troj3(.A(troj3_0_RO3_0out3), .B(troj3_0_RO3_0out3), .C(troj3_0_RO3_0out3), .Y(troj3_0_RO3_0out4) );
+	nand3_1 troj3_0_RO3_0troj4(.A(troj3_0_RO3_0out4), .B(troj3_0_RO3_0out4), .C(troj3_0_RO3_0out4), .Y(troj3_0_RO3_0out5) );
+	nand3_1 troj3_0_RO3_0troj5(.A(troj3_0_RO3_0out5), .B(troj3_0_RO3_0out5), .C(troj3_0_RO3_0out5), .Y(troj3_0_RO3_0out6) );
+	nand3_1 troj3_0_RO3_0troj6(.A(troj3_0_RO3_0out6), .B(troj3_0_RO3_0out6), .C(troj3_0_RO3_0out6), .Y(troj3_0_RO3_0out7) );
+	nand3_1 troj3_0_RO3_0troj7(.A(troj3_0_RO3_0out7), .B(troj3_0_RO3_0out7), .C(troj3_0_RO3_0out7), .Y(troj3_0_RO3_0out8) );
+	nand3_1 troj3_0_RO3_0troj8(.A(troj3_0_RO3_0out8), .B(troj3_0_RO3_0out8), .C(troj3_0_RO3_0out8), .Y(troj3_0_RO3_0out9) );
+	nand3_1 troj3_0_RO3_0troj9(.A(troj3_0_RO3_0out9), .B(troj3_0_RO3_0out9), .C(troj3_0_RO3_0out9), .Y(troj3_0_RO3_0out10) );
+	nand3_1 troj3_0_RO3_0troj10(.A(troj3_0_RO3_0out10), .B(troj3_0_RO3_0out10), .C(troj3_0_RO3_0out10), .Y(troj3_0_RO3_0out11) );
+	nand3_1 troj3_0_RO3_0troj11(.A(troj3_0_RO3_0out11), .B(troj3_0_RO3_0out11), .C(troj3_0_RO3_0out11), .Y(troj3_0_RO3_0out12) );
+	nand3_1 troj3_0_RO3_0troj12(.A(troj3_0_RO3_0out12), .B(troj3_0_RO3_0out12), .C(troj3_0_RO3_0out12), .Y(troj3_0_RO3_0out13) );
+	nand3_1 troj3_0_RO3_0troj13(.A(troj3_0_RO3_0out13), .B(troj3_0_RO3_0out13), .C(troj3_0_RO3_0out13), .Y(troj3_0_RO3_0out14) );
+	nand3_1 troj3_0_RO3_0troj14(.A(troj3_0_RO3_0out14), .B(troj3_0_RO3_0out14), .C(troj3_0_RO3_0out14), .Y(troj3_0_RO3_0out15) );
+	nand3_1 troj3_0_RO3_0troj15(.A(troj3_0_RO3_0out15), .B(troj3_0_RO3_0out15), .C(troj3_0_RO3_0out15), .Y(troj3_0_RO3_0out16) );
+	nand3_1 troj3_0_RO3_0troj16(.A(troj3_0_RO3_0out16), .B(troj3_0_RO3_0out16), .C(troj3_0_RO3_0out16), .Y(troj3_0_RO3_0out17) );
+	nand3_1 troj3_0_RO3_0troj17(.A(troj3_0_RO3_0out17), .B(troj3_0_RO3_0out17), .C(troj3_0_RO3_0out17), .Y(troj3_0_RO3_0out18) );
+	nand3_1 troj3_0_RO3_0troj18(.A(troj3_0_RO3_0out18), .B(troj3_0_RO3_0out18), .C(troj3_0_RO3_0out18), .Y(troj3_0_RO3_0out19) );
+	nand3_1 troj3_0_RO3_0troj19(.A(troj3_0_RO3_0out19), .B(troj3_0_RO3_0out19), .C(troj3_0_RO3_0out19), .Y(troj3_0_RO3_0out20) );
+	nand3_1 troj3_0_RO3_0troj20(.A(troj3_0_RO3_0out20), .B(troj3_0_RO3_0out20), .C(troj3_0_RO3_0out20), .Y(troj3_0_RO3_0out21) );
+	nand3_1 troj3_0_RO3_0troj21(.A(troj3_0_RO3_0out21), .B(troj3_0_RO3_0out21), .C(troj3_0_RO3_0out21), .Y(troj3_0_RO3_0out22) );
+	nand3_1 troj3_0_RO3_0troj22(.A(troj3_0_RO3_0out22), .B(troj3_0_RO3_0out22), .C(troj3_0_RO3_0out22), .Y(troj3_0_RO3_0out23) );
+	nand3_1 troj3_0_RO3_0troj23(.A(troj3_0_RO3_0out23), .B(troj3_0_RO3_0out23), .C(troj3_0_RO3_0out23), .Y(troj3_0_RO3_0out24) );
+	nand3_1 troj3_0_RO3_0troj24(.A(troj3_0_RO3_0out24), .B(troj3_0_RO3_0out24), .C(troj3_0_RO3_0out24), .Y(troj3_0_RO3_0out25) );
+
+================================================================

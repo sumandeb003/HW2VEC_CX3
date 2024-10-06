@@ -1,0 +1,49 @@
+s1196_T0114_S LOG
+****************************************************************
+ TRIT-ASIC Generated Trojans.  The design generated is for academic use only.
+ Please cite the following if using the benchmark provided:
+J. Cruz, Y. Huang, P. Mishra, S. Bhunia, 
+"An Automated Configurable Trojan Insertion Framework for Dynamic Trust Benchmarks", DATE, 2018
+
+****************************************************************
+TROJAN STATS:
+
+Number of Trojans: 1
+****************************************************************
+================================================================
+Trojan 0
+================================================================
+-----
+Type
+-----
+2-bit counter
+
+-------
+Effect
+-------
+The Trojan alters the following signal(s)...
+n516
+
+---------------------
+Activation Condition
+---------------------
+The Trojan is triggered by the following internal signals and activation values...
+n340:0 n411:0 n419:0 n427:0 
+
+------------
+TROJAN BODY
+------------
+	dfrtp_1 troj14_0_counter_reg_0_( .D(troj14_0_n2), .CLK(CLK), .RESET_B(troj14_0_N4), .Q(troj14_0_counter_0_) );
+	dfrtp_1 troj14_0_counter_reg_1_( .D(troj14_0_n1), .CLK(CLK), .RESET_B(troj14_0_N4), .Q(troj14_0_counter_1_) );
+	edfxtp_1 troj14_0_Trojan_out14_0_reg( .D(troj14_0_N5), .DE(troj14_0_N4), .CLK(CLK), .Q(Trojan_out_14_0) );
+	mux2_1 troj14_0_U3( .A0(troj14_0_counter_1_), .A1(troj14_0_N3), .S(Trigger_en_14_0), .X(troj14_0_n1) );
+	xor2_1 troj14_0_U4( .A(troj14_0_counter_0_), .B(Trigger_en_14_0), .X(troj14_0_n2) );
+	nor4_2 troj14_0_U5( .A(n411), .B(n340), .C(n427), .D(n419), .Y(Trigger_en_14_0) );
+	xnor2_1 troj14_0_U6( .A(troj14_0_n3), .B(tempn516), .Y(n516) );
+	nand2_1 troj14_0_U7( .A(Trojan_out_14_0), .B(Trigger_en_14_0), .Y(troj14_0_n3) );
+	and2_0 troj14_0_U8( .A(troj14_0_counter_0_), .B(troj14_0_counter_1_), .X(troj14_0_N5) );
+	inv_1 troj14_0_U9( .A(RST), .Y(troj14_0_N4) );
+	xnor2_1 troj14_0_U10( .A(troj14_0_counter_1_), .B(troj14_0_N2), .Y(troj14_0_N3) );
+	inv_1 troj14_0_U11( .A(troj14_0_counter_0_), .Y(troj14_0_N2) );
+
+================================================================

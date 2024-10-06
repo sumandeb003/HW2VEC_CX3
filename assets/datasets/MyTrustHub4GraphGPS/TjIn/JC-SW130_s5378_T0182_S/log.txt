@@ -1,0 +1,50 @@
+s5378_T0182_S LOG
+****************************************************************
+ TRIT-ASIC Generated Trojans.  The design generated is for academic use only.
+ Please cite the following if using the benchmark provided:
+J. Cruz, Y. Huang, P. Mishra, S. Bhunia, 
+"An Automated Configurable Trojan Insertion Framework for Dynamic Trust Benchmarks", DATE, 2018
+
+****************************************************************
+TROJAN STATS:
+
+Number of Trojans: 1
+****************************************************************
+================================================================
+Trojan 0
+================================================================
+-----
+Type
+-----
+2-bit counter
+
+-------
+Effect
+-------
+The Trojan alters the following signal(s)...
+n3117gat
+
+---------------------
+Activation Condition
+---------------------
+The Trojan is triggered by the following internal signals and activation values...
+DFF_149_N3:0 DFF_163_N3:0 DFF_53_N3:0 n728:0 n847:0 
+
+------------
+TROJAN BODY
+------------
+	dfrtp_1 troj32_0_counter_reg_0_( .D(troj32_0_n2), .CLK(CLK), .RESET_B(troj32_0_N4), .Q(troj32_0_counter_0_) );
+	dfrtp_1 troj32_0_counter_reg_1_( .D(troj32_0_n1), .CLK(CLK), .RESET_B(troj32_0_N4), .Q(troj32_0_counter_1_) );
+	edfxtp_1 troj32_0_Trojan_out32_0_reg( .D(troj32_0_N5), .DE(troj32_0_N4), .CLK(CLK), .Q(Trojan_out_32_0) );
+	mux2_1 troj32_0_U3( .A0(troj32_0_counter_1_), .A1(troj32_0_N3), .S(Trigger_en_32_0), .X(troj32_0_n1) );
+	xor2_1 troj32_0_U4( .A(troj32_0_counter_0_), .B(Trigger_en_32_0), .X(troj32_0_n2) );
+	nor3_2 troj32_0_U5( .A(DFF_163_N3), .B(DFF_149_N3), .C(troj32_0_n4), .Y(Trigger_en_32_0) );
+	xnor2_1 troj32_0_U6( .A(troj32_0_n3), .B(tempn3117gat), .Y(n3117gat) );
+	nand2_1 troj32_0_U7( .A(Trojan_out_32_0), .B(Trigger_en_32_0), .Y(troj32_0_n3) );
+	or3_1 troj32_0_U8( .A(n847), .B(n728), .C(DFF_53_N3), .X(troj32_0_n4) );
+	and2_0 troj32_0_U9( .A(troj32_0_counter_0_), .B(troj32_0_counter_1_), .X(troj32_0_N5) );
+	inv_1 troj32_0_U10( .A(RST), .Y(troj32_0_N4) );
+	xnor2_1 troj32_0_U11( .A(troj32_0_counter_1_), .B(troj32_0_N2), .Y(troj32_0_N3) );
+	inv_1 troj32_0_U12( .A(troj32_0_counter_0_), .Y(troj32_0_N2) );
+
+================================================================

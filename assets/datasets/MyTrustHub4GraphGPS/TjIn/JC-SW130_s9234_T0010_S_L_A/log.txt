@@ -1,0 +1,131 @@
+s9234_T0010_S_L_A LOG
+****************************************************************
+ TRIT-ASIC Generated Trojans.  The design generated is for academic use only.
+ Please cite the following if using the benchmark provided:
+J. Cruz, Y. Huang, P. Mishra, S. Bhunia, 
+"An Automated Configurable Trojan Insertion Framework for Dynamic Trust Benchmarks", DATE, 2018
+
+****************************************************************
+TROJAN STATS:
+
+Number of Trojans: 1
+****************************************************************
+================================================================
+Trojan 0
+================================================================
+-----
+Type
+-----
+19-bit NLFSR with seed 0100001101111111010 based on MOLES Trojan
+-------
+Effect
+-------
+The Trojan leaks the following signal(s) through power side channel ...
+n640
+n615
+n847
+n937
+n998
+
+---------------------
+Activation Condition
+---------------------
+Always On
+
+
+------------
+TROJAN BODY
+------------
+	dfxtp_1 troj0_0_nlfsr_stream0_0_reg_0_( .D(troj0_0_N2), .CLK(CLK), .Q(troj0_0_nlfsr_stream0_0_0_) );
+	dfxtp_1 troj0_0_nlfsr_stream0_0_reg_18_( .D(troj0_0_N20), .CLK(CLK), .Q(troj0_0_nlfsr_stream0_0_18_) );
+	dfxtp_1 troj0_0_nlfsr_stream0_0_reg_17_( .D(troj0_0_N19), .CLK(CLK), .Q(troj0_0_nlfsr_stream0_0_17_) );
+	dfxtp_1 troj0_0_nlfsr_stream0_0_reg_16_( .D(troj0_0_N18), .CLK(CLK), .Q(troj0_0_nlfsr_stream0_0_16_) );
+	dfxtp_1 troj0_0_nlfsr_stream0_0_reg_15_( .D(troj0_0_N17), .CLK(CLK), .Q(troj0_0_nlfsr_stream0_0_15_) );
+	dfxtp_1 troj0_0_nlfsr_stream0_0_reg_14_( .D(troj0_0_N16), .CLK(CLK), .Q(troj0_0_nlfsr_stream0_0_14_) );
+	dfxtp_1 troj0_0_nlfsr_stream0_0_reg_13_( .D(troj0_0_N15), .CLK(CLK), .Q(troj0_0_nlfsr_stream0_0_13_) );
+	dfxtp_1 troj0_0_nlfsr_stream0_0_reg_12_( .D(troj0_0_N14), .CLK(CLK), .Q(troj0_0_nlfsr_stream0_0_12_) );
+	dfxtp_1 troj0_0_nlfsr_stream0_0_reg_11_( .D(troj0_0_N13), .CLK(CLK), .Q(troj0_0_nlfsr_stream0_0_11_) );
+	dfxtp_1 troj0_0_nlfsr_stream0_0_reg_10_( .D(troj0_0_N12), .CLK(CLK), .Q(troj0_0_nlfsr_stream0_0_10_) );
+	dfxtp_1 troj0_0_nlfsr_stream0_0_reg_9_( .D(troj0_0_N11), .CLK(CLK), .Q(troj0_0_nlfsr_stream0_0_9_) );
+	dfxtp_1 troj0_0_nlfsr_stream0_0_reg_8_( .D(troj0_0_N10), .CLK(CLK), .Q(troj0_0_nlfsr_stream0_0_8_) );
+	dfxtp_1 troj0_0_nlfsr_stream0_0_reg_7_( .D(troj0_0_N9), .CLK(CLK), .Q(troj0_0_nlfsr_stream0_0_7_) );
+	dfxtp_1 troj0_0_nlfsr_stream0_0_reg_6_( .D(troj0_0_N8), .CLK(CLK), .Q(troj0_0_nlfsr_stream0_0_6_) );
+	dfxtp_1 troj0_0_nlfsr_stream0_0_reg_5_( .D(troj0_0_N7), .CLK(CLK), .Q(troj0_0_nlfsr_stream0_0_5_) );
+	dfxtp_1 troj0_0_nlfsr_stream0_0_reg_4_( .D(troj0_0_N6), .CLK(CLK), .Q(troj0_0_nlfsr_stream0_0_4_) );
+	dfxtp_1 troj0_0_nlfsr_stream0_0_reg_3_( .D(troj0_0_N5), .CLK(CLK), .Q(troj0_0_nlfsr_stream0_0_3_) );
+	dfxtp_1 troj0_0_nlfsr_stream0_0_reg_2_( .D(troj0_0_N4), .CLK(CLK), .Q(troj0_0_nlfsr_stream0_0_2_) );
+	dfxtp_1 troj0_0_nlfsr_stream0_0_reg_1_( .D(troj0_0_N3), .CLK(CLK), .Q(troj0_0_nlfsr_stream0_0_1_) );
+	dfxtp_1 troj0_0_load0_0_reg_39_( .D(troj0_0_N25), .CLK(CLK), .Q(troj0_0_load0_0_39_) );
+	dfxtp_1 troj0_0_load0_0_reg_38_( .D(troj0_0_N25), .CLK(CLK), .Q(troj0_0_load0_0_38_) );
+	dfxtp_1 troj0_0_load0_0_reg_37_( .D(troj0_0_N25), .CLK(CLK), .Q(troj0_0_load0_0_37_) );
+	dfxtp_1 troj0_0_load0_0_reg_36_( .D(troj0_0_N25), .CLK(CLK), .Q(troj0_0_load0_0_36_) );
+	dfxtp_1 troj0_0_load0_0_reg_35_( .D(troj0_0_N25), .CLK(CLK), .Q(troj0_0_load0_0_35_) );
+	dfxtp_1 troj0_0_load0_0_reg_34_( .D(troj0_0_N25), .CLK(CLK), .Q(troj0_0_load0_0_34_) );
+	dfxtp_1 troj0_0_load0_0_reg_33_( .D(troj0_0_N25), .CLK(CLK), .Q(troj0_0_load0_0_33_) );
+	dfxtp_1 troj0_0_load0_0_reg_32_( .D(troj0_0_N25), .CLK(CLK), .Q(troj0_0_load0_0_32_) );
+	dfxtp_1 troj0_0_load0_0_reg_31_( .D(troj0_0_N24), .CLK(CLK), .Q(troj0_0_load0_0_31_) );
+	dfxtp_1 troj0_0_load0_0_reg_30_( .D(troj0_0_N24), .CLK(CLK), .Q(troj0_0_load0_0_30_) );
+	dfxtp_1 troj0_0_load0_0_reg_29_( .D(troj0_0_N24), .CLK(CLK), .Q(troj0_0_load0_0_29_) );
+	dfxtp_1 troj0_0_load0_0_reg_28_( .D(troj0_0_N24), .CLK(CLK), .Q(troj0_0_load0_0_28_) );
+	dfxtp_1 troj0_0_load0_0_reg_27_( .D(troj0_0_N24), .CLK(CLK), .Q(troj0_0_load0_0_27_) );
+	dfxtp_1 troj0_0_load0_0_reg_26_( .D(troj0_0_N24), .CLK(CLK), .Q(troj0_0_load0_0_26_) );
+	dfxtp_1 troj0_0_load0_0_reg_25_( .D(troj0_0_N24), .CLK(CLK), .Q(troj0_0_load0_0_25_) );
+	dfxtp_1 troj0_0_load0_0_reg_24_( .D(troj0_0_N24), .CLK(CLK), .Q(troj0_0_load0_0_24_) );
+	dfxtp_1 troj0_0_load0_0_reg_23_( .D(troj0_0_N23), .CLK(CLK), .Q(troj0_0_load0_0_23_) );
+	dfxtp_1 troj0_0_load0_0_reg_22_( .D(troj0_0_N23), .CLK(CLK), .Q(troj0_0_load0_0_22_) );
+	dfxtp_1 troj0_0_load0_0_reg_21_( .D(troj0_0_N23), .CLK(CLK), .Q(troj0_0_load0_0_21_) );
+	dfxtp_1 troj0_0_load0_0_reg_20_( .D(troj0_0_N23), .CLK(CLK), .Q(troj0_0_load0_0_20_) );
+	dfxtp_1 troj0_0_load0_0_reg_19_( .D(troj0_0_N23), .CLK(CLK), .Q(troj0_0_load0_0_19_) );
+	dfxtp_1 troj0_0_load0_0_reg_18_( .D(troj0_0_N23), .CLK(CLK), .Q(troj0_0_load0_0_18_) );
+	dfxtp_1 troj0_0_load0_0_reg_17_( .D(troj0_0_N23), .CLK(CLK), .Q(troj0_0_load0_0_17_) );
+	dfxtp_1 troj0_0_load0_0_reg_16_( .D(troj0_0_N23), .CLK(CLK), .Q(troj0_0_load0_0_16_) );
+	dfxtp_1 troj0_0_load0_0_reg_15_( .D(troj0_0_N22), .CLK(CLK), .Q(troj0_0_load0_0_15_) );
+	dfxtp_1 troj0_0_load0_0_reg_14_( .D(troj0_0_N22), .CLK(CLK), .Q(troj0_0_load0_0_14_) );
+	dfxtp_1 troj0_0_load0_0_reg_13_( .D(troj0_0_N22), .CLK(CLK), .Q(troj0_0_load0_0_13_) );
+	dfxtp_1 troj0_0_load0_0_reg_12_( .D(troj0_0_N22), .CLK(CLK), .Q(troj0_0_load0_0_12_) );
+	dfxtp_1 troj0_0_load0_0_reg_11_( .D(troj0_0_N22), .CLK(CLK), .Q(troj0_0_load0_0_11_) );
+	dfxtp_1 troj0_0_load0_0_reg_10_( .D(troj0_0_N22), .CLK(CLK), .Q(troj0_0_load0_0_10_) );
+	dfxtp_1 troj0_0_load0_0_reg_9_( .D(troj0_0_N22), .CLK(CLK), .Q(troj0_0_load0_0_9_) );
+	dfxtp_1 troj0_0_load0_0_reg_8_( .D(troj0_0_N22), .CLK(CLK), .Q(troj0_0_load0_0_8_) );
+	dfxtp_1 troj0_0_load0_0_reg_7_( .D(troj0_0_N21), .CLK(CLK), .Q(troj0_0_load0_0_7_) );
+	dfxtp_1 troj0_0_load0_0_reg_6_( .D(troj0_0_N21), .CLK(CLK), .Q(troj0_0_load0_0_6_) );
+	dfxtp_1 troj0_0_load0_0_reg_5_( .D(troj0_0_N21), .CLK(CLK), .Q(troj0_0_load0_0_5_) );
+	dfxtp_1 troj0_0_load0_0_reg_4_( .D(troj0_0_N21), .CLK(CLK), .Q(troj0_0_load0_0_4_) );
+	dfxtp_1 troj0_0_load0_0_reg_3_( .D(troj0_0_N21), .CLK(CLK), .Q(troj0_0_load0_0_3_) );
+	dfxtp_1 troj0_0_load0_0_reg_2_( .D(troj0_0_N21), .CLK(CLK), .Q(troj0_0_load0_0_2_) );
+	dfxtp_1 troj0_0_load0_0_reg_1_( .D(troj0_0_N21), .CLK(CLK), .Q(troj0_0_load0_0_1_) );
+	dfxtp_1 troj0_0_load0_0_reg_0_( .D(troj0_0_N21), .CLK(CLK), .Q(troj0_0_load0_0_0_) );
+	a21oi_2 troj0_0_U3( .A1(troj0_0_N19), .A2(troj0_0_N3), .B1(troj0_0_n4), .Y(troj0_0_n5) );
+	or2_0 troj0_0_U4( .A(troj0_0_nlfsr_stream0_0_8_), .B(troj0_0_n1), .X(troj0_0_N9) );
+	or2_0 troj0_0_U5( .A(troj0_0_nlfsr_stream0_0_7_), .B(troj0_0_n1), .X(troj0_0_N8) );
+	or2_0 troj0_0_U6( .A(troj0_0_n1), .B(troj0_0_nlfsr_stream0_0_6_), .X(troj0_0_N7) );
+	or2_0 troj0_0_U7( .A(troj0_0_n1), .B(troj0_0_nlfsr_stream0_0_5_), .X(troj0_0_N6) );
+	or2_0 troj0_0_U8( .A(troj0_0_n1), .B(troj0_0_nlfsr_stream0_0_4_), .X(troj0_0_N5) );
+	and2_0 troj0_0_U9( .A(RST), .B(troj0_0_nlfsr_stream0_0_3_), .X(troj0_0_N4) );
+	xor2_1 troj0_0_U10( .A(troj0_0_nlfsr_stream0_0_4_), .B(n998), .X(troj0_0_N25) );
+	xor2_1 troj0_0_U11( .A(troj0_0_nlfsr_stream0_0_3_), .B(n937), .X(troj0_0_N24) );
+	xor2_1 troj0_0_U12( .A(troj0_0_nlfsr_stream0_0_2_), .B(n847), .X(troj0_0_N23) );
+	xor2_1 troj0_0_U13( .A(troj0_0_nlfsr_stream0_0_1_), .B(n615), .X(troj0_0_N22) );
+	xor2_1 troj0_0_U14( .A(troj0_0_nlfsr_stream0_0_0_), .B(n640), .X(troj0_0_N21) );
+	nand2_1 troj0_0_U15( .A(troj0_0_n2), .B(troj0_0_n3), .Y(troj0_0_N20) );
+	nand4_1 troj0_0_U16( .A(troj0_0_n4), .B(troj0_0_nlfsr_stream0_0_18_), .C(troj0_0_nlfsr_stream0_0_2_), .D( RST), .Y(troj0_0_n3) );
+	inv_1 troj0_0_U17( .A(troj0_0_n5), .Y(troj0_0_n2) );
+	xor2_1 troj0_0_U18( .A(troj0_0_n6), .B(troj0_0_n7), .X(troj0_0_n4) );
+	xor2_1 troj0_0_U19( .A(troj0_0_nlfsr_stream0_0_12_), .B(troj0_0_nlfsr_stream0_0_0_), .X(troj0_0_n7) );
+	xnor2_1 troj0_0_U20( .A(troj0_0_nlfsr_stream0_0_14_), .B(troj0_0_n8), .Y(troj0_0_n6) );
+	xor2_1 troj0_0_U21( .A(troj0_0_nlfsr_stream0_0_6_), .B(troj0_0_nlfsr_stream0_0_5_), .X(troj0_0_n8) );
+	or2_0 troj0_0_U22( .A(troj0_0_n1), .B(troj0_0_nlfsr_stream0_0_2_), .X(troj0_0_N3) );
+	and2_0 troj0_0_U23( .A(RST), .B(troj0_0_nlfsr_stream0_0_1_), .X(troj0_0_N2) );
+	or2_0 troj0_0_U24( .A(troj0_0_n1), .B(troj0_0_nlfsr_stream0_0_18_), .X(troj0_0_N19) );
+	and2_0 troj0_0_U25( .A(troj0_0_nlfsr_stream0_0_17_), .B(RST), .X(troj0_0_N18) );
+	and2_0 troj0_0_U26( .A(troj0_0_nlfsr_stream0_0_16_), .B(RST), .X(troj0_0_N17) );
+	and2_0 troj0_0_U27( .A(troj0_0_nlfsr_stream0_0_15_), .B(RST), .X(troj0_0_N16) );
+	and2_0 troj0_0_U28( .A(RST), .B(troj0_0_nlfsr_stream0_0_14_), .X(troj0_0_N15) );
+	or2_0 troj0_0_U29( .A(troj0_0_nlfsr_stream0_0_13_), .B(troj0_0_n1), .X(troj0_0_N14) );
+	or2_0 troj0_0_U30( .A(troj0_0_n1), .B(troj0_0_nlfsr_stream0_0_12_), .X(troj0_0_N13) );
+	and2_0 troj0_0_U31( .A(troj0_0_nlfsr_stream0_0_11_), .B(RST), .X(troj0_0_N12) );
+	or2_0 troj0_0_U32( .A(troj0_0_nlfsr_stream0_0_10_), .B(troj0_0_n1), .X(troj0_0_N11) );
+	or2_0 troj0_0_U33( .A(troj0_0_nlfsr_stream0_0_9_), .B(troj0_0_n1), .X(troj0_0_N10) );
+	inv_1 troj0_0_U34( .A(RST), .Y(troj0_0_n1) );
+
+================================================================

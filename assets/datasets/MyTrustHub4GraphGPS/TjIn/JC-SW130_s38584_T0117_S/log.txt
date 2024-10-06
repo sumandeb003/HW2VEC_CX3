@@ -1,0 +1,49 @@
+s38584_T0117_S LOG
+****************************************************************
+ TRIT-ASIC Generated Trojans.  The design generated is for academic use only.
+ Please cite the following if using the benchmark provided:
+J. Cruz, Y. Huang, P. Mishra, S. Bhunia, 
+"An Automated Configurable Trojan Insertion Framework for Dynamic Trust Benchmarks", DATE, 2018
+
+****************************************************************
+TROJAN STATS:
+
+Number of Trojans: 1
+****************************************************************
+================================================================
+Trojan 0
+================================================================
+-----
+Type
+-----
+2-bit counter
+
+-------
+Effect
+-------
+The Trojan alters the following signal(s)...
+n5677
+
+---------------------
+Activation Condition
+---------------------
+The Trojan is triggered by the following internal signals and activation values...
+n11036:0 n5392:0 n9092:0 n9838:0 
+
+------------
+TROJAN BODY
+------------
+	dfrtp_1 troj17_0_counter_reg_0_( .D(troj17_0_n2), .CLK(CLK), .RESET_B(troj17_0_N4), .Q(troj17_0_counter_0_) );
+	dfrtp_1 troj17_0_counter_reg_1_( .D(troj17_0_n1), .CLK(CLK), .RESET_B(troj17_0_N4), .Q(troj17_0_counter_1_) );
+	edfxtp_1 troj17_0_Trojan_out17_0_reg( .D(troj17_0_N5), .DE(troj17_0_N4), .CLK(CLK), .Q(Trojan_out_17_0) );
+	mux2_1 troj17_0_U3( .A0(troj17_0_counter_1_), .A1(troj17_0_N3), .S(Trigger_en_17_0), .X(troj17_0_n1) );
+	xor2_1 troj17_0_U4( .A(troj17_0_counter_0_), .B(Trigger_en_17_0), .X(troj17_0_n2) );
+	nor4_2 troj17_0_U5( .A(n5392), .B(n11036), .C(n9838), .D(n9092), .Y(Trigger_en_17_0) );
+	xnor2_1 troj17_0_U6( .A(troj17_0_n3), .B(tempn5677), .Y(n5677) );
+	nand2_1 troj17_0_U7( .A(Trojan_out_17_0), .B(Trigger_en_17_0), .Y(troj17_0_n3) );
+	and2_0 troj17_0_U8( .A(troj17_0_counter_0_), .B(troj17_0_counter_1_), .X(troj17_0_N5) );
+	inv_1 troj17_0_U9( .A(RST), .Y(troj17_0_N4) );
+	xnor2_1 troj17_0_U10( .A(troj17_0_counter_1_), .B(troj17_0_N2), .Y(troj17_0_N3) );
+	inv_1 troj17_0_U11( .A(troj17_0_counter_0_), .Y(troj17_0_N2) );
+
+================================================================

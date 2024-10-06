@@ -1,0 +1,53 @@
+s1423_T0001_C_L_A LOG
+****************************************************************
+ TRIT-ASIC Generated Trojans.  The design generated is for academic use only.
+ Please cite the following if using the benchmark provided:
+J. Cruz, Y. Huang, P. Mishra, S. Bhunia, 
+"An Automated Configurable Trojan Insertion Framework for Dynamic Trust Benchmarks", DATE, 2018
+
+****************************************************************
+TROJAN STATS:
+
+Number of Trojans: 1
+****************************************************************
+================================================================
+Trojan 0
+================================================================
+-----
+Type
+-----
+Combinational
+
+-------
+Effect
+-------
+The Trojan leaks the following signal(s) through power side channel ...
+n538
+
+---------------------
+Activation Condition
+---------------------
+Always On
+
+
+------------
+TROJAN BODY
+------------
+	nand2_1 troj1_0_Trojan1_0(.A(troj1_0_RO1_0out15), .B(n538), .Y(troj1_0_RO1_0out0) );
+	inv_1 troj1_0_RO1_0troj0(.A(troj1_0_RO1_0out0), .Y(troj1_0_RO1_0out1));
+	inv_1 troj1_0_RO1_0troj1(.A(troj1_0_RO1_0out1), .Y(troj1_0_RO1_0out2));
+	inv_1 troj1_0_RO1_0troj2(.A(troj1_0_RO1_0out2), .Y(troj1_0_RO1_0out3));
+	inv_1 troj1_0_RO1_0troj3(.A(troj1_0_RO1_0out3), .Y(troj1_0_RO1_0out4));
+	inv_1 troj1_0_RO1_0troj4(.A(troj1_0_RO1_0out4), .Y(troj1_0_RO1_0out5));
+	inv_1 troj1_0_RO1_0troj5(.A(troj1_0_RO1_0out5), .Y(troj1_0_RO1_0out6));
+	inv_1 troj1_0_RO1_0troj6(.A(troj1_0_RO1_0out6), .Y(troj1_0_RO1_0out7));
+	inv_1 troj1_0_RO1_0troj7(.A(troj1_0_RO1_0out7), .Y(troj1_0_RO1_0out8));
+	inv_1 troj1_0_RO1_0troj8(.A(troj1_0_RO1_0out8), .Y(troj1_0_RO1_0out9));
+	inv_1 troj1_0_RO1_0troj9(.A(troj1_0_RO1_0out9), .Y(troj1_0_RO1_0out10));
+	inv_1 troj1_0_RO1_0troj10(.A(troj1_0_RO1_0out10), .Y(troj1_0_RO1_0out11));
+	inv_1 troj1_0_RO1_0troj11(.A(troj1_0_RO1_0out11), .Y(troj1_0_RO1_0out12));
+	inv_1 troj1_0_RO1_0troj12(.A(troj1_0_RO1_0out12), .Y(troj1_0_RO1_0out13));
+	inv_1 troj1_0_RO1_0troj13(.A(troj1_0_RO1_0out13), .Y(troj1_0_RO1_0out14));
+	inv_1 troj1_0_RO1_0troj14(.A(troj1_0_RO1_0out14), .Y(troj1_0_RO1_0out15));
+
+================================================================
