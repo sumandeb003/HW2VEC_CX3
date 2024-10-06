@@ -34,9 +34,8 @@ def TrustHub_to_graph(cfg, circuit_path, copy_folder):
         data[0].y = torch.tensor([TJFREE])
         data[0].label = 'TjFree' # attributes 'label' and 'hw_type' are same        
     else:
-    	data[0].label = 'TjIn' # attributes 'label' and 'hw_type' are same
         data[0].y = torch.tensor([TJIN])
-    
+        data[0].label = 'TjIn' # attributes 'label' and 'hw_type' are same    
     
     data[0].x = data[0].x.float()
     data[0].x = torch.reshape(data[0].x,(data[0].num_nodes, data[0].num_node_features))
