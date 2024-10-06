@@ -55,7 +55,7 @@ if __name__ == '__main__':
     
     print(f'Converting circuits to {cfg.graph_type}s', file = logger)
     
-    directory_path = '../assets/datasets/MyTrustHub4GraphGPS' #like, path to TjFree and TjIn
+    directory_path = '../assets/datasets/MyTrustHub4GraphGPS/try' #like, path to TjFree and TjIn
     #delete all previous .pt files in all sub-directories of directory_path
     delete_dotptfiles_in_all_subdirectories(cfg, directory_path)
     
